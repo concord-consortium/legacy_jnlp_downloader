@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="d383ef30-81e0-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="76bbc708-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page1.cml">
+                  <prompt>
+                    <OTText id="76bcb169-61a1-11de-afd0-7fbc3a01a55c" text="Give one example of how Newton's laws affect atoms and molecules, using your observations of the model above." />
+                  </prompt>
+                  <input>
+                    <OTText id="76cf761a-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="79e6a12c-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page2.cml">
+                  <prompt>
+                    <OTText id="79e6c83d-61a1-11de-afd0-7fbc3a01a55c" text="Describe the motion of the particles you see above." />
+                  </prompt>
+                  <input>
+                    <OTText id="79e6c83e-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="79e6ef50-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page2.cml">
+                  <prompt>
+                    <OTText id="79e6ef51-61a1-11de-afd0-7fbc3a01a55c" text="Why does the observed motion not seem to be following Newton's first law?" />
+                  </prompt>
+                  <input>
+                    <OTText id="79e6ef52-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7c4048a4-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page3.cml">
+                  <prompt>
+                    <OTText id="7c4048a5-61a1-11de-afd0-7fbc3a01a55c" text="Does a single atom obey Newton's laws? Describe your observations and how you affected the model by applying forces in support of your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="7c4048a6-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7c4048a8-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page3.cml">
+                  <prompt>
+                    <OTText id="7c406fb9-61a1-11de-afd0-7fbc3a01a55c" text="If you don’t apply any force to the atom, what is true of its velocity?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7c406fba-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="7c40e4eb-61a1-11de-afd0-7fbc3a01a55c" text="The atom slows down over time." />
+                        <OTText id="7c410bfc-61a1-11de-afd0-7fbc3a01a55c" text="The atom speeds up over time." />
+                        <OTText id="7c410bfd-61a1-11de-afd0-7fbc3a01a55c" text="The atom maintains the same speed over time." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7c40e4eb-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7d52a30e-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page4.cml">
+                  <prompt>
+                    <OTText id="7d52a30f-61a1-11de-afd0-7fbc3a01a55c" text="Why could Brown come back to his particles over and over again, and always observe that they were moving in the same way?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7d52a310-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="7d52a311-61a1-11de-afd0-7fbc3a01a55c" text="because they were alive" />
+                        <OTText id="7d52a312-61a1-11de-afd0-7fbc3a01a55c" text="because atoms and molecules are always in continual motion" />
+                        <OTText id="7d52a313-61a1-11de-afd0-7fbc3a01a55c" text="because atoms and molecules generate their own heat" />
+                        <OTText id="7d52a314-61a1-11de-afd0-7fbc3a01a55c" text="because vibrations caused by his walking jiggled the atoms" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7d52a312-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7d52ca25-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page4.cml">
+                  <prompt>
+                    <OTText id="7d52ca26-61a1-11de-afd0-7fbc3a01a55c" text="Explain how Brown's particles, which were surrounded by water molecules, appear to be moving &quot;randomly&quot; yet also follow Newton’s first law at the same time." />
+                  </prompt>
+                  <input>
+                    <OTText id="7d52ca27-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7e0a3349-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page5.cml">
+                  <prompt>
+                    <OTText id="7e0a334a-61a1-11de-afd0-7fbc3a01a55c" text="The force on each atom is represented by the green vector, and the acceleration is represented by the yellow vector. What is true of the force on each atom?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7e0a334b-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="7e0a334c-61a1-11de-afd0-7fbc3a01a55c" text="they all feel the same force" />
+                        <OTText id="7e0a334d-61a1-11de-afd0-7fbc3a01a55c" text="the lighter atoms feel a stronger force" />
+                        <OTText id="7e0a334e-61a1-11de-afd0-7fbc3a01a55c" text="the heavier atoms feel a stronger force" />
+                        <OTText id="7e0a334f-61a1-11de-afd0-7fbc3a01a55c" text="the force depends upon the size of the atom" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7e0a334c-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7e0b92e0-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page5.cml">
+                  <prompt>
+                    <OTText id="7e0b92e1-61a1-11de-afd0-7fbc3a01a55c" text="Explain why some atoms move faster than other atoms if the same force is applied to all of them. Be sure to talk about about the relevance of F=ma in your answer:" />
+                  </prompt>
+                  <input>
+                    <OTText id="7e0b92e2-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7f1cb4c4-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="7f1cb4c5-61a1-11de-afd0-7fbc3a01a55c" text="Take a snapshot of two atoms with the same mass colliding, and then place that snapshot here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7f1cb4c6-61a1-11de-afd0-7fbc3a01a55c" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7f1d29f7-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="7f1d29f8-61a1-11de-afd0-7fbc3a01a55c" text="Take a snapshot of two atoms with different masses colliding, and then place that snapshot here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7f1d29f9-61a1-11de-afd0-7fbc3a01a55c" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7f1d510a-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="7f1d510b-61a1-11de-afd0-7fbc3a01a55c" text="When is there a significant force between atoms?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7f1d510c-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="7f1d510d-61a1-11de-afd0-7fbc3a01a55c" text="only when the atoms are far enough apart" />
+                        <OTText id="7f1d781e-61a1-11de-afd0-7fbc3a01a55c" text="only when the atoms are close enough together" />
+                        <OTText id="7f1d781f-61a1-11de-afd0-7fbc3a01a55c" text="there is always a significant force" />
+                        <OTText id="7f1d7820-61a1-11de-afd0-7fbc3a01a55c" text="there is never a force shown" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7f1d781e-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7f1d9f31-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="7f1d9f32-61a1-11de-afd0-7fbc3a01a55c" text="Do the snapshots you took illustrate Newton’s third law or not? Explain your reasoning." />
+                  </prompt>
+                  <input>
+                    <OTText id="7f1d9f33-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7ffd29c5-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7ffd29c6-61a1-11de-afd0-7fbc3a01a55c" text="Take a snapshot of a sealed balloon, and place that image here. Make sure to draw arrows indicating where the gas exerts force on the balloon." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7ffd29c7-61a1-11de-afd0-7fbc3a01a55c" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7ffd50d8-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7ffd50d9-61a1-11de-afd0-7fbc3a01a55c" text="Take a snapshot of a popped balloon, and place that image here. Make sure to draw arrows indicating where the gas exerts force on the balloon." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7ffd50da-61a1-11de-afd0-7fbc3a01a55c" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7ffd77eb-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7ffd77ec-61a1-11de-afd0-7fbc3a01a55c" text="When the balloon is popped, which direction does the balloon move?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7ffd77ed-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="7ffd9efe-61a1-11de-afd0-7fbc3a01a55c" text="It continues to stay in the same general location." />
+                        <OTText id="7ffd9eff-61a1-11de-afd0-7fbc3a01a55c" text="It moves, but in random directions." />
+                        <OTText id="7ffd9f00-61a1-11de-afd0-7fbc3a01a55c" text="It moves in the direction of the escaping air." />
+                        <OTText id="7ffd9f01-61a1-11de-afd0-7fbc3a01a55c" text="It moves in the opposite direction as the escaping air." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7ffd9f01-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7ffdc612-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7ffdc613-61a1-11de-afd0-7fbc3a01a55c" text="Explain on an atomic level why the balloon moves the way it does when you provide an opening for the air, and connect this to Newton’s third law." />
+                  </prompt>
+                  <input>
+                    <OTText id="7ffdc614-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="80ce3576-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="80ce3577-61a1-11de-afd0-7fbc3a01a55c" text="How does atom mass affect the vibrational frequency of the bonded atoms?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="80ce3578-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="80ce3579-61a1-11de-afd0-7fbc3a01a55c" text="higher mass causes higher frequency" />
+                        <OTText id="80ce357a-61a1-11de-afd0-7fbc3a01a55c" text="lower mass causes lower frequency" />
+                        <OTText id="80ce357b-61a1-11de-afd0-7fbc3a01a55c" text="higher mass causes lower frequency" />
+                        <OTText id="80ce839c-61a1-11de-afd0-7fbc3a01a55c" text="there is no effect of mass on frequency" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="80ce357b-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="80ce839d-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="80ce839e-61a1-11de-afd0-7fbc3a01a55c" text="How does the strength of the bond affect the vibrational frequency of the bonded atoms?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="80ceaaaf-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="80ced0c0-61a1-11de-afd0-7fbc3a01a55c" text="stronger bond causes higher frequency" />
+                        <OTText id="80ced0c1-61a1-11de-afd0-7fbc3a01a55c" text="weaker bond causes higher frequency" />
+                        <OTText id="80ced0c2-61a1-11de-afd0-7fbc3a01a55c" text="stronger bond causes lower frequency" />
+                        <OTText id="80ced0c3-61a1-11de-afd0-7fbc3a01a55c" text="there is no effect of bond strength on frequency" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="80ced0c0-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="80cef7d4-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="80cef7d5-61a1-11de-afd0-7fbc3a01a55c">
+                      <text>How does Newton's second law help explain the relationship between:
+a) bond strength and vibrational frequency?
+b) atom mass and vibrational frequency?</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTText id="80cef7d6-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="80cf1ee8-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="80cf1ee9-61a1-11de-afd0-7fbc3a01a55c" text="How do Newton's first and third laws help explain why the molecule as a whole is not moving around within the model container, and just vibrates in place?" />
+                  </prompt>
+                  <input>
+                    <OTText id="80cf1eea-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="80cf45fc-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="80cf45fd-61a1-11de-afd0-7fbc3a01a55c">
+                      <text>When doing infrared spectroscopy an infrared light is shined on a substance to determine the vibrational frequency of the various bonds in a molecule. Because each molecule has a unique set of vibrations you can identify the molecule using this procedure, which is often used in forensics. 
+If you knew that part of a molecule had a high vibrational frequency, what could you say about the atoms and how they were bonded together in that part of the molecule?</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTText id="80cf45fe-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="818f3aa0-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page9.cml">
+                  <prompt>
+                    <OTText id="818f3aa1-61a1-11de-afd0-7fbc3a01a55c" text="The image above shows two atoms colliding. Which of Newton's laws are demonstrated by this image?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="818f3aa2-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="818f3aa3-61a1-11de-afd0-7fbc3a01a55c" text="Newton's first law." />
+                        <OTText id="818f3aa4-61a1-11de-afd0-7fbc3a01a55c" text="Newton's second law." />
+                        <OTText id="818f61b5-61a1-11de-afd0-7fbc3a01a55c" text="Newton's third law." />
+                        <OTText id="818f61b6-61a1-11de-afd0-7fbc3a01a55c" text="none of the above" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="818f61b5-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="818f61b7-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page9.cml">
+                  <prompt>
+                    <OTText id="818f88c8-61a1-11de-afd0-7fbc3a01a55c" text="Use Newton's second law to predict how the motion of these two atoms will change after colliding. (Note: the bigger atom has a larger mass.)" />
+                  </prompt>
+                  <input>
+                    <OTText id="818f88c9-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="818f88cb-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page9.cml">
+                  <prompt>
+                    <OTText id="818fafdc-61a1-11de-afd0-7fbc3a01a55c" text="You release two perfumes at opposite ends of a room, but one perfume is made from heavy molecules and one from light molecules. Which one would reach your nose first if you were standing in the center of the room? Explain your reasoning." />
+                  </prompt>
+                  <input>
+                    <OTText id="818fafdd-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="818fafdf-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page9.cml">
+                  <prompt>
+                    <OTText id="818fafe0-61a1-11de-afd0-7fbc3a01a55c" text="Give one example of an object that you can observe with your eyes that comes close to having the same characteristics of motion as an atom. Explain why." />
+                  </prompt>
+                  <input>
+                    <OTText id="818fafe1-61a1-11de-afd0-7fbc3a01a55c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="818fd6f3-61a1-11de-afd0-7fbc3a01a55c" name="http://ri-itest.concord.org/SAMActivities/NewtonsLaws/NewtonsLaws_v3/page9.cml">
+                  <prompt>
+                    <OTText id="818fd6f4-61a1-11de-afd0-7fbc3a01a55c">
+                      <text>Another way to apply a force to a charged atom is to pass it through a magnetic field. If the field is oriented properly you will apply a force that is perpendicular to the motion of the atom, causing the atom to deflect from its previously straight line path. The amount of force depends on the charge of the atom and strength of the magnetic field.
+If you had two atoms moving at the same speed with the same charge, but one atom had more mass than another, what would you expect to happen when they both enter the magnetic field?</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTChoice id="818fd6f5-61a1-11de-afd0-7fbc3a01a55c" selectionUI="0">
+                      <choices>
+                        <OTText id="818fd6f6-61a1-11de-afd0-7fbc3a01a55c" text="The heavier atom would deflect more." />
+                        <OTText id="818ffe07-61a1-11de-afd0-7fbc3a01a55c" text="The lighter atom would deflect more." />
+                        <OTText id="818ffe08-61a1-11de-afd0-7fbc3a01a55c" text="They would both deflect the same amount because they have the same force applied." />
+                        <OTText id="818ffe09-61a1-11de-afd0-7fbc3a01a55c" text="You can't tell what would happen. It depends on the magnetic field and the charge of the atoms." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="818ffe07-61a1-11de-afd0-7fbc3a01a55c" />
+                  </correctAnswer>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

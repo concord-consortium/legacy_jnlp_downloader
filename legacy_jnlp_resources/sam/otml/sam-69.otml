@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="2a962040-81e1-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="b2f3bff5-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page2.cml">
+                  <prompt>
+                    <OTText id="b2f48346-60d6-11de-9642-c37f4184d1a8" text="In the model above, describe the relationship between voltage and kinetic energy as the electron moves." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b2f5bbc7-60d6-11de-9642-c37f4184d1a8" selectionUI="0">
+                      <choices>
+                        <OTText id="b2f7dea8-60d6-11de-9642-c37f4184d1a8" text="The higher the voltage the higher the kinetic energy." />
+                        <OTText id="b2f7dea9-60d6-11de-9642-c37f4184d1a8" text="The higher the voltage the lower the kinetic energy." />
+                        <OTText id="b2f7deaa-60d6-11de-9642-c37f4184d1a8" text="The lower the voltage the higher the kinetic energy." />
+                        <OTText id="b2f7deab-60d6-11de-9642-c37f4184d1a8" text="There is no relationship between voltage and kinetic energy." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b2f7dea8-60d6-11de-9642-c37f4184d1a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b2f853dc-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page2.cml">
+                  <prompt>
+                    <OTText id="b2f853dd-60d6-11de-9642-c37f4184d1a8" text="Complete the analogy: If gravitational potential energy is the work done by gravity on a mass moving a certain distance then electric potential energy is..." />
+                  </prompt>
+                  <input>
+                    <OTText id="b2f853de-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b499cde0-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page3.cml">
+                  <prompt>
+                    <OTText id="b499cde1-60d6-11de-9642-c37f4184d1a8" text="Does a material with a higher density of electrons or a lower density produce a greater current under the same voltage?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b499cde2-60d6-11de-9642-c37f4184d1a8" selectionUI="0">
+                      <choices>
+                        <OTText id="b499f4f3-60d6-11de-9642-c37f4184d1a8" text="Higher." />
+                        <OTText id="b499f4f4-60d6-11de-9642-c37f4184d1a8" text="Lower." />
+                        <OTText id="b499f4f5-60d6-11de-9642-c37f4184d1a8" text="No difference." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b499f4f3-60d6-11de-9642-c37f4184d1a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b49a1c06-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page3.cml">
+                  <prompt>
+                    <OTText id="b49a1c07-60d6-11de-9642-c37f4184d1a8" text="Copper and iron have a lot of electrons that can flow freely. When a voltage is applied would that produce a lot of current or a little current? Explain." />
+                  </prompt>
+                  <input>
+                    <OTText id="b49a1c08-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b5d18a9a-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page4.cml">
+                  <prompt>
+                    <OTText id="b5d18a9b-60d6-11de-9642-c37f4184d1a8" text="Electric conductivity measures:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b5d18a9c-60d6-11de-9642-c37f4184d1a8" selectionUI="0">
+                      <choices>
+                        <OTText id="b5d1b1ad-60d6-11de-9642-c37f4184d1a8" text="How well electrons flow around defects." />
+                        <OTText id="b5d1b1ae-60d6-11de-9642-c37f4184d1a8" text="How strongly a material opposes the flow of electrons." />
+                        <OTText id="b5d1b1af-60d6-11de-9642-c37f4184d1a8" text="How well electrons flow through a material." />
+                        <OTText id="b5d1b1b0-60d6-11de-9642-c37f4184d1a8" text="How strongly electrons are attracted to nuclei." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b5d1b1af-60d6-11de-9642-c37f4184d1a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b5d1d8c1-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page4.cml">
+                  <prompt>
+                    <OTText id="b5d1d8c2-60d6-11de-9642-c37f4184d1a8" text="Explain why the current measurements are so low for an insulator." />
+                  </prompt>
+                  <input>
+                    <OTText id="b5d1d8c3-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b74d2e25-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page5.cml">
+                  <prompt>
+                    <OTText id="b74d2e26-60d6-11de-9642-c37f4184d1a8" text="How does voltage affect the current passing through a material?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b74d2e27-60d6-11de-9642-c37f4184d1a8" selectionUI="0">
+                      <choices>
+                        <OTText id="b74d2e28-60d6-11de-9642-c37f4184d1a8" text="The current is higher when the voltage is higher." />
+                        <OTText id="b74d5539-60d6-11de-9642-c37f4184d1a8" text="The current is lower when the voltage is higher." />
+                        <OTText id="b74d553a-60d6-11de-9642-c37f4184d1a8" text="The current is the same regardless of the voltage." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b74d2e28-60d6-11de-9642-c37f4184d1a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b74d553b-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page5.cml">
+                  <prompt>
+                    <OTText id="b74d553c-60d6-11de-9642-c37f4184d1a8" text="Set the voltage to zero and observe both the model and the ammeter. The electrons are moving, but why doesn't the ammeter measure a current?" />
+                  </prompt>
+                  <input>
+                    <OTText id="b74d553d-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b74da35f-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page5.cml">
+                  <prompt>
+                    <OTText id="b74da360-60d6-11de-9642-c37f4184d1a8" text="How does resistance affect the current passing through a material?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b74da361-60d6-11de-9642-c37f4184d1a8" selectionUI="0">
+                      <choices>
+                        <OTText id="b74da362-60d6-11de-9642-c37f4184d1a8" text="The current is higher when the resistance is higher." />
+                        <OTText id="b74da363-60d6-11de-9642-c37f4184d1a8" text="The current is lower when the resistance is higher." />
+                        <OTText id="b74da364-60d6-11de-9642-c37f4184d1a8" text="The current is the same regardless of the resistance." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b74da363-60d6-11de-9642-c37f4184d1a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b74dca75-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page5.cml">
+                  <prompt>
+                    <OTText id="b74dca76-60d6-11de-9642-c37f4184d1a8" text="Why is the current higher in a material with lower resistance than in a material with higher resistance under the same voltage?" />
+                  </prompt>
+                  <input>
+                    <OTText id="b74dca77-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="bcfdefe9-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page6.cml">
+                  <prompt>
+                    <OTText id="bcfdefea-60d6-11de-9642-c37f4184d1a8" text="If there were no battery describe how the model above would change." />
+                  </prompt>
+                  <input>
+                    <OTText id="bcfdefeb-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="bfdccced-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page7.cml">
+                  <prompt>
+                    <OTText id="bfdcf3fe-60d6-11de-9642-c37f4184d1a8" text="Imagine if the wire to the green resistor was broken at point A. Describe what you think would happen to the movement of the electrons?" />
+                  </prompt>
+                  <input>
+                    <OTText id="bfdcf3ff-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="c3036151-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page8.cml">
+                  <prompt>
+                    <OTText id="c3036152-60d6-11de-9642-c37f4184d1a8" text="Based on your experience with the model, explain why a light bulb from a table lamp won't be lit if you connect it to an AA battery." />
+                  </prompt>
+                  <input>
+                    <OTText id="c3036153-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="c61e8405-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page10.cml">
+                  <prompt>
+                    <OTText id="c61e8406-60d6-11de-9642-c37f4184d1a8" text="Compared to conductive wires, insulators are considered to have:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="c61e8407-60d6-11de-9642-c37f4184d1a8" selectionUI="0">
+                      <choices>
+                        <OTText id="c61e8408-60d6-11de-9642-c37f4184d1a8" text="Very high resistance." />
+                        <OTText id="c61e8409-60d6-11de-9642-c37f4184d1a8" text="Very low resistance." />
+                        <OTText id="c61e840a-60d6-11de-9642-c37f4184d1a8" text="About the same resistance." />
+                        <OTText id="c61eab1b-60d6-11de-9642-c37f4184d1a8" text="No resistance." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="c61e8408-60d6-11de-9642-c37f4184d1a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="c61eab1c-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page10.cml">
+                  <prompt>
+                    <OTText id="c61eab1d-60d6-11de-9642-c37f4184d1a8" text="If two batteries were serially used in a circuit instead of one, would the electric current be different? Why or why not." />
+                  </prompt>
+                  <input>
+                    <OTText id="c61eab1e-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="c61ed230-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page10.cml">
+                  <prompt>
+                    <OTText id="c61ed231-60d6-11de-9642-c37f4184d1a8" text="According to Ohm's Law, in any electrical circuit, the current increases: (Choose all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="c61ed232-60d6-11de-9642-c37f4184d1a8" selectionUI="1">
+                      <choices>
+                        <OTText id="c61ed233-60d6-11de-9642-c37f4184d1a8" text="when voltage increases." />
+                        <OTText id="c61ed234-60d6-11de-9642-c37f4184d1a8" text="when voltage decreases." />
+                        <OTText id="c61ef945-60d6-11de-9642-c37f4184d1a8" text="when there is an increase in resistance." />
+                        <OTText id="c61ef946-60d6-11de-9642-c37f4184d1a8" text="when there is a decrease in resistance." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="c61ed233-60d6-11de-9642-c37f4184d1a8" />
+                        <object refid="c61ef946-60d6-11de-9642-c37f4184d1a8" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="c61f6e78-60d6-11de-9642-c37f4184d1a8" name="http://ri-itest.concord.org/SAMActivities/ElectricCurrent/ElectricCurrent_v4/page10.cml">
+                  <prompt>
+                    <OTText id="c61f9589-60d6-11de-9642-c37f4184d1a8" text="What causes the electric energy to change to light energy in a light bulb?" />
+                  </prompt>
+                  <input>
+                    <OTText id="c61f958a-60d6-11de-9642-c37f4184d1a8" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="9273fcd0-ad99-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="2731d6f7-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page1.cml">
+                  <prompt>
+                    <OTText id="2732c158-ad9a-11de-bfe1-8562a0fd4afe" text="Create a negative ion and record below the number of protons and the number of electrons for that ion. (There are 21 protons and 21 electrons initially.)" />
+                  </prompt>
+                  <input>
+                    <OTText id="27346f09-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2734bd2b-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page1.cml">
+                  <prompt>
+                    <OTText id="2734bd2c-ad9a-11de-bfe1-8562a0fd4afe" text="An atom that has a charge of -2 has:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2734bd2d-ad9a-11de-bfe1-8562a0fd4afe" selectionUI="0">
+                      <choices>
+                        <OTText id="2735f5ae-ad9a-11de-bfe1-8562a0fd4afe" text="2 more electrons than protons" />
+                        <OTText id="2735f5af-ad9a-11de-bfe1-8562a0fd4afe" text="2 more protons than electrons" />
+                        <OTText id="2735f5b0-ad9a-11de-bfe1-8562a0fd4afe" text="2 more neutrons than protons" />
+                        <OTText id="2735f5b1-ad9a-11de-bfe1-8562a0fd4afe" text="2 more neutrons than electrons" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2735f5ae-ad9a-11de-bfe1-8562a0fd4afe" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="29303f12-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page2.cml">
+                  <prompt>
+                    <OTText id="29303f13-ad9a-11de-bfe1-8562a0fd4afe" text="Follow the instruction below to drag in a snapshot image that shows atoms that have repulsive forces:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="29303f14-ad9a-11de-bfe1-8562a0fd4afe" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2930db55-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page2.cml">
+                  <prompt>
+                    <OTText id="2930db56-ad9a-11de-bfe1-8562a0fd4afe" text="Follow the instruction below to drag in a snapshot image that shows atoms that have attractive forces:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="29310267-ad9a-11de-bfe1-8562a0fd4afe" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="29310268-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page2.cml">
+                  <prompt>
+                    <OTText id="29310269-ad9a-11de-bfe1-8562a0fd4afe" text="Describe the rule for whether or not atoms will attract or repel each other." />
+                  </prompt>
+                  <input>
+                    <OTText id="2931026a-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2acb788c-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page3.cml">
+                  <prompt>
+                    <OTText id="2acb788d-ad9a-11de-bfe1-8562a0fd4afe" text="Let's say the purple atom has a charge of +3 and the green atom a charge of -1. It would be easier to separate these atoms than which of the following?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2acb788e-ad9a-11de-bfe1-8562a0fd4afe" selectionUI="0">
+                      <choices>
+                        <OTText id="2acb9f9f-ad9a-11de-bfe1-8562a0fd4afe" text="Purple 0, green -2" />
+                        <OTText id="2acb9fa0-ad9a-11de-bfe1-8562a0fd4afe" text="Purple +1, green -1" />
+                        <OTText id="2acbedc1-ad9a-11de-bfe1-8562a0fd4afe" text="Purple +2, green -1" />
+                        <OTText id="2acbedc2-ad9a-11de-bfe1-8562a0fd4afe" text="Purple +3, green -2" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2acbedc2-ad9a-11de-bfe1-8562a0fd4afe" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2acc14d3-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page3.cml">
+                  <prompt>
+                    <OTText id="2acc14d4-ad9a-11de-bfe1-8562a0fd4afe" text="From this experiment it can be concluded that the greater the charge ..." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2acc14d5-ad9a-11de-bfe1-8562a0fd4afe" selectionUI="0">
+                      <choices>
+                        <OTText id="2acc14d6-ad9a-11de-bfe1-8562a0fd4afe" text="The weaker the force." />
+                        <OTText id="2acc3be7-ad9a-11de-bfe1-8562a0fd4afe" text="The stronger the force." />
+                        <OTText id="2acc3be8-ad9a-11de-bfe1-8562a0fd4afe" text="The same the force." />
+                        <OTText id="2acc3be9-ad9a-11de-bfe1-8562a0fd4afe" text="Cannot determine." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2acc3be7-ad9a-11de-bfe1-8562a0fd4afe" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2c87325a-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page4.cml">
+                  <prompt>
+                    <OTText id="2c87325b-ad9a-11de-bfe1-8562a0fd4afe" text="Press the &quot;Snapshot&quot; button above to take a snapshot and then follow the instructions below to drag in an image to prove that you succeeded in shooting an electron into the blue rectangle." />
+                  </prompt>
+                  <input>
+                    <OTImage id="2c87325c-ad9a-11de-bfe1-8562a0fd4afe" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2c87596d-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page4.cml">
+                  <prompt>
+                    <OTText id="2c87596e-ad9a-11de-bfe1-8562a0fd4afe" text="Describe where you placed the particle and why this made the electron move towards the target." />
+                  </prompt>
+                  <input>
+                    <OTText id="2c87596f-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2c87a791-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page4.cml">
+                  <prompt>
+                    <OTText id="2c87a792-ad9a-11de-bfe1-8562a0fd4afe" text="Which of the following settings would cause the shot electron to travel in a straight line? Check all that apply. (See the image on the left for an illustration of choices C, D, and E.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2c87a793-ad9a-11de-bfe1-8562a0fd4afe" selectionUI="1">
+                      <choices>
+                        <OTText id="2c87cea4-ad9a-11de-bfe1-8562a0fd4afe" text="Removing the postively charged particle." />
+                        <OTText id="2c87cea5-ad9a-11de-bfe1-8562a0fd4afe" text="Neutralizing the positively charged particle." />
+                        <OTText id="2c87cea6-ad9a-11de-bfe1-8562a0fd4afe" text="Putting two positively-charged particles of the same amount of charge on the exactly opposite sites about the middle line." />
+                        <OTText id="2c87cea7-ad9a-11de-bfe1-8562a0fd4afe" text="Putting two negatively-charged particlesof the same amount of charge on the exactly opposite sites about the middle line." />
+                        <OTText id="2c87cea8-ad9a-11de-bfe1-8562a0fd4afe" text="Putting two particles of the opposite charges on the exactly opposite sites about the middle line." />
+                        <OTText id="2c87f5b9-ad9a-11de-bfe1-8562a0fd4afe" text="Putting a particle with a charge of opposite sign near the particle." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="2c87cea4-ad9a-11de-bfe1-8562a0fd4afe" />
+                        <object refid="2c87cea5-ad9a-11de-bfe1-8562a0fd4afe" />
+                        <object refid="2c87cea6-ad9a-11de-bfe1-8562a0fd4afe" />
+                        <object refid="2c87cea7-ad9a-11de-bfe1-8562a0fd4afe" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="303e46fb-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page6.cml">
+                  <prompt>
+                    <OTText id="303e6e0c-ad9a-11de-bfe1-8562a0fd4afe" text="The balloon sticks to the wall as long as it is charged, regardless of the sign (positive or negative). Can you explain why?" />
+                  </prompt>
+                  <input>
+                    <OTText id="303e6e0d-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="303e951f-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page6.cml">
+                  <prompt>
+                    <OTText id="303e9520-ad9a-11de-bfe1-8562a0fd4afe" text="Describe what happens to the electrons in the wall when a balloon with positive charges sticks to the wall." />
+                  </prompt>
+                  <input>
+                    <OTText id="303e9521-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="320b17c3-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page7.cml">
+                  <prompt>
+                    <OTText id="320b17c4-ad9a-11de-bfe1-8562a0fd4afe" text="Which amount is greatest? Explain how you can tell." />
+                  </prompt>
+                  <input>
+                    <OTText id="320b17c5-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="320b3ed7-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page7.cml">
+                  <prompt>
+                    <OTText id="320b65e8-ad9a-11de-bfe1-8562a0fd4afe" text="Suppose you shot an electron into the container pictured. The container has a particle that has a negative charge. Describe the path the electron will follow and why it follows this path." />
+                  </prompt>
+                  <input>
+                    <OTText id="320b65e9-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="320b8cfb-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page7.cml">
+                  <prompt>
+                    <OTText id="320b8cfc-ad9a-11de-bfe1-8562a0fd4afe" text="Particle A has a charge of +3 and particle B a charge of -3. They are 4 nm apart from each other. How would the forces change if the distance was halved? Explain your answer. (❏ Hint)" />
+                  </prompt>
+                  <input>
+                    <OTText id="320b8cfd-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="320bdb1f-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page7.cml">
+                  <prompt>
+                    <OTText id="320bdb20-ad9a-11de-bfe1-8562a0fd4afe" text="Two positively charged particles, 1 and 2, are placed on a line. A third particle, 3, is placed on the line and it starts to move towards the particle on the right. What is the charge of the third particle? Why does it travel towards the right? Choose all that are possible." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="320bdb21-ad9a-11de-bfe1-8562a0fd4afe" selectionUI="1">
+                      <choices>
+                        <OTText id="320bdb22-ad9a-11de-bfe1-8562a0fd4afe" text="It is negative; it was closer to particle on right." />
+                        <OTText id="320c0233-ad9a-11de-bfe1-8562a0fd4afe" text="It is negative; particle on right had a stronger charge." />
+                        <OTText id="3223cff4-ad9a-11de-bfe1-8562a0fd4afe" text="It is negative; particle on left had a stronger charge." />
+                        <OTText id="3223cff5-ad9a-11de-bfe1-8562a0fd4afe" text="It is positive; it was midway between the particles." />
+                        <OTText id="3223cff6-ad9a-11de-bfe1-8562a0fd4afe" text="It is positive; it was closer to particle on right." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="320bdb22-ad9a-11de-bfe1-8562a0fd4afe" />
+                        <object refid="320c0233-ad9a-11de-bfe1-8562a0fd4afe" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="3223f708-ad9a-11de-bfe1-8562a0fd4afe" name="http://ri-itest.concord.org/SAMActivities/Electrostatics/Electrostatics_v5/page7.cml">
+                  <prompt>
+                    <OTText id="3223f709-ad9a-11de-bfe1-8562a0fd4afe" text="Suppose the Coulomb force is the main force responsible for most interactions between atoms and molecules. The Coulomb force gets weaker at further distance. What can you guess about the forces between molecules in a gas versus the forces between molecules in a liquid?" />
+                  </prompt>
+                  <input>
+                    <OTText id="32241e1a-ad9a-11de-bfe1-8562a0fd4afe" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

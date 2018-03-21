@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="874b8410-3938-012a-b543-0017f2cc694e">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="6c708097-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page1.cml">
+                  <prompt>
+                    <OTText id="6c7143e8-60db-11de-b8d8-4d98530a2ff2" text="List an example of light being emitted and absorbed." />
+                  </prompt>
+                  <input>
+                    <OTText id="6c7318a9-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="6c7318aa-60db-11de-b8d8-4d98530a2ff2" text="1300 m/s" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6dc8486b-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page2.cml">
+                  <prompt>
+                    <OTText id="6dc8486c-60db-11de-b8d8-4d98530a2ff2" text="Experiment by changing the velocity. Can you figure out the slowest velocity the blue atom can have and still excite the green atom?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="6dc8486d-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="6dc90bbe-60db-11de-b8d8-4d98530a2ff2" text="1000 m/s" />
+                        <OTText id="6dc90bbf-60db-11de-b8d8-4d98530a2ff2" text="1200 m/s" />
+                        <OTText id="6dc90bc0-60db-11de-b8d8-4d98530a2ff2" text="1700 m/s" />
+                        <OTText id="6dc932d1-60db-11de-b8d8-4d98530a2ff2" text="2200 m/s" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="6dc90bc0-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6dca4442-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page2.cml">
+                  <prompt>
+                    <OTText id="6dca4443-60db-11de-b8d8-4d98530a2ff2" text="What is associated with a drop in kinetic energy?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="6dca4444-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="6dca6b55-60db-11de-b8d8-4d98530a2ff2" text="An increase in potential energy." />
+                        <OTText id="6dca6b56-60db-11de-b8d8-4d98530a2ff2" text="An atom returning to its ground state." />
+                        <OTText id="6dca6b57-60db-11de-b8d8-4d98530a2ff2" text="An atom going into an excited state." />
+                        <OTText id="6dca6b58-60db-11de-b8d8-4d98530a2ff2" text="Both A and C." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="6dca6b58-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6dca9269-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page2.cml">
+                  <prompt>
+                    <OTText id="6dca926a-60db-11de-b8d8-4d98530a2ff2" text="Compare the movement of the atoms at 1000 m/s and at 2000 m/s. Describe the changes for each atom." />
+                  </prompt>
+                  <input>
+                    <OTText id="6dca926b-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="6ef68f4d-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page3.cml">
+                  <prompt>
+                    <OTText id="6ef68f4e-60db-11de-b8d8-4d98530a2ff2" text="What is true of the minimum energy needed to excite atoms C and D?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="6ef68f4f-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="6ef68f50-60db-11de-b8d8-4d98530a2ff2" text="Each atom requires the same energy to be excited." />
+                        <OTText id="6ef68f51-60db-11de-b8d8-4d98530a2ff2" text="Atom C requires more energy to be excited." />
+                        <OTText id="6ef68f52-60db-11de-b8d8-4d98530a2ff2" text="Atom D requires more energy to be excited." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="6ef68f52-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6ef6b663-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page3.cml">
+                  <prompt>
+                    <OTText id="6ef6b664-60db-11de-b8d8-4d98530a2ff2" text="Explain your answer to the previous question." />
+                  </prompt>
+                  <input>
+                    <OTText id="6ef6b665-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7098a697-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page4.cml">
+                  <prompt>
+                    <OTText id="7098a698-60db-11de-b8d8-4d98530a2ff2" text="Place a snapshot of the orbital of the hydrogen atom above that shows it in a state that might represent an excited state." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7098a699-60db-11de-b8d8-4d98530a2ff2" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="709a062a-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page4.cml">
+                  <prompt>
+                    <OTText id="709a062b-60db-11de-b8d8-4d98530a2ff2" text="What relationship do you see between the distance electrons can be found from the nucleus and the energy level of the electrons?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="709a062c-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="709a062d-60db-11de-b8d8-4d98530a2ff2" text="The closer the electrons are to the center of the atom the higher their energy." />
+                        <OTText id="709a062e-60db-11de-b8d8-4d98530a2ff2" text="The farther the electrons are from the center of the atom the higher their energy" />
+                        <OTText id="709a2d3f-60db-11de-b8d8-4d98530a2ff2" text="There is no relationship between the distance of electrons from the nucleus and their energy." />
+                        <OTText id="709a2d40-60db-11de-b8d8-4d98530a2ff2" text="The ground state electrons have the highest energy and can be found farthest from the nucleus." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="709a062e-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="71c91051-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page5.cml">
+                  <prompt>
+                    <OTText id="71c91052-60db-11de-b8d8-4d98530a2ff2" text="If you want the purple atom to be easily excited, the energy levels should be:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="71c91053-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="71c91054-60db-11de-b8d8-4d98530a2ff2" text="close together (small difference in electron energy levels)." />
+                        <OTText id="71c91055-60db-11de-b8d8-4d98530a2ff2" text="moderately far apart (medium difference in energy levels)." />
+                        <OTText id="71c91056-60db-11de-b8d8-4d98530a2ff2" text="far apart (large difference in energy levels)." />
+                        <OTText id="71c91057-60db-11de-b8d8-4d98530a2ff2" text="any difference. It doesn’t matter." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="71c91054-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="71c95e78-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page5.cml">
+                  <prompt>
+                    <OTText id="71c95e79-60db-11de-b8d8-4d98530a2ff2" text="Reset the model and try setting the energy levels so that they have a difference of 1.20 electron volt between them. (❐ help) At some point, when you run the model, you should see some of the kinetic energy of the atoms “disappear.” Where does this energy go? Try to notice a change in the energy level diagram when this happens. (❐ help)" />
+                  </prompt>
+                  <input>
+                    <OTText id="71c95e7a-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7337e29c-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page6.cml">
+                  <prompt>
+                    <OTText id="7337e29d-60db-11de-b8d8-4d98530a2ff2" text="Describe what you observed as you adjusted the intensity slider (comment on the energy, color and number of photons per unit time)." />
+                  </prompt>
+                  <input>
+                    <OTText id="7337e29e-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="733809b0-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page6.cml">
+                  <prompt>
+                    <OTText id="733809b1-60db-11de-b8d8-4d98530a2ff2" text="Describe what you observed as you adjusted the frequency slider (comment on the energy, color and number of photons per unit time)." />
+                  </prompt>
+                  <input>
+                    <OTText id="733809b2-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="749501a4-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page7.cml">
+                  <prompt>
+                    <OTText id="749501a5-60db-11de-b8d8-4d98530a2ff2" text="The photon emitted from atom C has" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="749528b6-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="749528b7-60db-11de-b8d8-4d98530a2ff2" text="higher energy than the one produced by atom D." />
+                        <OTText id="749528b8-60db-11de-b8d8-4d98530a2ff2" text="lower energy than the one produced by atom D." />
+                        <OTText id="749528b9-60db-11de-b8d8-4d98530a2ff2" text="the same as the one produced by atom D." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="749528b8-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7495ec0a-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page7.cml">
+                  <prompt>
+                    <OTText id="7495ec0b-60db-11de-b8d8-4d98530a2ff2" text="Why do the atoms slow down when they produce a photon?" />
+                  </prompt>
+                  <input>
+                    <OTText id="7495ec0c-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="75ffdc4e-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page8.cml">
+                  <prompt>
+                    <OTText id="75ffdc4f-60db-11de-b8d8-4d98530a2ff2" text="What did you have to do to get the incoming photons to excite atom B?" />
+                  </prompt>
+                  <input>
+                    <OTText id="75ffdc50-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="76000362-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page8.cml">
+                  <prompt>
+                    <OTText id="76000363-60db-11de-b8d8-4d98530a2ff2" text="Try getting both of the atoms to absorb photons, but not with identical energy levels. What is the same about the two atoms when this happens?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="76000364-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="76002a75-60db-11de-b8d8-4d98530a2ff2" text="They are both the same kind of atom." />
+                        <OTText id="76002a76-60db-11de-b8d8-4d98530a2ff2" text="They absorb photons of the same energy/frequency." />
+                        <OTText id="76002a77-60db-11de-b8d8-4d98530a2ff2" text="The difference between the lower and upper energy levels is the same." />
+                        <OTText id="76002a78-60db-11de-b8d8-4d98530a2ff2" text="Both B and C." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="76002a78-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78311439-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page9.cml">
+                  <prompt>
+                    <OTText id="7831143a-60db-11de-b8d8-4d98530a2ff2" text="As you change the frequency of the photons coming out from the light source, what changes do you observe in the energies of the photons?" />
+                  </prompt>
+                  <input>
+                    <OTText id="78313b4b-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7831625d-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page9.cml">
+                  <prompt>
+                    <OTText id="7831896e-60db-11de-b8d8-4d98530a2ff2" text="What relationship do you see between the energy of the photons and the energy levels of the atoms that can be excited by these photons?" />
+                  </prompt>
+                  <input>
+                    <OTText id="7831896f-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="79c6ce71-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page10.cml">
+                  <prompt>
+                    <OTText id="79c6ce72-60db-11de-b8d8-4d98530a2ff2" text="Why do the pink and green atoms emit different kinds of photons?" />
+                  </prompt>
+                  <input>
+                    <OTText id="79c6ce73-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="79c743a5-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page10.cml">
+                  <prompt>
+                    <OTText id="79c743a6-60db-11de-b8d8-4d98530a2ff2" text="Why is it easier to excite the green atoms?" />
+                  </prompt>
+                  <input>
+                    <OTText id="79c743a7-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7c1ea129-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page11.cml">
+                  <prompt>
+                    <OTText id="7c1ea12a-60db-11de-b8d8-4d98530a2ff2" text="Place the snapshot that shows the purple atoms producing green photons." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7c1ea12b-60db-11de-b8d8-4d98530a2ff2" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7c1ec83c-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page11.cml">
+                  <prompt>
+                    <OTText id="7c1ec83d-60db-11de-b8d8-4d98530a2ff2" text="Place the snapshot below that shows the purple atoms producing infrared photons." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7c1ec83e-60db-11de-b8d8-4d98530a2ff2" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7c1f8b8f-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page11.cml">
+                  <prompt>
+                    <OTText id="7c1f8b90-60db-11de-b8d8-4d98530a2ff2" text="What happens if you have an atom with many different possible energy levels:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7c1f8b91-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="7c1f8b92-60db-11de-b8d8-4d98530a2ff2" text="It takes more energy to make the atom go to a higher energy level." />
+                        <OTText id="7c1f8b93-60db-11de-b8d8-4d98530a2ff2" text="You get more photons from the atom." />
+                        <OTText id="7c1f8b94-60db-11de-b8d8-4d98530a2ff2" text="You get more types of photons from the atom." />
+                        <OTText id="7c1f8b95-60db-11de-b8d8-4d98530a2ff2" text="The atom will stay in a higher energy state without giving off photons." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7c1f8b94-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7c1fb2a6-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page11.cml">
+                  <prompt>
+                    <OTText id="7c1fb2a7-60db-11de-b8d8-4d98530a2ff2" text="How can you tell the difference between two different atoms just by looking at the light they give of when heated?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7c1fb2a8-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="7c1fb2a9-60db-11de-b8d8-4d98530a2ff2" text="Different atoms have different colors, so they give off different light." />
+                        <OTText id="7c1fb2aa-60db-11de-b8d8-4d98530a2ff2" text="Different atoms require different amounts of heat to give off light." />
+                        <OTText id="7c1fb2ab-60db-11de-b8d8-4d98530a2ff2" text="Some atoms don't give off any light, and others do." />
+                        <OTText id="7c1fb2ac-60db-11de-b8d8-4d98530a2ff2" text="Each type of atom has a unique set of energy levels and gives off a unique set of photons." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7c1fb2ac-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7d93b50d-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page12.cml">
+                  <prompt>
+                    <OTText id="7d93b50e-60db-11de-b8d8-4d98530a2ff2" text="When two balls collide with each other they bounce away from each other with the same kinetic energy they had when they collided. This can happen for atoms too. However, sometimes the atoms have less kinetic energy after a collision. Explain what must have happened to the lost kinetic energy." />
+                  </prompt>
+                  <input>
+                    <OTText id="7d93b50f-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7d93dc21-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page12.cml">
+                  <prompt>
+                    <OTText id="7d93dc22-60db-11de-b8d8-4d98530a2ff2" text="Give one reason it would take more energy to excite on kind of atom when compared to another?" />
+                  </prompt>
+                  <input>
+                    <OTText id="7d93dc23-60db-11de-b8d8-4d98530a2ff2" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7d940335-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page12.cml">
+                  <prompt>
+                    <OTText id="7d940336-60db-11de-b8d8-4d98530a2ff2" text="If an atom had an energy diagram that looked like the image on the left, which transition between levels would cause the atoms to give off its lowest energy photon?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7d940337-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="7d940338-60db-11de-b8d8-4d98530a2ff2" text="From level 4⇝3." />
+                        <OTText id="7d940339-60db-11de-b8d8-4d98530a2ff2" text="From level 3⇝4." />
+                        <OTText id="7d942a4a-60db-11de-b8d8-4d98530a2ff2" text="From level 4⇝1." />
+                        <OTText id="7d942a4b-60db-11de-b8d8-4d98530a2ff2" text="From level 2⇝3." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7d940338-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7d9514ac-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page12.cml">
+                  <prompt>
+                    <OTText id="7d9514ad-60db-11de-b8d8-4d98530a2ff2" text="If an atom goes from a very high energy state to a very low energy state what kind of photon must be emitted?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7d9514ae-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="7d953bbf-60db-11de-b8d8-4d98530a2ff2" text="A very high energy photon equal to the difference in the energy levels of the atom." />
+                        <OTText id="7d953bc0-60db-11de-b8d8-4d98530a2ff2" text="A very low energy photon equal to the low energy state of the atom." />
+                        <OTText id="7d953bc1-60db-11de-b8d8-4d98530a2ff2" text="A very high energy photon equal to the high energy state of the atom." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7d953bbf-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7d9562d2-60db-11de-b8d8-4d98530a2ff2" name="http://ri-itest.concord.org/SAMActivities/EnergeticStatesAndPhotons/EnergeticStatesAndPhotons_v4/page12.cml">
+                  <prompt>
+                    <OTText id="7d9562d3-60db-11de-b8d8-4d98530a2ff2" text="When an atom absorbs a photon it is very picky about which photons can excite it. Why is this?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7d9562d4-60db-11de-b8d8-4d98530a2ff2" selectionUI="0">
+                      <choices>
+                        <OTText id="7d9562d5-60db-11de-b8d8-4d98530a2ff2" text="The photon has to be the same color as the atom." />
+                        <OTText id="7d9589e6-60db-11de-b8d8-4d98530a2ff2" text="The energy of the photon has to be just right in order to get the atom into one of its predetermined excited states." />
+                        <OTText id="7d9589e7-60db-11de-b8d8-4d98530a2ff2" text="The photon has to be the right size for an atom to be able to absorb it." />
+                        <OTText id="7d9589e8-60db-11de-b8d8-4d98530a2ff2" text="It depends on the direction the atom is moving. If it moves in the right direction it can absorb any photon." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7d9589e6-60db-11de-b8d8-4d98530a2ff2" />
+                  </correctAnswer>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

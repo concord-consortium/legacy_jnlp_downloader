@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="f6a74bb0-81e0-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="9b783f61-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page1.cml">
+                  <prompt>
+                    <OTText id="9b7902b2-60f0-11de-bf99-df165f7ab769" text="Which of the following are other factors that might affect the motion of the ball, so they should be considered or calculated by the computer model (check ALL that apply):" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9b7a1423-60f0-11de-bf99-df165f7ab769" selectionUI="1">
+                      <choices>
+                        <OTText id="9b7b9ac4-60f0-11de-bf99-df165f7ab769" text="the speed of the ball" />
+                        <OTText id="9b7b9ac5-60f0-11de-bf99-df165f7ab769" text="the friction between the ball and its environment" />
+                        <OTText id="9b7b9ac6-60f0-11de-bf99-df165f7ab769" text="the elasticity or (bounciness) of the ball" />
+                        <OTText id="9b7b9ac7-60f0-11de-bf99-df165f7ab769" text="the position of the ball at any particular time" />
+                        <OTText id="9b7bc1d8-60f0-11de-bf99-df165f7ab769" text="the color of the ball" />
+                        <OTText id="9b7bc1d9-60f0-11de-bf99-df165f7ab769" text="the effect of gravity" />
+                        <OTText id="9b7c5e1a-60f0-11de-bf99-df165f7ab769" text="the angle the ball will bounce off of when colliding with other objects" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="9b7b9ac4-60f0-11de-bf99-df165f7ab769" />
+                        <object refid="9b7b9ac5-60f0-11de-bf99-df165f7ab769" />
+                        <object refid="9b7b9ac6-60f0-11de-bf99-df165f7ab769" />
+                        <object refid="9b7b9ac7-60f0-11de-bf99-df165f7ab769" />
+                        <object refid="9b7bc1d9-60f0-11de-bf99-df165f7ab769" />
+                        <object refid="9b7c5e1a-60f0-11de-bf99-df165f7ab769" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9e3367cc-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page3.cml">
+                  <prompt>
+                    <OTText id="9e3367cd-60f0-11de-bf99-df165f7ab769" text="What can you tell about the velocity of the ball by watching the arrow attached to it?" />
+                  </prompt>
+                  <input>
+                    <OTText id="9e3367ce-60f0-11de-bf99-df165f7ab769" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9e33b5f0-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page3.cml">
+                  <prompt>
+                    <OTText id="9e33b5f1-60f0-11de-bf99-df165f7ab769" text="How does the color of the ball correspond with the graph of kinetic energy on the right? hint" />
+                  </prompt>
+                  <input>
+                    <OTText id="9e33b5f2-60f0-11de-bf99-df165f7ab769" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9fda8824-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page4.cml">
+                  <prompt>
+                    <OTText id="9fdaaf35-60f0-11de-bf99-df165f7ab769" text="PEAK of bounce." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9fdaaf36-60f0-11de-bf99-df165f7ab769" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9fdb4b77-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page4.cml">
+                  <prompt>
+                    <OTText id="9fdb7288-60f0-11de-bf99-df165f7ab769" text="MIDDLE of bounce." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9fdb7289-60f0-11de-bf99-df165f7ab769" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9fdc0eca-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page4.cml">
+                  <prompt>
+                    <OTText id="9fdc0ecb-60f0-11de-bf99-df165f7ab769" text="BOTTOM of bounce." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9fdc0ecc-60f0-11de-bf99-df165f7ab769" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9fdc35dd-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page4.cml">
+                  <prompt>
+                    <OTText id="9fdc35de-60f0-11de-bf99-df165f7ab769" text="When does the ball have the MOST kinetic energy?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9fdc35df-60f0-11de-bf99-df165f7ab769" selectionUI="0">
+                      <choices>
+                        <OTText id="9fdc35e0-60f0-11de-bf99-df165f7ab769" text="at the peak of a bounce" />
+                        <OTText id="9fdc35e1-60f0-11de-bf99-df165f7ab769" text="in the middle of a bounce" />
+                        <OTText id="9fdc35e2-60f0-11de-bf99-df165f7ab769" text="near the bottom of a bounce" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9fdc35e2-60f0-11de-bf99-df165f7ab769" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9fdc5cf3-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page4.cml">
+                  <prompt>
+                    <OTText id="9fdc5cf4-60f0-11de-bf99-df165f7ab769" text="When does the ball have the LEAST kinetic energy?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9fdc5cf5-60f0-11de-bf99-df165f7ab769" selectionUI="0">
+                      <choices>
+                        <OTText id="9fdc5cf6-60f0-11de-bf99-df165f7ab769" text="at the peak of a bounce" />
+                        <OTText id="9fdc5cf7-60f0-11de-bf99-df165f7ab769" text="in the middle of a bounce" />
+                        <OTText id="9fdc5cf8-60f0-11de-bf99-df165f7ab769" text="near the bottom of a bounce" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9fdc5cf6-60f0-11de-bf99-df165f7ab769" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a178cee9-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page5.cml">
+                  <prompt>
+                    <OTText id="a178ceea-60f0-11de-bf99-df165f7ab769" text="What is similar and what is different about the way the ball bounces on Earth and on the Moon?" />
+                  </prompt>
+                  <input>
+                    <OTText id="a178f5fb-60f0-11de-bf99-df165f7ab769" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a30e3bfd-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page6.cml">
+                  <prompt>
+                    <OTText id="a30e3bfe-60f0-11de-bf99-df165f7ab769" text="The kinetic energy of atoms:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a30e3bff-60f0-11de-bf99-df165f7ab769" selectionUI="0">
+                      <choices>
+                        <OTText id="a30e3c00-60f0-11de-bf99-df165f7ab769" text="slowly decreases" />
+                        <OTText id="a30e3c01-60f0-11de-bf99-df165f7ab769" text="stays the same" />
+                        <OTText id="a30e3c02-60f0-11de-bf99-df165f7ab769" text="changes randomly" />
+                        <OTText id="a30e6313-60f0-11de-bf99-df165f7ab769" text="slowly increases" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a30e3c01-60f0-11de-bf99-df165f7ab769" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a30e6314-60f0-11de-bf99-df165f7ab769" name="http://ri-itest.concord.org/SAMActivities/IntroToModeling/IntroToModeling_v3/page6.cml">
+                  <prompt>
+                    <OTText id="a30e6315-60f0-11de-bf99-df165f7ab769" text="Gravity affects atoms in the following way:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a30e6316-60f0-11de-bf99-df165f7ab769" selectionUI="0">
+                      <choices>
+                        <OTText id="a30e8a27-60f0-11de-bf99-df165f7ab769" text="gravity seems to make atoms fall" />
+                        <OTText id="a30e8a28-60f0-11de-bf99-df165f7ab769" text="gravity seems to make atoms rise" />
+                        <OTText id="a30e8a29-60f0-11de-bf99-df165f7ab769" text="gravity seems to have no effect" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a30e8a29-60f0-11de-bf99-df165f7ab769" />
+                  </correctAnswer>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="481613f0-e99c-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="700" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="15ca9a3c-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page1.cml">
+                  <prompt>
+                    <OTText id="15cc960d-e99d-11de-b379-1f88ed98ebea" text="Take a snapshot that you think best illustrates the bonds that hold the two strands of DNA together in a double helix." />
+                  </prompt>
+                  <input>
+                    <OTImage id="15ceb8ee-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="15d0187f-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page1.cml">
+                  <prompt>
+                    <OTText id="15d01880-e99d-11de-b379-1f88ed98ebea" text="A DNA nucleotide from one strand pairs with a specific nucleotide on the other strand. Take a snapshot showing which nucleotide pairs with cytosine (C). Use the annotation tools to indicate this nucleotide." />
+                  </prompt>
+                  <input>
+                    <OTImage id="15d03f91-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="426b50d2-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page2.cml">
+                  <prompt>
+                    <OTText id="426b50d3-e99d-11de-b379-1f88ed98ebea" text="In this model, the bottom DNA strand is transcribed. Which DNA strand is most similar to the RNA strand?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="426b50d4-e99d-11de-b379-1f88ed98ebea" selectionUI="0">
+                      <choices>
+                        <OTText id="426c3b35-e99d-11de-b379-1f88ed98ebea" text="The top DNA strand." />
+                        <OTText id="426c3b36-e99d-11de-b379-1f88ed98ebea" text="The bottom DNA strand." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="426c3b35-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="426d73b7-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page2.cml">
+                  <prompt>
+                    <OTText id="426d73b8-e99d-11de-b379-1f88ed98ebea" text="A group of three nucleotides codes for one amino acid. Notice the black tick marks above the DNA strand showing these triplet groups, which are called codons. How many amino acids are coded for by the strand in the model above?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="426d73b9-e99d-11de-b379-1f88ed98ebea" selectionUI="0">
+                      <choices>
+                        <OTText id="426d9aca-e99d-11de-b379-1f88ed98ebea" text="3." />
+                        <OTText id="426d9acb-e99d-11de-b379-1f88ed98ebea" text="10." />
+                        <OTText id="426d9acc-e99d-11de-b379-1f88ed98ebea" text="20." />
+                        <OTText id="426d9acd-e99d-11de-b379-1f88ed98ebea" text="30." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="426d9acb-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="426dc1de-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page2.cml">
+                  <prompt>
+                    <OTText id="426dc1df-e99d-11de-b379-1f88ed98ebea" text="From using the model above, you should now know the &quot;rules&quot; for which RNA nucleotide pairs with each DNA nucleotide. List them here." />
+                  </prompt>
+                  <input>
+                    <OTText id="426dc1e0-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="426de8f2-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page2.cml">
+                  <prompt>
+                    <OTText id="426de8f3-e99d-11de-b379-1f88ed98ebea" text="If six bases on the template strand of DNA are AGTAAC, what are the six bases on the complementary section of the RNA?" />
+                  </prompt>
+                  <input>
+                    <OTText id="426de8f4-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="4c822bd6-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page3.cml">
+                  <prompt>
+                    <OTText id="4c822bd7-e99d-11de-b379-1f88ed98ebea" text="Click the &quot;Translate step by step&quot; buttton and describe each step as the RNA is translated." />
+                  </prompt>
+                  <input>
+                    <OTText id="4c822bd8-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="4c8252ea-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page3.cml">
+                  <prompt>
+                    <OTText id="4c8252eb-e99d-11de-b379-1f88ed98ebea" text="Compare the sequence and shape of both proteins that are formed." />
+                  </prompt>
+                  <input>
+                    <OTText id="4c8252ec-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="4fa787be-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page4.cml">
+                  <prompt>
+                    <OTText id="4fa787bf-e99d-11de-b379-1f88ed98ebea" text="Insert a snapshot of the protein you translated." />
+                  </prompt>
+                  <input>
+                    <OTImage id="4fa787c0-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="4fa787c1-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page4.cml">
+                  <prompt>
+                    <OTText id="4fa787c2-e99d-11de-b379-1f88ed98ebea" text="What is the function of the final codon in the mRNA of this model?" />
+                  </prompt>
+                  <input>
+                    <OTText id="4fa787c3-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="54aaa455-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page5.cml">
+                  <prompt>
+                    <OTText id="54aaa456-e99d-11de-b379-1f88ed98ebea" text="Make a prediction: which mutation types do you think will most likely cause the biggest changes in the translated protein? (Check ALL that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="54aaa457-e99d-11de-b379-1f88ed98ebea" selectionUI="1">
+                      <choices>
+                        <OTText id="54aacb68-e99d-11de-b379-1f88ed98ebea" text="substitution" />
+                        <OTText id="54aaf279-e99d-11de-b379-1f88ed98ebea" text="insertion" />
+                        <OTText id="54aaf27a-e99d-11de-b379-1f88ed98ebea" text="deletion" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="54aaf279-e99d-11de-b379-1f88ed98ebea" />
+                        <object refid="54aaf27a-e99d-11de-b379-1f88ed98ebea" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="54ab8ebc-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page5.cml">
+                  <prompt>
+                    <OTText id="54ab8ebd-e99d-11de-b379-1f88ed98ebea" text="Explain the reasoning behind your prediction. (In the rest of this activity, you will learn how to test this prediction.)" />
+                  </prompt>
+                  <input>
+                    <OTText id="54ab8ebe-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="568271a0-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page6.cml">
+                  <prompt>
+                    <OTText id="568271a1-e99d-11de-b379-1f88ed98ebea" text="Challenge 1: Insert the snapshot image of the protein synthesized before the mutation." />
+                  </prompt>
+                  <input>
+                    <OTImage id="568271a2-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="568298b3-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page6.cml">
+                  <prompt>
+                    <OTText id="568298b4-e99d-11de-b379-1f88ed98ebea" text="Challenge 1: Insert the snapshot image of the protein after mutation." />
+                  </prompt>
+                  <input>
+                    <OTImage id="5682bfc5-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5682bfc6-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page6.cml">
+                  <prompt>
+                    <OTText id="5682e6d7-e99d-11de-b379-1f88ed98ebea" text="Challenge 2: Place an image of a protein here that has one of the original hydrophobic amino acids changed to another by a substitution mutation." />
+                  </prompt>
+                  <input>
+                    <OTImage id="5682e6d8-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="56830de9-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page6.cml">
+                  <prompt>
+                    <OTText id="56830dea-e99d-11de-b379-1f88ed98ebea" text="Some substitution mutations result in a malfunctioning protein, but others do not. What might be the reason for this?" />
+                  </prompt>
+                  <input>
+                    <OTText id="56830deb-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="58d477fd-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page7.cml">
+                  <prompt>
+                    <OTText id="58d477fe-e99d-11de-b379-1f88ed98ebea" text="All of the following codons are used in the model below. Synthesize the protein, and then check off the ones that code for Leu. (Check ALL that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="58d49f0f-e99d-11de-b379-1f88ed98ebea" selectionUI="1">
+                      <choices>
+                        <OTText id="58d49f10-e99d-11de-b379-1f88ed98ebea" text="CUC" />
+                        <OTText id="58d49f11-e99d-11de-b379-1f88ed98ebea" text="CUA" />
+                        <OTText id="58d49f12-e99d-11de-b379-1f88ed98ebea" text="CUU" />
+                        <OTText id="58d4c623-e99d-11de-b379-1f88ed98ebea" text="CCU" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="58d49f10-e99d-11de-b379-1f88ed98ebea" />
+                        <object refid="58d49f11-e99d-11de-b379-1f88ed98ebea" />
+                        <object refid="58d49f12-e99d-11de-b379-1f88ed98ebea" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="58d4ed35-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page7.cml">
+                  <prompt>
+                    <OTText id="58d4ed36-e99d-11de-b379-1f88ed98ebea" text="Enter the original codon:" />
+                  </prompt>
+                  <input>
+                    <OTText id="58d4ed37-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="58d4ed38-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="58d51449-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page7.cml">
+                  <prompt>
+                    <OTText id="58d5144a-e99d-11de-b379-1f88ed98ebea" text="Enter the mutated codon:" />
+                  </prompt>
+                  <input>
+                    <OTText id="58d5144b-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="58d5144c-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="58d53b5d-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page7.cml">
+                  <prompt>
+                    <OTText id="58d53b5e-e99d-11de-b379-1f88ed98ebea" text="What amino acid is specified by both codons?" />
+                  </prompt>
+                  <input>
+                    <OTText id="58d5626f-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="58d56270-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="5ce08a71-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page8.cml">
+                  <prompt>
+                    <OTText id="5ce0b182-e99d-11de-b379-1f88ed98ebea" text="Drag a snapshot image that shows the mutated protein." />
+                  </prompt>
+                  <input>
+                    <OTImage id="5ce0ffa3-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ce126b4-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page8.cml">
+                  <prompt>
+                    <OTText id="5ce14dc5-e99d-11de-b379-1f88ed98ebea" text="Compare the effects of a mutation that causes an amino acid change with a mutation that causes a stop codon. Which do you think would affect the protein more? Why?" />
+                  </prompt>
+                  <input>
+                    <OTText id="5ce14dc6-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ef5d5e8-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page9.cml">
+                  <prompt>
+                    <OTText id="5ef5fcf9-e99d-11de-b379-1f88ed98ebea" text="Take a snapshot image that shows the original protein before mutation." />
+                  </prompt>
+                  <input>
+                    <OTImage id="5ef5fcfa-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ef6240b-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page9.cml">
+                  <prompt>
+                    <OTText id="5ef6240c-e99d-11de-b379-1f88ed98ebea" text="Take a snapshot image that shows the mutant protein resulting from the frame-shift mutation." />
+                  </prompt>
+                  <input>
+                    <OTImage id="5ef6240d-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ef64b1e-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page9.cml">
+                  <prompt>
+                    <OTText id="5ef6722f-e99d-11de-b379-1f88ed98ebea" text="Why do insertion mutations have a bigger effect on the protein than substitution mutations?" />
+                  </prompt>
+                  <input>
+                    <OTText id="5ef67230-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ef69942-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page9.cml">
+                  <prompt>
+                    <OTText id="5ef6c053-e99d-11de-b379-1f88ed98ebea" text="Take a snapshot image that shows the mutant protein that is not the result of a frame-shift." />
+                  </prompt>
+                  <input>
+                    <OTImage id="5ef6c054-e99d-11de-b379-1f88ed98ebea" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ef6e765-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page9.cml">
+                  <prompt>
+                    <OTText id="5ef6e766-e99d-11de-b379-1f88ed98ebea" text="How did you make insertion and/or deletion mutations that did not cause a frame-shift?" />
+                  </prompt>
+                  <input>
+                    <OTText id="5ef6e767-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="61956009-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page10.cml">
+                  <prompt>
+                    <OTText id="6195600a-e99d-11de-b379-1f88ed98ebea" text="The process by which the genetic code of DNA is copied into a strand of RNA is called" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="6195871b-e99d-11de-b379-1f88ed98ebea" selectionUI="0">
+                      <choices>
+                        <OTText id="6195871c-e99d-11de-b379-1f88ed98ebea" text="translation." />
+                        <OTText id="6195871d-e99d-11de-b379-1f88ed98ebea" text="transcription." />
+                        <OTText id="6195871e-e99d-11de-b379-1f88ed98ebea" text="transformation." />
+                        <OTText id="6195871f-e99d-11de-b379-1f88ed98ebea" text="replication." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="6195871d-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="61970cc0-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page10.cml">
+                  <prompt>
+                    <OTText id="61970cc1-e99d-11de-b379-1f88ed98ebea">
+                      <text>Which one of the following is the mRNA made from the following DNA sequence:
+TAGTTTAGACGATG</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTChoice id="619733d2-e99d-11de-b379-1f88ed98ebea" selectionUI="0">
+                      <choices>
+                        <OTText id="619733d3-e99d-11de-b379-1f88ed98ebea" text="TAGTTTAGACGATC" />
+                        <OTText id="619733d4-e99d-11de-b379-1f88ed98ebea" text="UAGUUUAGACGAUC" />
+                        <OTText id="619733d5-e99d-11de-b379-1f88ed98ebea" text="AUCAAAUCUGCUAC" />
+                        <OTText id="619733d6-e99d-11de-b379-1f88ed98ebea" text="UACUUUACAGCAUC" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="619733d5-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="61975ae7-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page10.cml">
+                  <prompt>
+                    <OTText id="61975ae8-e99d-11de-b379-1f88ed98ebea" text="Use the terms DNA, RNA, codon, and protein to explain the connections between genetic information and proteins." />
+                  </prompt>
+                  <input>
+                    <OTText id="61975ae9-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="619781fb-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page10.cml">
+                  <prompt>
+                    <OTText id="6197a90c-e99d-11de-b379-1f88ed98ebea">
+                      <text>How many nucleotides would be needed to code for a protein with the following amino acid sequence? 
+
+Ala-Ala-Met-Ile-Leu-Val-Phe-Tyr</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTChoice id="6197a90d-e99d-11de-b379-1f88ed98ebea" selectionUI="0">
+                      <choices>
+                        <OTText id="6197a90e-e99d-11de-b379-1f88ed98ebea" text="8." />
+                        <OTText id="6197a90f-e99d-11de-b379-1f88ed98ebea" text="16." />
+                        <OTText id="6197a910-e99d-11de-b379-1f88ed98ebea" text="24." />
+                        <OTText id="6197a911-e99d-11de-b379-1f88ed98ebea" text="32." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="6197a910-e99d-11de-b379-1f88ed98ebea" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6197d022-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page10.cml">
+                  <prompt>
+                    <OTText id="6197d023-e99d-11de-b379-1f88ed98ebea" text="In cells that have a nucleus, the DNA is not able to leave the nucleus. How does the information in DNA make its way out of the nucleus so that it can be used in making proteins?" />
+                  </prompt>
+                  <input>
+                    <OTText id="6197d024-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="6197f736-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page10.cml">
+                  <prompt>
+                    <OTText id="6197f737-e99d-11de-b379-1f88ed98ebea" text="How can a mutation have no effect?" />
+                  </prompt>
+                  <input>
+                    <OTText id="6197f738-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="6198455a-e99d-11de-b379-1f88ed98ebea" name="http://ri-itest.concord.org/SAMActivities/DNAToProteins/DNAToProteins_v4/page10.cml">
+                  <prompt>
+                    <OTText id="6198455b-e99d-11de-b379-1f88ed98ebea" text="Which types of mutations, among those you created in this activity, are more likely to cause the biggest problems due to the resulting protein? Why?" />
+                  </prompt>
+                  <input>
+                    <OTText id="6198455c-e99d-11de-b379-1f88ed98ebea" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

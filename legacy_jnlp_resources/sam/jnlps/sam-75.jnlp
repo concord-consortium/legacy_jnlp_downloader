@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="http://jars.dev.concord.org/dev">
+  <information>
+    <title>RI-ITEST</title>
+    <vendor>Concord Consortium</vendor>
+    <homepage href="http://www.concord.org/"/>
+    <description>The Concord software for running an activity which has been authored in the DIY system.</description>
+    <icon width="64" href="http://itsidiy.concord.org/images/butterfly64x64.png" height="64"/>
+  </information>
+<security>
+    <all-permissions/>
+  </security>
+<resources>
+<j2se version="1.5+" max-heap-size="128m" initial-heap-size="32m"/>
+
+<jar href="org/concord/otrunk-mw/otrunk-mw__V0.1.0-20100217.160922-977.jar"/>
+<jar href="org/concord/framework/framework__V0.1.0-20100122.201208-427.jar"/>
+<jar href="org/concord/otrunk/otrunk__V0.2.0-20100217.160825-86.jar"/>
+<jar href="org/concord/frameworkview/frameworkview__V0.1.0-20100217.160056-263.jar"/>
+<jar href="org/concord/swing/swing__V0.1.0-20100217.151410-256.jar"/>
+<jar href="jug/jug/jug__V1.1.2.jar"/>
+<jar href="jdom/jdom/jdom__V1.0.jar"/>
+<jar href="org/concord/apple-support/apple-support__V0.1.0-20100122.201405-193.jar"/>
+<jar href="org/concord/utilities/response-cache/response-cache__V0.1.0-20100201.200105-95.jar"/>
+<jar href="org/concord/modeler/mw/mw__V2.1.0-20101125.163234-417.jar"/>
+<jar href="org/concord/data/data__V0.2.0-20100217.160012-136.jar"/>
+<jar href="org/concord/otrunk-ui/otrunk-ui__V0.1.0-20100217.160342-816.jar"/>
+<jar href="org/concord/external/sound/jlayer/jlayer__V1.0.jar"/>
+<jar href="org/concord/external/sound/mp3spi/mp3spi__V1.9.4.jar"/>
+<jar href="org/concord/external/sound/tritonus/tritonus__V0.1.jar"/>
+<jar href="org/concord/external/ekit/ekit__V1.0.jar"/>
+<jar href="org/concord/loader/loader__V0.1.0-20100122.201537-188.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-script-api/ot-script-api__V0.1.0-20100122.202119-483.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-bsf/ot-bsf__V0.1.0-20100123.092443-497.jar"/>
+<jar href="bsf/bsf/bsf__V2.4.0.jar"/>
+<jar href="commons-logging/commons-logging/commons-logging__V1.0.4.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-javascript/ot-javascript__V0.1.0-20100123.092503-493.jar"/>
+<jar href="rhino/js/js__V1.6R5.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-script-view/ot-script-view__V0.1.0-20100123.092554-454.jar"/>
+<jar href="org/telscenter/sail-otrunk/sail-otrunk__V0.1.0-20091028.054139-1083.jar"/>
+<jar href="net/sf/sail/sail-core/sail-core__V0.4.5-20100122.203714-12.jar"/>
+<jar href="commons-beanutils/commons-beanutils/commons-beanutils__V1.7.0.jar"/>
+<jar href="commons-lang/commons-lang/commons-lang__V2.0.jar"/>
+<jar href="commons-io/commons-io/commons-io__V1.1.jar"/>
+<jar href="log4j/log4j/log4j__V1.2.8.jar"/>
+<jar href="script/jsr223/jsr223__V1.0.jar"/>
+<jar href="xstream/xstream/xstream__V1.1.2.jar"/>
+<jar href="net/sf/sail/sail-data-emf/sail-data-emf__V0.1.0-20100217.160207-51.jar" main="true"/>
+<jar href="org/eclipse/emf/ecore/ecore__V2.2.0.jar"/>
+<jar href="org/eclipse/emf/common/common__V2.2.0.jar"/>
+<jar href="org/eclipse/emf/ecore-xmi/ecore-xmi__V2.2.0.jar"/>
+
+<property name="maven.jnlp.version" value="ri-itest-sds-0.1.0-20100217.161609c"/>
+
+
+
+<property name="otrunk.view.frame_title" value="RI-ITEST DIY - 75: Intermolecular Attractions (v3)"/></resources>
+<application-desc main-class="net.sf.sail.emf.launch.EMFLauncher2">
+   <argument>http://models-resources.concord.org/legacy_jnlp_resources/sam/configs/sam-75-config.xml</argument>
+</application-desc></jnlp>

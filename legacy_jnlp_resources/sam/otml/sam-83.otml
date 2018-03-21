@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="ae9b6310-81e0-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="70196d07-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page2.cml">
+                  <prompt>
+                    <OTText id="701a3058-61b6-11de-800d-0739ba62ff4f" text="Which atoms are found in all of the proteins?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="701cc869-61b6-11de-800d-0739ba62ff4f" selectionUI="1">
+                      <choices>
+                        <OTText id="701d64aa-61b6-11de-800d-0739ba62ff4f" text="Carbon" />
+                        <OTText id="701d64ab-61b6-11de-800d-0739ba62ff4f" text="Hydrogen" />
+                        <OTText id="701d8bbc-61b6-11de-800d-0739ba62ff4f" text="Nitrogen" />
+                        <OTText id="701d8bbd-61b6-11de-800d-0739ba62ff4f" text="Oxygen" />
+                        <OTText id="701d8bbe-61b6-11de-800d-0739ba62ff4f" text="Sulfur" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="701d64aa-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="701d64ab-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="701d8bbc-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="701d8bbd-61b6-11de-800d-0739ba62ff4f" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="701e2800-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page2.cml">
+                  <prompt>
+                    <OTText id="701e2801-61b6-11de-800d-0739ba62ff4f" text="Which element is found in some, but not all proteins?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="701e2802-61b6-11de-800d-0739ba62ff4f" selectionUI="1">
+                      <choices>
+                        <OTText id="701e2803-61b6-11de-800d-0739ba62ff4f" text="Carbon" />
+                        <OTText id="701e2804-61b6-11de-800d-0739ba62ff4f" text="Hydrogen" />
+                        <OTText id="701e4f15-61b6-11de-800d-0739ba62ff4f" text="Nitrogen" />
+                        <OTText id="701e4f16-61b6-11de-800d-0739ba62ff4f" text="Oxygen" />
+                        <OTText id="701e4f17-61b6-11de-800d-0739ba62ff4f" text="Sulfur" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="701e4f17-61b6-11de-800d-0739ba62ff4f" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="72b43c39-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page3.cml">
+                  <prompt>
+                    <OTText id="72b43c3a-61b6-11de-800d-0739ba62ff4f" text="Is polyethylene (above) a homo- or heteropolymer? Explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="72b43c3b-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="72b4634d-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page3.cml">
+                  <prompt>
+                    <OTText id="72b4634e-61b6-11de-800d-0739ba62ff4f" text="Take a snapshot of your homopolymer and drag it in to the box below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="72b48a5f-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="72b4ff90-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page3.cml">
+                  <prompt>
+                    <OTText id="72b4ff91-61b6-11de-800d-0739ba62ff4f" text="Take a snapshot of your heteropolymer and drag it into the box below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="72b4ff92-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="72b54db3-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page3.cml">
+                  <prompt>
+                    <OTText id="72b54db4-61b6-11de-800d-0739ba62ff4f" text="Why do scientists call proteins heteropolymers?" />
+                  </prompt>
+                  <input>
+                    <OTText id="72b54db5-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="76312e07-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page4.cml">
+                  <prompt>
+                    <OTText id="76315518-61b6-11de-800d-0739ba62ff4f" text="Large side chain:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="76315519-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7631551a-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page4.cml">
+                  <prompt>
+                    <OTText id="7631551b-61b6-11de-800d-0739ba62ff4f" text="Polar side chain:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="7631551c-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="76317c2d-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page4.cml">
+                  <prompt>
+                    <OTText id="76317c2e-61b6-11de-800d-0739ba62ff4f" text="Nonpolar side chain:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="76317c2f-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7631a240-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page4.cml">
+                  <prompt>
+                    <OTText id="7631a241-61b6-11de-800d-0739ba62ff4f" text="Charged side chain:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="7631a242-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="78528673-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page5.cml">
+                  <prompt>
+                    <OTText id="78528674-61b6-11de-800d-0739ba62ff4f" text="If the hydrogen bonds could not form within the oval area, how would that affect the function of the protein?" />
+                  </prompt>
+                  <input>
+                    <OTText id="78528675-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7852ad87-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page5.cml">
+                  <prompt>
+                    <OTText id="7852ad88-61b6-11de-800d-0739ba62ff4f" text="Place the snapshot of the protein with half hydrophobic and half hydrophilic amino acids. Point out how the amino acids help determine the shape of the folded protein." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7852d499-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7852d49a-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page5.cml">
+                  <prompt>
+                    <OTText id="7852d49b-61b6-11de-800d-0739ba62ff4f" text="Imagine you are one of the hydrophobic amino acids. What do you experience as the chain folds in water? Describe your interactions with other amino acids and with water molecules." />
+                  </prompt>
+                  <input>
+                    <OTText id="7852d49c-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="79e0797e-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page6.cml">
+                  <prompt>
+                    <OTText id="79e0797f-61b6-11de-800d-0739ba62ff4f" text="Place the snapshot of the unaltered protein after it has folded in the box below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="79e07980-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="79e07981-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page6.cml">
+                  <prompt>
+                    <OTText id="79e07982-61b6-11de-800d-0739ba62ff4f" text="Create a protein with a different shape by changing a single amino acid. Take a snapshot and drag it here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="79e07983-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7bd6cb44-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7bd6cb45-61b6-11de-800d-0739ba62ff4f" text="The order of the nucleotide monomers in DNA carries genetic information. Write the letters of the nucleotides in the DNA fragment above in sequence, from #1 to #12, below. (Hint ❏)" />
+                  </prompt>
+                  <input>
+                    <OTText id="7bd6cb46-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7bd6f258-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7bd6f259-61b6-11de-800d-0739ba62ff4f" text="Which components are the same in all the DNA nucleotide monomers? (Hint ❏)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7bd6f25a-61b6-11de-800d-0739ba62ff4f" selectionUI="1">
+                      <choices>
+                        <OTText id="7bd6f25b-61b6-11de-800d-0739ba62ff4f" text="the sugar" />
+                        <OTText id="7bd7196c-61b6-11de-800d-0739ba62ff4f" text="the phosphate" />
+                        <OTText id="7bd7196d-61b6-11de-800d-0739ba62ff4f" text="the base" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="7bd6f25b-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="7bd7196c-61b6-11de-800d-0739ba62ff4f" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7bd7407f-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7bd74080-61b6-11de-800d-0739ba62ff4f" text="Which components serve to link the DNA nucleotide monomers together into a copolymer?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7bd74081-61b6-11de-800d-0739ba62ff4f" selectionUI="1">
+                      <choices>
+                        <OTText id="7bd74082-61b6-11de-800d-0739ba62ff4f" text="the sugar" />
+                        <OTText id="7becc453-61b6-11de-800d-0739ba62ff4f" text="the phosphate" />
+                        <OTText id="7becc454-61b6-11de-800d-0739ba62ff4f" text="the base" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="7bd74082-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="7becc453-61b6-11de-800d-0739ba62ff4f" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7e0fcb66-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e0fcb67-61b6-11de-800d-0739ba62ff4f" text="The more hydrogen bonds the nucleotides form, the more stable the relationships between them. What is the maximum number of hydrogen bonds you can form? (Count the dotted lines.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7e0fcb68-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="7e0fcb69-61b6-11de-800d-0739ba62ff4f" text="6" />
+                        <OTText id="7e0fcb6a-61b6-11de-800d-0739ba62ff4f" text="5" />
+                        <OTText id="7e0ff27b-61b6-11de-800d-0739ba62ff4f" text="4" />
+                        <OTText id="7e0ff27c-61b6-11de-800d-0739ba62ff4f" text="3" />
+                        <OTText id="7e0ff27d-61b6-11de-800d-0739ba62ff4f" text="2" />
+                        <OTText id="7e10198e-61b6-11de-800d-0739ba62ff4f" text="1" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7e0fcb6a-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7e10198f-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e101990-61b6-11de-800d-0739ba62ff4f" text="Place the snapshot of your arrangement of the molecules that shows the maximal number of dotted lines (representing hydrogen bonds):" />
+                  </prompt>
+                  <input>
+                    <OTImage id="7e101991-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7e1040a2-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e1040a3-61b6-11de-800d-0739ba62ff4f" text="Place the snapshot of your arrangement of the molecules that shows the new strand is created:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="7e1067b4-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7e1067b5-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e1067b6-61b6-11de-800d-0739ba62ff4f" text="Recall the definitions of homopolymer and heteropolymer on Page 3. A DNA molecule is" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7e1067b7-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="7e1067b8-61b6-11de-800d-0739ba62ff4f" text="a homopolymer." />
+                        <OTText id="7e1067b9-61b6-11de-800d-0739ba62ff4f" text="a heteropolymer." />
+                        <OTText id="7e108eca-61b6-11de-800d-0739ba62ff4f" text="not a polymer." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7e1067b9-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="8137714b-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page9.cml">
+                  <prompt>
+                    <OTText id="8137714c-61b6-11de-800d-0739ba62ff4f" text="Which of the following is NOT a factor in complementary base pairing?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="8137985d-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="8137985e-61b6-11de-800d-0739ba62ff4f" text="The sites for the hydrogen bonding on each pair." />
+                        <OTText id="8137985f-61b6-11de-800d-0739ba62ff4f" text="The number of rings on a base pair." />
+                        <OTText id="81379860-61b6-11de-800d-0739ba62ff4f" text="The sizes of the paired bases." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="8137985f-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="8137bf71-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page9.cml">
+                  <prompt>
+                    <OTText id="8137bf72-61b6-11de-800d-0739ba62ff4f" text="Are there equal amounts of thymine (T) and adenine (A) in a DNA double helix? Explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="8137bf73-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="829db815-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page10.cml">
+                  <prompt>
+                    <OTText id="829ddf26-61b6-11de-800d-0739ba62ff4f" text="Is photocopying a document similar to making an RNA strand? Explain how the two processes are alike and how they are different." />
+                  </prompt>
+                  <input>
+                    <OTText id="829ddf27-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="829e0639-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page10.cml">
+                  <prompt>
+                    <OTText id="829e063a-61b6-11de-800d-0739ba62ff4f" text="Place the snapshot of your completed RNA strand." />
+                  </prompt>
+                  <input>
+                    <OTImage id="829e063b-61b6-11de-800d-0739ba62ff4f" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="83cbd7dc-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page11.cml">
+                  <prompt>
+                    <OTText id="83cbfeed-61b6-11de-800d-0739ba62ff4f" text="The information in the first three nucleotides codes for the following amino acid:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="83cbfeee-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="83cbfeef-61b6-11de-800d-0739ba62ff4f" text="K (lysine)" />
+                        <OTText id="83cbfef0-61b6-11de-800d-0739ba62ff4f" text="H (histidine)" />
+                        <OTText id="83cbfef1-61b6-11de-800d-0739ba62ff4f" text="M (methionine)" />
+                        <OTText id="83cbfef2-61b6-11de-800d-0739ba62ff4f" text="S (serine)" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="83cbfef1-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="83cc2603-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page11.cml">
+                  <prompt>
+                    <OTText id="83cc2604-61b6-11de-800d-0739ba62ff4f" text="The function of RNA is to create a protein chain. How is an RNA's structure related to its function?" />
+                  </prompt>
+                  <input>
+                    <OTText id="83cc2605-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="84984fa7-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="84984fa8-61b6-11de-800d-0739ba62ff4f" text="The side chain gives an amino acid its property. Which of the following affects how it interacts with other amino acids and its environment? (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="84984fa9-61b6-11de-800d-0739ba62ff4f" selectionUI="1">
+                      <choices>
+                        <OTText id="84984faa-61b6-11de-800d-0739ba62ff4f" text="The side chain is polar." />
+                        <OTText id="84984fab-61b6-11de-800d-0739ba62ff4f" text="The side chain is nonpolar." />
+                        <OTText id="84984fac-61b6-11de-800d-0739ba62ff4f" text="The side chain is charged." />
+                        <OTText id="84984fad-61b6-11de-800d-0739ba62ff4f" text="The side chain is hydrophobic." />
+                        <OTText id="84984fae-61b6-11de-800d-0739ba62ff4f" text="The side chain is hydrophilic." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="84984faa-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="84984fab-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="84984fac-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="84984fad-61b6-11de-800d-0739ba62ff4f" />
+                        <object refid="84984fae-61b6-11de-800d-0739ba62ff4f" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="849876c0-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="849876c1-61b6-11de-800d-0739ba62ff4f" text="Proteins and nucleic acids are:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="849876c2-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="849876c3-61b6-11de-800d-0739ba62ff4f" text="monomers." />
+                        <OTText id="849876c4-61b6-11de-800d-0739ba62ff4f" text="homopolymers." />
+                        <OTText id="849876c5-61b6-11de-800d-0739ba62ff4f" text="heteropolymers." />
+                        <OTText id="849876c6-61b6-11de-800d-0739ba62ff4f" text="none of the above." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="849876c5-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="84989dd7-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="84989dd8-61b6-11de-800d-0739ba62ff4f" text="Explain the relationship between monomers and polymers using a protein chain as an example." />
+                  </prompt>
+                  <input>
+                    <OTText id="84989dd9-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="84989ddb-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="84989ddc-61b6-11de-800d-0739ba62ff4f" text="Explain the relationship between the sequence of DNA and the primary structure (the sequence) of proteins." />
+                  </prompt>
+                  <input>
+                    <OTText id="8498c4ed-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="8498c4ef-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="8498c4f0-61b6-11de-800d-0739ba62ff4f" text="Which of the following best describes what the two amino acids F (phenylalanine) in the center of the molecule in the picture to the right is experiencing?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="8498c4f1-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="8498c4f2-61b6-11de-800d-0739ba62ff4f" text="They are attracted to the water molecules around them." />
+                        <OTText id="8498c4f3-61b6-11de-800d-0739ba62ff4f" text="They are repelled by the water molecules around them." />
+                        <OTText id="8498ec04-61b6-11de-800d-0739ba62ff4f" text="They are attracted to amino acids I and A." />
+                        <OTText id="8498ec05-61b6-11de-800d-0739ba62ff4f" text="They are not attracted or repelled by water; the water is more attracted to itself." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="8498ec05-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="8498ec06-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="8498ec07-61b6-11de-800d-0739ba62ff4f" text="The function of a protein is determined by all of the following EXCEPT:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="8498ec08-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="8498ec09-61b6-11de-800d-0739ba62ff4f" text="the way the chain folds." />
+                        <OTText id="8498ec0a-61b6-11de-800d-0739ba62ff4f" text="the sequence of the amino acids." />
+                        <OTText id="8499131b-61b6-11de-800d-0739ba62ff4f" text="the backbone of the amino acids." />
+                        <OTText id="8499131c-61b6-11de-800d-0739ba62ff4f" text="the bumps and valleys on the surface." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="8499131b-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="8499131d-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="8499131e-61b6-11de-800d-0739ba62ff4f" text="Nucleic acids carry information for making proteins in:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="8499131f-61b6-11de-800d-0739ba62ff4f" selectionUI="0">
+                      <choices>
+                        <OTText id="84991320-61b6-11de-800d-0739ba62ff4f" text="the sugar portion of the nucleotides." />
+                        <OTText id="84991321-61b6-11de-800d-0739ba62ff4f" text="the sequence of the nucleotides." />
+                        <OTText id="84991322-61b6-11de-800d-0739ba62ff4f" text="the way they fold into a helix." />
+                        <OTText id="84993a33-61b6-11de-800d-0739ba62ff4f" text="the bumps and valleys on the surface of the helix." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="84991321-61b6-11de-800d-0739ba62ff4f" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="84993a34-61b6-11de-800d-0739ba62ff4f" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v3/page12.cml">
+                  <prompt>
+                    <OTText id="84993a35-61b6-11de-800d-0739ba62ff4f" text="How does random motion of molecules play a role in the way RNA and proteins form?" />
+                  </prompt>
+                  <input>
+                    <OTText id="84993a36-61b6-11de-800d-0739ba62ff4f" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="69069f80-81e1-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="5cee5385-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page1.cml">
+                  <prompt>
+                    <OTText id="5cef16d6-5f62-11de-8ee9-d5678c6c64b5" text="Now imagine that some random person walks up and throws one dart at the board. Based on the pattern of holes you've seen from previous players, where will this dart most likely land: hint" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="5cf0eb97-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="5cf160c8-5f62-11de-8ee9-d5678c6c64b5" text="There is no way to tell." />
+                        <OTText id="5cf187d9-5f62-11de-8ee9-d5678c6c64b5" text="Close to the center of the board." />
+                        <OTText id="5cf187da-5f62-11de-8ee9-d5678c6c64b5" text="Out toward the edge of the board." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="5cf187d9-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="5cf1aeeb-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page1.cml">
+                  <prompt>
+                    <OTText id="5cf1aeec-5f62-11de-8ee9-d5678c6c64b5" text="Explain the reasoning behind your prediction:" />
+                  </prompt>
+                  <input>
+                    <OTText id="5cf1aeed-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ff0be1f-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page2.cml">
+                  <prompt>
+                    <OTText id="5ff0be20-5f62-11de-8ee9-d5678c6c64b5" text="Explain why the color of the orbital gets lighter as you move further from the nucleus: (see completed orbital above and to the right)" />
+                  </prompt>
+                  <input>
+                    <OTText id="5ff0be21-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5ff0e533-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page2.cml">
+                  <prompt>
+                    <OTText id="5ff0e534-5f62-11de-8ee9-d5678c6c64b5" text="If you had to bet on where you are most likely to find an electron at any particular point in time, where would it be?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="5ff0e535-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="5ff0e536-5f62-11de-8ee9-d5678c6c64b5" text="Near the nucleus." />
+                        <OTText id="5ff10c47-5f62-11de-8ee9-d5678c6c64b5" text="Away from the nucleus." />
+                        <OTText id="5ff10c48-5f62-11de-8ee9-d5678c6c64b5" text="There is a perfectly even chance of finding an electron anywhere." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="5ff0e536-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="614d67f9-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page3.cml">
+                  <prompt>
+                    <OTText id="614d67fa-5f62-11de-8ee9-d5678c6c64b5" text="Which sub-atomic particle defines the kind of element an atom will be? hint" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="614d67fb-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="614d67fc-5f62-11de-8ee9-d5678c6c64b5" text="electron" />
+                        <OTText id="614d8f0d-5f62-11de-8ee9-d5678c6c64b5" text="proton" />
+                        <OTText id="614d8f0e-5f62-11de-8ee9-d5678c6c64b5" text="neutron" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="614d8f0d-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="614db61f-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page3.cml">
+                  <prompt>
+                    <OTText id="614db620-5f62-11de-8ee9-d5678c6c64b5" text="Which number defines the kind of element an atom will be?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="614db621-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="614db622-5f62-11de-8ee9-d5678c6c64b5" text="mass number" />
+                        <OTText id="614db623-5f62-11de-8ee9-d5678c6c64b5" text="atomic number" />
+                        <OTText id="614db624-5f62-11de-8ee9-d5678c6c64b5" text="a combination of both mass and atomic number" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="614db623-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="614ddd35-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page3.cml">
+                  <prompt>
+                    <OTText id="614ddd36-5f62-11de-8ee9-d5678c6c64b5" text="Explain how you can predict the atomic number and the mass number by using an atom's number of protons and/or neutrons." />
+                  </prompt>
+                  <input>
+                    <OTText id="614ddd37-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="614e0449-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page3.cml">
+                  <prompt>
+                    <OTText id="614e044a-5f62-11de-8ee9-d5678c6c64b5" text="Put a snapshot of your lithium atom here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="614e044b-5f62-11de-8ee9-d5678c6c64b5" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="62efcd6c-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page4.cml">
+                  <prompt>
+                    <OTText id="62efcd6d-5f62-11de-8ee9-d5678c6c64b5" text="What would be the charge on an atom with 7 protons and 4 electrons?" />
+                  </prompt>
+                  <input>
+                    <OTText id="62efcd6e-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="62efcd6f-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="62eff480-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page4.cml">
+                  <prompt>
+                    <OTText id="62eff481-5f62-11de-8ee9-d5678c6c64b5" text="What would be the charge on an atom with 7 protons and 8 electrons?" />
+                  </prompt>
+                  <input>
+                    <OTText id="62eff482-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="62eff483-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="62f01b94-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page4.cml">
+                  <prompt>
+                    <OTText id="62f01b95-5f62-11de-8ee9-d5678c6c64b5" text="An atom is NOT an ion when:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="62f01b96-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="62f01b97-5f62-11de-8ee9-d5678c6c64b5" text="there are no electrons" />
+                        <OTText id="62f01b98-5f62-11de-8ee9-d5678c6c64b5" text="there are an equal number of protons and electrons" />
+                        <OTText id="62f01b99-5f62-11de-8ee9-d5678c6c64b5" text="the number of protons and neutrons cancel out" />
+                        <OTText id="62f01b9a-5f62-11de-8ee9-d5678c6c64b5" text="the atom has no overall charge" />
+                        <OTText id="62f042ab-5f62-11de-8ee9-d5678c6c64b5" text="both B and D" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="62f042ab-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="62f042ac-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page4.cml">
+                  <prompt>
+                    <OTText id="62f042ad-5f62-11de-8ee9-d5678c6c64b5" text="Explain how can you predict the overall charge by knowing an atom's number of protons and electrons." />
+                  </prompt>
+                  <input>
+                    <OTText id="62f042ae-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="6479c8e0-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page5.cml">
+                  <prompt>
+                    <OTText id="6479c8e1-5f62-11de-8ee9-d5678c6c64b5" text="What is different and what is the same between these carbon isotopes? (check all that apply)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="6479c8e2-5f62-11de-8ee9-d5678c6c64b5" selectionUI="1">
+                      <choices>
+                        <OTText id="6479c8e3-5f62-11de-8ee9-d5678c6c64b5" text="the mass number is the same" />
+                        <OTText id="6479c8e4-5f62-11de-8ee9-d5678c6c64b5" text="the atomic number is the same" />
+                        <OTText id="6479c8e5-5f62-11de-8ee9-d5678c6c64b5" text="the mass number is different" />
+                        <OTText id="6479eff6-5f62-11de-8ee9-d5678c6c64b5" text="the atomic number is different" />
+                        <OTText id="6479eff7-5f62-11de-8ee9-d5678c6c64b5" text="the number of protons is the same" />
+                        <OTText id="6479eff8-5f62-11de-8ee9-d5678c6c64b5" text="the number of protons is different" />
+                        <OTText id="6479eff9-5f62-11de-8ee9-d5678c6c64b5" text="the number of neutrons is the same" />
+                        <OTText id="6479effa-5f62-11de-8ee9-d5678c6c64b5" text="the number of neutrons is different" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="6479c8e4-5f62-11de-8ee9-d5678c6c64b5" />
+                        <object refid="6479c8e5-5f62-11de-8ee9-d5678c6c64b5" />
+                        <object refid="6479eff7-5f62-11de-8ee9-d5678c6c64b5" />
+                        <object refid="6479effa-5f62-11de-8ee9-d5678c6c64b5" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="647a652c-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page5.cml">
+                  <prompt>
+                    <OTText id="647a652d-5f62-11de-8ee9-d5678c6c64b5" text="Scientists use the fact that living things have a lot of carbon in them. When they die the radioactive isotope breaks down over time, turning into other elements. By seeing how much of the radioactive carbon is left you can tell how old something is. Which one of these isotopes of carbon is radioactive, and can be used for carbon dating?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="647a652e-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="647a8c3f-5f62-11de-8ee9-d5678c6c64b5" text="carbon-12" />
+                        <OTText id="647a8c40-5f62-11de-8ee9-d5678c6c64b5" text="carbon-13" />
+                        <OTText id="647a8c41-5f62-11de-8ee9-d5678c6c64b5" text="carbon-14" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="647a8c41-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="647ab352-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page5.cml">
+                  <prompt>
+                    <OTText id="647ab353-5f62-11de-8ee9-d5678c6c64b5" text="Try making several stable and radioactive forms of other elements. What is the general rule for creating an atom with a stable nucleus (one that is NOT radioactive)?" />
+                  </prompt>
+                  <input>
+                    <OTText id="647ab354-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="66172546-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page6.cml">
+                  <prompt>
+                    <OTText id="66172547-5f62-11de-8ee9-d5678c6c64b5" text="Click on the energy diagram to determine which orbital this is, and record the name of the orbital below:" />
+                  </prompt>
+                  <input>
+                    <OTText id="66172548-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="66174c59-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6617736a-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page6.cml">
+                  <prompt>
+                    <OTText id="6617736b-5f62-11de-8ee9-d5678c6c64b5" text="Electron orbitals (choose all that are correct):" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="661884dc-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="661884dd-5f62-11de-8ee9-d5678c6c64b5" text="get bigger at higher energies" />
+                        <OTText id="661884de-5f62-11de-8ee9-d5678c6c64b5" text="get smaller at higher energies" />
+                        <OTText id="661884df-5f62-11de-8ee9-d5678c6c64b5" text="stay about the same size regardless of energy" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="661884dd-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="681e8e10-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page7.cml">
+                  <prompt>
+                    <OTText id="681e8e11-5f62-11de-8ee9-d5678c6c64b5" text="In what order do electrons form boron’s orbitals?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="681e8e12-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="681e8e13-5f62-11de-8ee9-d5678c6c64b5" text="from lowest energy to highest" />
+                        <OTText id="681e8e14-5f62-11de-8ee9-d5678c6c64b5" text="from highest energy to lowest" />
+                        <OTText id="681eb525-5f62-11de-8ee9-d5678c6c64b5" text="they randomly form various orbitals" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="681e8e13-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="681edc36-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page7.cml">
+                  <prompt>
+                    <OTText id="681edc37-5f62-11de-8ee9-d5678c6c64b5" text="Which orbital is the one that would give the best estimate of the size of this atom?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="681edc38-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="681edc39-5f62-11de-8ee9-d5678c6c64b5" text="1s" />
+                        <OTText id="681edc3a-5f62-11de-8ee9-d5678c6c64b5" text="2s" />
+                        <OTText id="681edc3b-5f62-11de-8ee9-d5678c6c64b5" text="2p" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="681edc3a-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="681f034c-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page7.cml">
+                  <prompt>
+                    <OTText id="681f034d-5f62-11de-8ee9-d5678c6c64b5" text="Take a snapshot of the boron atom showing all the overlapping orbitals." />
+                  </prompt>
+                  <input>
+                    <OTImage id="681f034e-5f62-11de-8ee9-d5678c6c64b5" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="699157ff-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page8.cml">
+                  <prompt>
+                    <OTText id="69915800-5f62-11de-8ee9-d5678c6c64b5" text="What happens to the size of an atom as you go across the table from left to right. Pick a row (also called a period) and click on each atom, starting from the left." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="69915801-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="69915802-5f62-11de-8ee9-d5678c6c64b5" text="the atoms get bigger" />
+                        <OTText id="69915803-5f62-11de-8ee9-d5678c6c64b5" text="the atoms get smaller" />
+                        <OTText id="69915804-5f62-11de-8ee9-d5678c6c64b5" text="the atoms stay the same size" />
+                        <OTText id="69915805-5f62-11de-8ee9-d5678c6c64b5" text="the size changes randomly" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="69915803-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="69917f16-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page8.cml">
+                  <prompt>
+                    <OTText id="69917f17-5f62-11de-8ee9-d5678c6c64b5" text="What happens to the size of an atom as you go down a column. Pick a column (also called a group) and click on each atom, starting from the top." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="69917f18-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="6991a629-5f62-11de-8ee9-d5678c6c64b5" text="the atoms get bigger" />
+                        <OTText id="6991a62a-5f62-11de-8ee9-d5678c6c64b5" text="the atoms get smaller" />
+                        <OTText id="6991a62b-5f62-11de-8ee9-d5678c6c64b5" text="the atoms stay the same size" />
+                        <OTText id="6991a62c-5f62-11de-8ee9-d5678c6c64b5" text="the size changes randomly" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="6991a629-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6b3d0c3d-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page9.cml">
+                  <prompt>
+                    <OTText id="6b3d334e-5f62-11de-8ee9-d5678c6c64b5" text="What is an orbital? Describe in detail." />
+                  </prompt>
+                  <input>
+                    <OTText id="6b3d334f-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="6b3d5a61-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page9.cml">
+                  <prompt>
+                    <OTText id="6b3d5a62-5f62-11de-8ee9-d5678c6c64b5" text="What would be the charge of an ion with 10 protons and 12 electrons?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="6b3d5a63-5f62-11de-8ee9-d5678c6c64b5" selectionUI="0">
+                      <choices>
+                        <OTText id="6b3d5a64-5f62-11de-8ee9-d5678c6c64b5" text="it would be neutral" />
+                        <OTText id="6b3d5a65-5f62-11de-8ee9-d5678c6c64b5" text="+2" />
+                        <OTText id="6b3d5a66-5f62-11de-8ee9-d5678c6c64b5" text="-2" />
+                        <OTText id="6b3d5a67-5f62-11de-8ee9-d5678c6c64b5" text="22" />
+                        <OTText id="6b3d5a68-5f62-11de-8ee9-d5678c6c64b5" text="10" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="6b3d5a66-5f62-11de-8ee9-d5678c6c64b5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6b3d8179-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page9.cml">
+                  <prompt>
+                    <OTText id="6b3d817a-5f62-11de-8ee9-d5678c6c64b5" text="What is true when comparing these two isotopes? (check all that apply)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="6b3da88b-5f62-11de-8ee9-d5678c6c64b5" selectionUI="1">
+                      <choices>
+                        <OTText id="6b3da88c-5f62-11de-8ee9-d5678c6c64b5" text="they have the same number of protons" />
+                        <OTText id="6b3da88d-5f62-11de-8ee9-d5678c6c64b5" text="they have the same number of neutrons" />
+                        <OTText id="6b3da88e-5f62-11de-8ee9-d5678c6c64b5" text="both are have a -4 charge" />
+                        <OTText id="6b3da88f-5f62-11de-8ee9-d5678c6c64b5" text="they are different elements" />
+                        <OTText id="6b3da890-5f62-11de-8ee9-d5678c6c64b5" text="they are both likely to be radioactive" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="6b3da88d-5f62-11de-8ee9-d5678c6c64b5" />
+                        <object refid="6b3da88f-5f62-11de-8ee9-d5678c6c64b5" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="6b3dcea2-5f62-11de-8ee9-d5678c6c64b5" name="http://ri-itest.concord.org/SAMActivities/AtomicStructure/AtomicStructure_v3/page9.cml">
+                  <prompt>
+                    <OTText id="6b3dcea3-5f62-11de-8ee9-d5678c6c64b5" text="To the right you see part of a periodic table that shows the sizes of the atoms. Describe why it makes sense to start a new row with Li, and then another with Na:" />
+                  </prompt>
+                  <input>
+                    <OTText id="6b3dcea4-5f62-11de-8ee9-d5678c6c64b5" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java class="java.beans.XMLDecoder" version="1.4.0">
+  <object class="net.sf.sail.emf.launch.ConsoleLogServiceImpl">
+  </object>
+  <object class="org.telscenter.sailotrunk.OtmlUrlCurnitProvider">
+    <void property="viewSystem">
+      <boolean>true</boolean>
+    </void>
+  </object>
+  <object class="net.sf.sail.emf.launch.PortfolioManagerService">
+    <void property="portfolioUrlProvider">
+      <object class="net.sf.sail.emf.launch.XmlUrlStringProviderImpl">
+        <void property="urlString">
+          <string>http://static.concord.org/activity-finder/empty-bundle.xml</string>
+        </void>
+      </object>
+    </void>
+  </object>
+  <object class="net.sf.sail.core.service.impl.LauncherServiceImpl">
+    <void property="properties">
+      <object class="java.util.Properties">
+        <void method="setProperty">
+          <string>sds_time</string>
+          <string>1521645204510</string>
+        </void>
+        <void method="setProperty">
+          <string>sailotrunk.otmlurl</string>
+          <string>http://static.concord.org/activity-finder/ER/act5-txmo.otml</string>
+        </void>
+        <void method="setProperty">
+          <string>jnlp_properties</string>
+          <string>otrunk.view.frame_title=ER - 64: Activity 5: The Mystery Plants Mystery (Spring 2011) (TX)</string>
+        </void>
+      </object>
+    </void>
+  </object>
+  <object class="net.sf.sail.emf.launch.EMFSailDataStoreService2"/>
+  <object class="net.sf.sail.core.service.impl.UserServiceImpl">
+    <void property="participants">
+      <void method="add">
+        <object class="net.sf.sail.core.entity.User">
+          <object class="net.sf.sail.core.uuid.UserUuid">
+            <string>d9ef1770-ac32-11dd-97bb-001ec94098a1</string>
+          </object>
+          <string>Anonymous User</string>
+        </object>
+      </void>
+    </void>
+    <void property="userLookupService">
+      <object class="net.sf.sail.core.service.impl.UserLookupServiceImpl"/>
+    </void>
+  </object>
+  <object class="net.sf.sail.core.service.impl.SessionLoadMonitor"/>
+  <object class="net.sf.sail.core.service.impl.SessionManagerImpl"/>
+</java>

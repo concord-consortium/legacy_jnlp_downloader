@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="1eab2590-b9dc-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="700" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="8eb7899c-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page1.cml">
+                  <prompt>
+                    <OTText id="8eb873fd-b9dc-11de-a607-85b5dc871898" text="To dissolve in water a substance must be polar. In the space below, place a snapshot of the substance that is NOT polar. Use the annotation tools to explain how you know the substance is not polar." />
+                  </prompt>
+                  <input>
+                    <OTImage id="8eba96de-b9dc-11de-a607-85b5dc871898" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="8ebb331f-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page1.cml">
+                  <prompt>
+                    <OTText id="8ebb3320-b9dc-11de-a607-85b5dc871898" text="The molecules that ARE dissolved (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="8ebb3321-b9dc-11de-a607-85b5dc871898" selectionUI="1">
+                      <choices>
+                        <OTText id="8ebbf672-b9dc-11de-a607-85b5dc871898" text="are good at attracting water molecules" />
+                        <OTText id="8ebbf673-b9dc-11de-a607-85b5dc871898" text="do not attract water very well" />
+                        <OTText id="8ebbf674-b9dc-11de-a607-85b5dc871898" text="remain grouped together instead of moving apart" />
+                        <OTText id="8ebbf675-b9dc-11de-a607-85b5dc871898" text="move apart by breaking covalent bonds" />
+                        <OTText id="8ebbf676-b9dc-11de-a607-85b5dc871898" text="become surrounded by water" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="8ebbf672-b9dc-11de-a607-85b5dc871898" />
+                        <object refid="8ebbf676-b9dc-11de-a607-85b5dc871898" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="95694098-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page2.cml">
+                  <prompt>
+                    <OTText id="95694099-b9dc-11de-a607-85b5dc871898" text="Which end of the fatty acid do you think would be better at attracting water molecules? Explain your thinking. (You may wish to return to Page 1 to review water attractions)." />
+                  </prompt>
+                  <input>
+                    <OTText id="9569409a-b9dc-11de-a607-85b5dc871898" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="95698ebc-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page2.cml">
+                  <prompt>
+                    <OTText id="95698ebd-b9dc-11de-a607-85b5dc871898" text="What makes the tail of a fatty acid non-polar?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="95698ebe-b9dc-11de-a607-85b5dc871898" selectionUI="0">
+                      <choices>
+                        <OTText id="95698ebf-b9dc-11de-a607-85b5dc871898" text="the presence of electron-greedy oxygen atoms" />
+                        <OTText id="95698ec0-b9dc-11de-a607-85b5dc871898" text="the absence of hydrogen atoms" />
+                        <OTText id="9569b4d1-b9dc-11de-a607-85b5dc871898" text="the equal sharing of electrons" />
+                        <OTText id="9569b4d2-b9dc-11de-a607-85b5dc871898" text="the presence of highly electronegative atoms" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9569b4d1-b9dc-11de-a607-85b5dc871898" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9569dbe3-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page2.cml">
+                  <prompt>
+                    <OTText id="956a02f4-b9dc-11de-a607-85b5dc871898" text="In the space below, place a snapshot of the structure (a micelle) formed by the fatty acids in water." />
+                  </prompt>
+                  <input>
+                    <OTImage id="956a02f5-b9dc-11de-a607-85b5dc871898" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="956a2a06-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page2.cml">
+                  <prompt>
+                    <OTText id="956a2a07-b9dc-11de-a607-85b5dc871898" text="Explain why the lipid head faces outward in a micelle. Make sure your explanation includes both the polar and non-polar parts of the lipid, as well as water in your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="956a2a08-b9dc-11de-a607-85b5dc871898" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a054cfba-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page3.cml">
+                  <prompt>
+                    <OTText id="a054cfbb-b9dc-11de-a607-85b5dc871898" text="In the space below, place a snapshot of the phospholipid. Use the annotation tools to indicate the head, tails, polar areas, and non-polar areas. Hint." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a054cfbc-b9dc-11de-a607-85b5dc871898" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a054f6cd-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page3.cml">
+                  <prompt>
+                    <OTText id="a054f6ce-b9dc-11de-a607-85b5dc871898" text="Which statement about membrane phospholipids is NOT true?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a054f6cf-b9dc-11de-a607-85b5dc871898" selectionUI="0">
+                      <choices>
+                        <OTText id="a0551de0-b9dc-11de-a607-85b5dc871898" text="They associate to form bilayers." />
+                        <OTText id="a0551de1-b9dc-11de-a607-85b5dc871898" text="They have nonpolar &quot;tails.&quot;" />
+                        <OTText id="a0551de2-b9dc-11de-a607-85b5dc871898" text="They have polar &quot;heads.&quot;" />
+                        <OTText id="a0551de3-b9dc-11de-a607-85b5dc871898" text="They allow certain materials to pass by them." />
+                        <OTText id="a0551de4-b9dc-11de-a607-85b5dc871898" text="They never allow anything through." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a0551de4-b9dc-11de-a607-85b5dc871898" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a0565665-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page3.cml">
+                  <prompt>
+                    <OTText id="a0565666-b9dc-11de-a607-85b5dc871898" text="After you use the model above, choose one thing in the model that can cross the membrane, and one thing that can't. For BOTH of your choices, explain why it can or cannot cross a bilayer membrane. Hint." />
+                  </prompt>
+                  <input>
+                    <OTText id="a0565667-b9dc-11de-a607-85b5dc871898" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="aeabec79-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page4.cml">
+                  <prompt>
+                    <OTText id="aeac138a-b9dc-11de-a607-85b5dc871898" text="What elements are carbohydrates made of? (Check ALL that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="aeac138b-b9dc-11de-a607-85b5dc871898" selectionUI="1">
+                      <choices>
+                        <OTText id="aeac138c-b9dc-11de-a607-85b5dc871898" text="oxygen, lipids, sulfur" />
+                        <OTText id="aeac138d-b9dc-11de-a607-85b5dc871898" text="nitrogen, oxygen, nucleic acids" />
+                        <OTText id="aeac138e-b9dc-11de-a607-85b5dc871898" text="oxygen, carbon, hydrogen" />
+                        <OTText id="aeac3a9f-b9dc-11de-a607-85b5dc871898" text="oxygen, carbon, nitrogen" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="aeac138e-b9dc-11de-a607-85b5dc871898" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="aeac88c1-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page4.cml">
+                  <prompt>
+                    <OTText id="aeac88c2-b9dc-11de-a607-85b5dc871898" text="What element is present in large quantities in carbohydrates, but is only a small part of lipid molecules?" />
+                  </prompt>
+                  <input>
+                    <OTText id="aeac88c3-b9dc-11de-a607-85b5dc871898" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b2eaf5c5-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page5.cml">
+                  <prompt>
+                    <OTText id="b2eb1cd6-b9dc-11de-a607-85b5dc871898" text="Insert a snapshot of glucose dissolved in water, and use the annotation tools to explain how you know the glucose is dissolved." />
+                  </prompt>
+                  <input>
+                    <OTImage id="b2eb1cd7-b9dc-11de-a607-85b5dc871898" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b2eb43e8-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page5.cml">
+                  <prompt>
+                    <OTText id="b2eb43e9-b9dc-11de-a607-85b5dc871898" text="Stop the model and drag a water molecule so that it is close to the different parts of a lipid and a sugar molecule. Which lipid or sugar atoms tend to form hydrogen bonds with water?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b2eb43ea-b9dc-11de-a607-85b5dc871898" selectionUI="1">
+                      <choices>
+                        <OTText id="b2eb43eb-b9dc-11de-a607-85b5dc871898" text="a hydrogen atom that is bonded to carbon." />
+                        <OTText id="b2eb43ec-b9dc-11de-a607-85b5dc871898" text="a hydrogen atom that is bonded to oxygen." />
+                        <OTText id="b2eb6afd-b9dc-11de-a607-85b5dc871898" text="an oxygen atom that is bonded only to carbon." />
+                        <OTText id="b2eb6afe-b9dc-11de-a607-85b5dc871898" text="an oxygen atom that is bonded to hydrogen." />
+                        <OTText id="b2eb6aff-b9dc-11de-a607-85b5dc871898" text="None of the above." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="b2eb43ec-b9dc-11de-a607-85b5dc871898" />
+                        <object refid="b2eb6afd-b9dc-11de-a607-85b5dc871898" />
+                        <object refid="b2eb6afe-b9dc-11de-a607-85b5dc871898" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b2eb9211-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page5.cml">
+                  <prompt>
+                    <OTText id="b2eb9212-b9dc-11de-a607-85b5dc871898" text="What does the intensity of color indicate on the surface of the molecule? (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b2eb9213-b9dc-11de-a607-85b5dc871898" selectionUI="1">
+                      <choices>
+                        <OTText id="b2ebb924-b9dc-11de-a607-85b5dc871898" text="The fainter the surface colors, the less separation of positive and negative charge." />
+                        <OTText id="b2ebb925-b9dc-11de-a607-85b5dc871898" text="The fainter the surface colors, the more even the sharing of electrons." />
+                        <OTText id="b2ebb926-b9dc-11de-a607-85b5dc871898" text="The more intense the surface color, the stronger the positive or negative charge." />
+                        <OTText id="b2ebb927-b9dc-11de-a607-85b5dc871898" text="The more intense the surface colors, the less polar the bond." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="b2ebb924-b9dc-11de-a607-85b5dc871898" />
+                        <object refid="b2ebb925-b9dc-11de-a607-85b5dc871898" />
+                        <object refid="b2ebb926-b9dc-11de-a607-85b5dc871898" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b2ec0749-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page5.cml">
+                  <prompt>
+                    <OTText id="b2ec2e5a-b9dc-11de-a607-85b5dc871898" text="In the first half of this activity you explored lipids and saw that they are largely non-polar. Explain why the chemical makeup of sugars causes them to be very polar molecules." />
+                  </prompt>
+                  <input>
+                    <OTText id="b2ec2e5b-b9dc-11de-a607-85b5dc871898" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b929036d-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page6.cml">
+                  <prompt>
+                    <OTText id="b9292a7e-b9dc-11de-a607-85b5dc871898" text="Why are fibers formed from long linear polysaccharides very strong?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b9292a7f-b9dc-11de-a607-85b5dc871898" selectionUI="0">
+                      <choices>
+                        <OTText id="b9292a80-b9dc-11de-a607-85b5dc871898" text="Aligning many linear molecules next to each other allows them to form many hydrogen bonds." />
+                        <OTText id="b9292a81-b9dc-11de-a607-85b5dc871898" text="Aligning many linear molecules next to each other guarantees they will repel each other." />
+                        <OTText id="b9299fb2-b9dc-11de-a607-85b5dc871898" text="The non-polar nature of polysaccharides makes them attract each other strongly." />
+                        <OTText id="b9299fb3-b9dc-11de-a607-85b5dc871898" text="The polysaccharide molecules are strong molecules." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b9292a80-b9dc-11de-a607-85b5dc871898" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b929edd4-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page6.cml">
+                  <prompt>
+                    <OTText id="b929edd5-b9dc-11de-a607-85b5dc871898" text="Branched polysaccharides can be more easily separated into individual chains than linear polysaccharides such as cellulose. This is explained by:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b929edd6-b9dc-11de-a607-85b5dc871898" selectionUI="0">
+                      <choices>
+                        <OTText id="b929edd7-b9dc-11de-a607-85b5dc871898" text="the tight fit that can occur between branched molecules." />
+                        <OTText id="b929edd8-b9dc-11de-a607-85b5dc871898" text="the increased number of covalent bonds in linear chains." />
+                        <OTText id="b92a14e9-b9dc-11de-a607-85b5dc871898" text="the decreased number of weak interactions that can form between branched chains." />
+                        <OTText id="b92a14ea-b9dc-11de-a607-85b5dc871898" text="the decreased number of weak interactions that can form between linear chains." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b92a14e9-b9dc-11de-a607-85b5dc871898" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="be20d56b-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page7.cml">
+                  <prompt>
+                    <OTText id="be20d56c-b9dc-11de-a607-85b5dc871898">
+                      <text>In the model to the left, three molecules tagged as "A", "B" and "C" are placed in water. Click the " Run" button to run the model and observe what happens.
+
+Based on your observation, which molecule is the most polar?</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTChoice id="be20d56d-b9dc-11de-a607-85b5dc871898" selectionUI="0">
+                      <choices>
+                        <OTText id="be20d56e-b9dc-11de-a607-85b5dc871898" text="Molecule A" />
+                        <OTText id="be20d56f-b9dc-11de-a607-85b5dc871898" text="Molecule B" />
+                        <OTText id="be212390-b9dc-11de-a607-85b5dc871898" text="Molecule C" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="be20d56e-b9dc-11de-a607-85b5dc871898" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="be214aa1-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page7.cml">
+                  <prompt>
+                    <OTText id="be214aa2-b9dc-11de-a607-85b5dc871898" text="Compare two molecules made primarily of carbon and hydrogen, one with some oxygen atoms and one without any. Which of the following statements are true? (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="be214aa3-b9dc-11de-a607-85b5dc871898" selectionUI="1">
+                      <choices>
+                        <OTText id="be214aa4-b9dc-11de-a607-85b5dc871898" text="Oxygen increases the polarity of the bonds in the molecule." />
+                        <OTText id="be214aa5-b9dc-11de-a607-85b5dc871898" text="Oxygen's electronegativity is equal to carbon's, so the bonds are polar." />
+                        <OTText id="be214aa6-b9dc-11de-a607-85b5dc871898" text="Oxygen pulls electrons away from hydrogen, making polar bonds." />
+                        <OTText id="be2171b7-b9dc-11de-a607-85b5dc871898" text="Carbon pulls electrons away more than oxygen, making the bonds polar." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="be214aa4-b9dc-11de-a607-85b5dc871898" />
+                        <object refid="be214aa6-b9dc-11de-a607-85b5dc871898" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="be2171b9-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page7.cml">
+                  <prompt>
+                    <OTText id="be2171ba-b9dc-11de-a607-85b5dc871898" text="Which of the statements below about membrane phospholipids is NOT true?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="be2171bb-b9dc-11de-a607-85b5dc871898" selectionUI="0">
+                      <choices>
+                        <OTText id="be2198cc-b9dc-11de-a607-85b5dc871898" text="They have polar &quot;heads.&quot;" />
+                        <OTText id="be2198cd-b9dc-11de-a607-85b5dc871898" text="They have nonpolar &quot;tails.&quot;" />
+                        <OTText id="be2198ce-b9dc-11de-a607-85b5dc871898" text="They form bilayers in water." />
+                        <OTText id="be2198cf-b9dc-11de-a607-85b5dc871898" text="They form many hydrogen bonds." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="be2198cf-b9dc-11de-a607-85b5dc871898" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="be21bfe0-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page7.cml">
+                  <prompt>
+                    <OTText id="be21bfe1-b9dc-11de-a607-85b5dc871898" text="Cellulose is made of multiple long polysaccharide chains that line up side by side in parallel. What keeps the cellulose molecules stuck together?" />
+                  </prompt>
+                  <input>
+                    <OTText id="be21bfe2-b9dc-11de-a607-85b5dc871898" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="be21e6f4-b9dc-11de-a607-85b5dc871898" name="http://ri-itest.concord.org/SAMActivities/LipidsAndCarbs/LipidsAndCarbs_v5/page7.cml">
+                  <prompt>
+                    <OTText id="be21e6f5-b9dc-11de-a607-85b5dc871898" text="Explain how the presence of oxygen-hydrogen bonds affects the solubility of glucose." />
+                  </prompt>
+                  <input>
+                    <OTText id="be21e6f6-b9dc-11de-a607-85b5dc871898" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

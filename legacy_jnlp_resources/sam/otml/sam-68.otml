@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="3f3b2900-81e1-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="014cb11a-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page1.cml">
+                  <prompt>
+                    <OTText id="015e163b-6010-11de-b1f2-033bb5808469" text="After looking at the path taken by several red dye molecules, their motion can best be described as:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="015feafc-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0160873d-6010-11de-b1f2-033bb5808469" text="moving in a directed way from high to low concentration" />
+                        <OTText id="0160ae4e-6010-11de-b1f2-033bb5808469" text="moving randomly through collisions in no particular direction" />
+                        <OTText id="0160ae4f-6010-11de-b1f2-033bb5808469" text="staying close to other red dye molecules" />
+                        <OTText id="0160ae50-6010-11de-b1f2-033bb5808469" text="moving in clumps of molecules together" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0160ae4e-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="01612381-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page1.cml">
+                  <prompt>
+                    <OTText id="01612382-6010-11de-b1f2-033bb5808469" text="It is often stated that substances diffuse from highly concentrated areas to areas of low concentration. Describe how this works if a molecule can't tell that it is in a region of high concentration and just diffuses randomly through collisions." />
+                  </prompt>
+                  <input>
+                    <OTText id="01612383-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="02bc46b5-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page2.cml">
+                  <prompt>
+                    <OTText id="02bc46b6-6010-11de-b1f2-033bb5808469" text="Set up the model so that there is a high concentration of something outside and a low concentration of that same thing inside. What are the chances that a molecule will move into or out of the cell?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="02bc46b7-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="02bc6dc8-6010-11de-b1f2-033bb5808469" text="There is a greater chance that a molecule will move from the lower concentrated area to the higher concentrated area." />
+                        <OTText id="02bc6dc9-6010-11de-b1f2-033bb5808469" text="There is a greater chance that a molecule will move from the higher concentrated area to the lower concentrated area." />
+                        <OTText id="02bc6dca-6010-11de-b1f2-033bb5808469" text="There is a equal chance that a molecule will move in either direction." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="02bc6dc9-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="02bcbbeb-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page2.cml">
+                  <prompt>
+                    <OTText id="02bcbbec-6010-11de-b1f2-033bb5808469" text="Describe the flow of molecules when there is an area of high and low concentration." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="02bcbbed-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="02bcbbee-6010-11de-b1f2-033bb5808469" text="Molecules move from the side with high concentration to low concentration." />
+                        <OTText id="02bcbbef-6010-11de-b1f2-033bb5808469" text="Molecules move from the side with low concentration to high concentration." />
+                        <OTText id="02bcbbf0-6010-11de-b1f2-033bb5808469" text="Both a and b, but there is a greater flow from high to low concentration than low to high concentration." />
+                        <OTText id="02bce301-6010-11de-b1f2-033bb5808469" text="The flow will be equal in both directions regardless of the starting concentrations." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="02bcbbf0-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="04776442-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page3.cml">
+                  <prompt>
+                    <OTText id="04776443-6010-11de-b1f2-033bb5808469" text="What is true of the concentrations when equilibrium has been reached?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="04776444-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="04776445-6010-11de-b1f2-033bb5808469" text="They will be higher inside the cell." />
+                        <OTText id="04778b56-6010-11de-b1f2-033bb5808469" text="They will be higher outside of the cell." />
+                        <OTText id="0477b267-6010-11de-b1f2-033bb5808469" text="They will reach a minimum inside and outside." />
+                        <OTText id="0477b268-6010-11de-b1f2-033bb5808469" text="They will be the same inside and outside." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0477b268-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0477b269-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page3.cml">
+                  <prompt>
+                    <OTText id="0477b26a-6010-11de-b1f2-033bb5808469" text="What is true of the rate at which molecules move into and out of the cell at equilibrium?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0477b26b-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0477d97c-6010-11de-b1f2-033bb5808469" text="More move into the cell than out of it." />
+                        <OTText id="0477d97d-6010-11de-b1f2-033bb5808469" text="More move out of the cell than into it." />
+                        <OTText id="0477d97e-6010-11de-b1f2-033bb5808469" text="Equal amounts move into and out of the cell." />
+                        <OTText id="0477d97f-6010-11de-b1f2-033bb5808469" text="They move randomly, so it is not predictable." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0477d97e-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="04780090-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page3.cml">
+                  <prompt>
+                    <OTText id="04780091-6010-11de-b1f2-033bb5808469" text="Set up the model so that it is NOT in equilibrium. Then use the &quot;snapshot&quot; button below the model to take a picture of your setup. Use the &quot;open&quot; button below to place that image here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="04780092-6010-11de-b1f2-033bb5808469" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="04796023-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page3.cml">
+                  <prompt>
+                    <OTText id="04796024-6010-11de-b1f2-033bb5808469" text="Set up the model so that it is IN equilibrium. Then use the &quot;snapshot&quot; button below the model to take a picture of your setup. Use the &quot;open&quot; button below to place that image here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="04796025-6010-11de-b1f2-033bb5808469" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="05f94966-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page4.cml">
+                  <prompt>
+                    <OTText id="05f94967-6010-11de-b1f2-033bb5808469" text="What happens to the oxygen concentration of the cell when you move it to a new environment?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="05f94968-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="05f94969-6010-11de-b1f2-033bb5808469" text="It stays the same." />
+                        <OTText id="05f9496a-6010-11de-b1f2-033bb5808469" text="It goes up." />
+                        <OTText id="05f9496b-6010-11de-b1f2-033bb5808469" text="It goes down." />
+                        <OTText id="05f9496c-6010-11de-b1f2-033bb5808469" text="It goes up or down until it reaches equilibrium." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="05f9496c-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="05f9978d-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page4.cml">
+                  <prompt>
+                    <OTText id="05f9978e-6010-11de-b1f2-033bb5808469" text="Explain how a red blood cell delivers oxygen from your lungs to the rest of your body. hint" />
+                  </prompt>
+                  <input>
+                    <OTText id="05f9978f-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="07b35581-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page5.cml">
+                  <prompt>
+                    <OTText id="07b35582-6010-11de-b1f2-033bb5808469" text="Describe what happens when the red blood cell contains hemoglobin:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="07b35583-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="07b35584-6010-11de-b1f2-033bb5808469" text="It is the same as without hemoglobin." />
+                        <OTText id="07b35585-6010-11de-b1f2-033bb5808469" text="It speeds up the normal diffusion." />
+                        <OTText id="07b35586-6010-11de-b1f2-033bb5808469" text="It causes the concentration of oxygen to be higher inside the cell when equilibrium has been reached." />
+                        <OTText id="07b37c97-6010-11de-b1f2-033bb5808469" text="It causes the oxygen concentration to be higher outside the cell when equilibrium has been reached." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="07b35586-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="07b37c98-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page5.cml">
+                  <prompt>
+                    <OTText id="07b37c99-6010-11de-b1f2-033bb5808469" text="Explain how hemoglobin helps transport more oxygen than could normally be done with simple diffusion:" />
+                  </prompt>
+                  <input>
+                    <OTText id="07b37c9a-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0994bfbc-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page6.cml">
+                  <prompt>
+                    <OTText id="0994bfbd-6010-11de-b1f2-033bb5808469" text="How does surface area affect diffusion rates?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0994bfbe-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0994bfbf-6010-11de-b1f2-033bb5808469" text="Surface area has no effect on diffusion rate." />
+                        <OTText id="0994e6d0-6010-11de-b1f2-033bb5808469" text="Smaller surface area = faster diffusion rate." />
+                        <OTText id="0994e6d1-6010-11de-b1f2-033bb5808469" text="Larger surface area = slower diffusion rate." />
+                        <OTText id="0994e6d2-6010-11de-b1f2-033bb5808469" text="Larger surface area = faster diffusion rate." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0994e6d2-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0994e6d3-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page6.cml">
+                  <prompt>
+                    <OTText id="09950de4-6010-11de-b1f2-033bb5808469" text="Single-celled organisms absorb everything they need directly through their &quot;skin,&quot; their cell membrane. However, you could never get enough oxygen if oxygen could only diffuse through your skin. Explain why it is necessary to have lungs with large surface areas:" />
+                  </prompt>
+                  <input>
+                    <OTText id="09950de5-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0b595327-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page7.cml">
+                  <prompt>
+                    <OTText id="0b595328-6010-11de-b1f2-033bb5808469" text="Take an image showing a side view of an aquapore poking out of both sides of a piece of cell membrane. (Note: You will need to find the right scene on the molecule tour and rotate the molecule yourself to get the correct image.)" />
+                  </prompt>
+                  <input>
+                    <OTImage id="0b595329-6010-11de-b1f2-033bb5808469" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0b597a3a-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page7.cml">
+                  <prompt>
+                    <OTText id="0b597a3b-6010-11de-b1f2-033bb5808469" text="Take an image showing water going through the channel formed by the aquapore:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="0b597a3c-6010-11de-b1f2-033bb5808469" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0b59a14d-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page7.cml">
+                  <prompt>
+                    <OTText id="0b59c85e-6010-11de-b1f2-033bb5808469" text="Which are the only types of molecules that pass easily through the cell membrane without an aquapore?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0b59c85f-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0b59c860-6010-11de-b1f2-033bb5808469" text="positive ions" />
+                        <OTText id="0b59c861-6010-11de-b1f2-033bb5808469" text="negative ions" />
+                        <OTText id="0b59ef72-6010-11de-b1f2-033bb5808469" text="small non-polar molecules" />
+                        <OTText id="0b59ef73-6010-11de-b1f2-033bb5808469" text="small polar molecules" />
+                        <OTText id="0b59ef74-6010-11de-b1f2-033bb5808469" text="medium sized polar molecules" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0b59ef72-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0b5a1685-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page7.cml">
+                  <prompt>
+                    <OTText id="0b5a1686-6010-11de-b1f2-033bb5808469" text="What is true of most naturally occuring pores?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0b5a1687-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0b5a1688-6010-11de-b1f2-033bb5808469" text="They allow only ions to pass through." />
+                        <OTText id="0b5a1689-6010-11de-b1f2-033bb5808469" text="They allow most molecules to pass through." />
+                        <OTText id="0b5a168a-6010-11de-b1f2-033bb5808469" text="They let anything that is the right size through." />
+                        <OTText id="0b5a168b-6010-11de-b1f2-033bb5808469" text="They are specific to one kind of molecule." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0b5a168b-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0d467d3c-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page8.cml">
+                  <prompt>
+                    <OTText id="0d467d3d-6010-11de-b1f2-033bb5808469" text="Osmotic pressure is related to salt concentrations (or other dissolved substances) in what way?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0d467d3e-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0d467d3f-6010-11de-b1f2-033bb5808469" text="High concentrations cause high osmotic pressures." />
+                        <OTText id="0d467d40-6010-11de-b1f2-033bb5808469" text="Low concentrations cause high osmotic pressures." />
+                        <OTText id="0d467d41-6010-11de-b1f2-033bb5808469" text="High concentrations cause low osmotic pressures." />
+                        <OTText id="0d467d42-6010-11de-b1f2-033bb5808469" text="It depends on what is dissolved in the water." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0d467d3f-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0d46a453-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page8.cml">
+                  <prompt>
+                    <OTText id="0d46a454-6010-11de-b1f2-033bb5808469" text="If you want water to flow out of the cell faster than into the cell you should:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0d46a455-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0d46a456-6010-11de-b1f2-033bb5808469" text="put the cell in pure distilled water." />
+                        <OTText id="0d46a457-6010-11de-b1f2-033bb5808469" text="put the cell in a low concentration of salt or sugar water." />
+                        <OTText id="0d46a458-6010-11de-b1f2-033bb5808469" text="put the cell in a high concentration of salt or sugar water." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0d46a458-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0d46cb69-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page8.cml">
+                  <prompt>
+                    <OTText id="0d46cb6a-6010-11de-b1f2-033bb5808469" text="Cells generally stay in equilibrium with their surroundings. What are two ways you know the cell has reached equilibrium?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0d46cb6b-6010-11de-b1f2-033bb5808469" selectionUI="1">
+                      <choices>
+                        <OTText id="0d46cb6c-6010-11de-b1f2-033bb5808469" text="Water stops flowing into and out of the cell." />
+                        <OTText id="0d46cb6d-6010-11de-b1f2-033bb5808469" text="The concentrations inside and outside of the cell are the same." />
+                        <OTText id="0d46f27e-6010-11de-b1f2-033bb5808469" text="The osmotic pressure inside and outside of the cell is the same." />
+                        <OTText id="0d46f27f-6010-11de-b1f2-033bb5808469" text="The cell gets as small as it possibly can." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="0d46cb6d-6010-11de-b1f2-033bb5808469" />
+                        <object refid="0d46f27e-6010-11de-b1f2-033bb5808469" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0d478ec1-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page8.cml">
+                  <prompt>
+                    <OTText id="0d478ec2-6010-11de-b1f2-033bb5808469" text="Describe the similarities and differences between diffusion and osmosis." />
+                  </prompt>
+                  <input>
+                    <OTText id="0d478ec3-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0ec07325-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page9.cml">
+                  <prompt>
+                    <OTText id="0ec07326-6010-11de-b1f2-033bb5808469" text="What must be done to get an electric potential (a voltage) across the membrane?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0ec07327-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0ec09a38-6010-11de-b1f2-033bb5808469" text="Move all the water to one side." />
+                        <OTText id="0ec09a39-6010-11de-b1f2-033bb5808469" text="Make the concentrations equal inside and out." />
+                        <OTText id="0ec09a3a-6010-11de-b1f2-033bb5808469" text="Make the concentrations of at least one ion different inside and out." />
+                        <OTText id="0ec09a3b-6010-11de-b1f2-033bb5808469" text="Make the concentrations of both ions different inside and out." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0ec09a3a-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0ec0c14c-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page9.cml">
+                  <prompt>
+                    <OTText id="0ec0c14d-6010-11de-b1f2-033bb5808469" text="How can you get the maximum voltage across the cell membrane?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0ec0c14e-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="0ec0c14f-6010-11de-b1f2-033bb5808469" text="Move all the water to one side." />
+                        <OTText id="0ec0c150-6010-11de-b1f2-033bb5808469" text="Move all the positive to one side." />
+                        <OTText id="0ec0e861-6010-11de-b1f2-033bb5808469" text="Move all the negative to one side." />
+                        <OTText id="0ec0e862-6010-11de-b1f2-033bb5808469" text="Move all of the ions both + and - to one side." />
+                        <OTText id="0ec0e863-6010-11de-b1f2-033bb5808469" text="Move all the positives to one side and negatives to the other." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0ec0e863-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="1054f5e4-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page10.cml">
+                  <prompt>
+                    <OTText id="10551cf5-6010-11de-b1f2-033bb5808469" text="What factor most affects how much chemical energy you start with?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="10551cf6-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="10551cf7-6010-11de-b1f2-033bb5808469" text="A low ATP concentration causes a high chemical energy." />
+                        <OTText id="10551cf8-6010-11de-b1f2-033bb5808469" text="A high ATP concentration causes a high chemical energy." />
+                        <OTText id="10551cf9-6010-11de-b1f2-033bb5808469" text="A low calcium ion concentration causes a high chemical energy." />
+                        <OTText id="10551cfa-6010-11de-b1f2-033bb5808469" text="A high calcium ion concentration causes a high chemical energy." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="10551cf8-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="1055440b-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page10.cml">
+                  <prompt>
+                    <OTText id="1055440c-6010-11de-b1f2-033bb5808469" text="Describe how the chemical energy in ATP is converted into electric potential energy. (hint)" />
+                  </prompt>
+                  <input>
+                    <OTText id="1055440d-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="11c2ddcf-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page11.cml">
+                  <prompt>
+                    <OTText id="11c2ddd0-6010-11de-b1f2-033bb5808469" text="Which best describes the motion of an INDIVIDUAL ion or molecule:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="11c2ddd1-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="11c2ddd2-6010-11de-b1f2-033bb5808469" text="It moves from high to low concentration." />
+                        <OTText id="11c304e3-6010-11de-b1f2-033bb5808469" text="It moves from low to high concentration." />
+                        <OTText id="11c304e4-6010-11de-b1f2-033bb5808469" text="It moves completely randomly through collisions." />
+                        <OTText id="11c304e5-6010-11de-b1f2-033bb5808469" text="It moves in a direction that depends on its environment." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="11c304e4-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="11c304e6-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page11.cml">
+                  <prompt>
+                    <OTText id="11c304e7-6010-11de-b1f2-033bb5808469" text="Describe in as many ways as possible how you know when a system has reached equilibrium:" />
+                  </prompt>
+                  <input>
+                    <OTText id="11c304e8-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="11c32bfa-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page11.cml">
+                  <prompt>
+                    <OTText id="11c32bfb-6010-11de-b1f2-033bb5808469" text="Describe what will happen if a cell has an oxygen concentration that is higher outside of the cell compared with inside of the cell (see illustration to the right):" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="11c32bfc-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="11c32bfd-6010-11de-b1f2-033bb5808469" text="The oxygen will move from high to low concentration." />
+                        <OTText id="11c32bfe-6010-11de-b1f2-033bb5808469" text="The oxygen will move from low to high concentration." />
+                        <OTText id="11c32bff-6010-11de-b1f2-033bb5808469" text="The concentrations will remain the same because you need a pore for oxygen to go through the membrane." />
+                        <OTText id="11c35210-6010-11de-b1f2-033bb5808469" text="Oxygen will go in both directions but faster from the higher concentration area." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="11c35210-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="11c35211-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page11.cml">
+                  <prompt>
+                    <OTText id="11c35212-6010-11de-b1f2-033bb5808469" text="Describe how surface area affects the speed at which diffusing ions or molecules reach equilibrium across both sides of the surface:" />
+                  </prompt>
+                  <input>
+                    <OTText id="11c35213-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="11c37925-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page11.cml">
+                  <prompt>
+                    <OTText id="11c37926-6010-11de-b1f2-033bb5808469" text="Which of the following can pass through a cell membrane without a specialized pore:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="11c37927-6010-11de-b1f2-033bb5808469" selectionUI="1">
+                      <choices>
+                        <OTText id="11c37928-6010-11de-b1f2-033bb5808469" text="positive ions" />
+                        <OTText id="11c37929-6010-11de-b1f2-033bb5808469" text="negative ions" />
+                        <OTText id="11c3792a-6010-11de-b1f2-033bb5808469" text="small non-polar molecules like carbon dioxide" />
+                        <OTText id="11c3a03b-6010-11de-b1f2-033bb5808469" text="small polar molecules like water" />
+                        <OTText id="11c3a03c-6010-11de-b1f2-033bb5808469" text="medium to large molecules" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="11c3792a-6010-11de-b1f2-033bb5808469" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="11c4638e-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page11.cml">
+                  <prompt>
+                    <OTText id="11c4638f-6010-11de-b1f2-033bb5808469" text="If you were to drink salt water from the ocean which has a high concentration of dissolved ions, what would happen?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="11c46390-6010-11de-b1f2-033bb5808469" selectionUI="0">
+                      <choices>
+                        <OTText id="11c46391-6010-11de-b1f2-033bb5808469" text="The high salt concentration outside of my cells would cause water to leave my cells, making me dehydrated." />
+                        <OTText id="11c48aa2-6010-11de-b1f2-033bb5808469" text="The high salt concentration outside of my cells would cause too much water to go into my cells, making them burst." />
+                        <OTText id="11c48aa3-6010-11de-b1f2-033bb5808469" text="The high salt outside of my cells would diffuse into my cells, causing too many ions to be present inside of my cells." />
+                        <OTText id="11c48aa4-6010-11de-b1f2-033bb5808469" text="The low salt concentration inside my cells would diffuse out, bonding with the high salt concentration outside of my cells." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="11c46391-6010-11de-b1f2-033bb5808469" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="11c48aa5-6010-11de-b1f2-033bb5808469" name="http://ri-itest.concord.org/SAMActivities/DiffusionActiveTrans/DiffusionActiveTrans_v4/page11.cml">
+                  <prompt>
+                    <OTText id="11c48aa6-6010-11de-b1f2-033bb5808469" text="Describe how you can make an electric potential occur across a membrane, and how you can maximize this potential energy:" />
+                  </prompt>
+                  <input>
+                    <OTText id="11c48aa7-6010-11de-b1f2-033bb5808469" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

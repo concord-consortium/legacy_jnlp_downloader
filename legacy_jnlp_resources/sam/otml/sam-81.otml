@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="c8b02ce0-81e0-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="28b5a559-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page1.cml">
+                  <prompt>
+                    <OTText id="28b68fba-61a3-11de-8597-4b53547bb8b3" text="List three more everyday examples of phase change." />
+                  </prompt>
+                  <input>
+                    <OTText id="28b8647b-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="29b2ca0d-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page2.cml">
+                  <prompt>
+                    <OTText id="29b2ca0e-61a3-11de-8597-4b53547bb8b3" text="Describe the motion of atoms and molecules in a gas." />
+                  </prompt>
+                  <input>
+                    <OTText id="29b2ca0f-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="29b2f121-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page2.cml">
+                  <prompt>
+                    <OTText id="29b31832-61a3-11de-8597-4b53547bb8b3" text="How are the behavior and arrangements of gas molecules similar to and different from soccer players running in the field?" />
+                  </prompt>
+                  <input>
+                    <OTText id="29b31833-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2a35dcc5-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page3.cml">
+                  <prompt>
+                    <OTText id="2a35dcc6-61a3-11de-8597-4b53547bb8b3" text="Record the average number of dashed lines there are per atom of each liquid." />
+                  </prompt>
+                  <input>
+                    <OTText id="2a35dcc7-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2a3651f9-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page3.cml">
+                  <prompt>
+                    <OTText id="2a3651fa-61a3-11de-8597-4b53547bb8b3" text="Observe the motion of the atom or molecule that were randomly selected. Describe the movement of that atom/molecule compared to the atoms around it." />
+                  </prompt>
+                  <input>
+                    <OTText id="2a3651fb-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2a3651fd-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page3.cml">
+                  <prompt>
+                    <OTText id="2a3651fe-61a3-11de-8597-4b53547bb8b3" text="How far do the atoms in a liquid appear to travel? Press the &quot;Randomly pick an atom and show its trajectory&quot; button, take a snapshot and place a snapshot image that you think best answers this question in the box below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="2a36790f-61a3-11de-8597-4b53547bb8b3" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2a37d8a0-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page3.cml">
+                  <prompt>
+                    <OTText id="2a37d8a1-61a3-11de-8597-4b53547bb8b3" text="How does the motion of folks at an outdoor rally resemble a liquid?" />
+                  </prompt>
+                  <input>
+                    <OTText id="2a37d8a2-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2aa98634-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page4.cml">
+                  <prompt>
+                    <OTText id="2aa98635-61a3-11de-8597-4b53547bb8b3" text="Stop the model and estimate how many dashed lines there are on the average for individual atoms inside the solid (not on the edge). Write down the number for each model below." />
+                  </prompt>
+                  <input>
+                    <OTText id="2aa98636-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2aa9d458-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page4.cml">
+                  <prompt>
+                    <OTText id="2aa9d459-61a3-11de-8597-4b53547bb8b3" text="How would you describe the movement and arrangement of atoms and molecules in a solid?" />
+                  </prompt>
+                  <input>
+                    <OTText id="2aa9d45a-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2aa9fb6c-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page4.cml">
+                  <prompt>
+                    <OTText id="2aa9fb6d-61a3-11de-8597-4b53547bb8b3" text="Molecules of gas are so far apart that the intermolecular attractions are pretty insignificant on the random thermal motion of the gas particles. Describe the role of intermolecular forces for solids and liquids." />
+                  </prompt>
+                  <input>
+                    <OTText id="2aa9fb6e-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2aaa2280-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page4.cml">
+                  <prompt>
+                    <OTText id="2aaa2281-61a3-11de-8597-4b53547bb8b3" text="How does the motion of atoms and molecules in a solid resemble people in a movie theater?" />
+                  </prompt>
+                  <input>
+                    <OTText id="2aaa2282-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="2aaa2283-61a3-11de-8597-4b53547bb8b3" text="Sometimes someone gets up to get popcorn." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2b3b8d14-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page5.cml">
+                  <prompt>
+                    <OTText id="2b3b8d15-61a3-11de-8597-4b53547bb8b3" text="Based on what you observed in the model, choose the items in the list below that you think have weak forces between atoms. Assume all these items are at 300K." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2b3b8d16-61a3-11de-8597-4b53547bb8b3" selectionUI="1">
+                      <choices>
+                        <OTText id="2b3c5067-61a3-11de-8597-4b53547bb8b3" text="Water" />
+                        <OTText id="2b3c5068-61a3-11de-8597-4b53547bb8b3" text="Wood" />
+                        <OTText id="2b3c5069-61a3-11de-8597-4b53547bb8b3" text="Iron" />
+                        <OTText id="2b3c506a-61a3-11de-8597-4b53547bb8b3" text="Air" />
+                        <OTText id="2b3c506b-61a3-11de-8597-4b53547bb8b3" text="Gold" />
+                        <OTText id="2b3c777c-61a3-11de-8597-4b53547bb8b3" text="Mercury" />
+                        <OTText id="2b3c777d-61a3-11de-8597-4b53547bb8b3" text="Carbon dioxide" />
+                        <OTText id="2b3c777e-61a3-11de-8597-4b53547bb8b3" text="Oxygen" />
+                        <OTText id="2b3c777f-61a3-11de-8597-4b53547bb8b3" text="Gasoline" />
+                        <OTText id="2b3c7780-61a3-11de-8597-4b53547bb8b3" text="Lead" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="2b3c506a-61a3-11de-8597-4b53547bb8b3" />
+                        <object refid="2b3c777d-61a3-11de-8597-4b53547bb8b3" />
+                        <object refid="2b3c777e-61a3-11de-8597-4b53547bb8b3" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2b3d13c2-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page5.cml">
+                  <prompt>
+                    <OTText id="2b3d13c3-61a3-11de-8597-4b53547bb8b3" text="Based on what you observed in the model above, choose the items in the list below that you think have strong forces between atoms. Assume all these items are at 300K." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2b3d13c4-61a3-11de-8597-4b53547bb8b3" selectionUI="1">
+                      <choices>
+                        <OTText id="2b3d13c5-61a3-11de-8597-4b53547bb8b3" text="Water" />
+                        <OTText id="2b3d13c6-61a3-11de-8597-4b53547bb8b3" text="Wood" />
+                        <OTText id="2b3d13c7-61a3-11de-8597-4b53547bb8b3" text="Iron" />
+                        <OTText id="2b3d3ad8-61a3-11de-8597-4b53547bb8b3" text="Air" />
+                        <OTText id="2b3d3ad9-61a3-11de-8597-4b53547bb8b3" text="Gold" />
+                        <OTText id="2b3d3ada-61a3-11de-8597-4b53547bb8b3" text="Mercury" />
+                        <OTText id="2b3d3adb-61a3-11de-8597-4b53547bb8b3" text="Carbon dioxide" />
+                        <OTText id="2b3d3adc-61a3-11de-8597-4b53547bb8b3" text="Oxygen" />
+                        <OTText id="2b3d3add-61a3-11de-8597-4b53547bb8b3" text="Gasoline" />
+                        <OTText id="2b3d3ade-61a3-11de-8597-4b53547bb8b3" text="Lead" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="2b3d13c6-61a3-11de-8597-4b53547bb8b3" />
+                        <object refid="2b3d13c7-61a3-11de-8597-4b53547bb8b3" />
+                        <object refid="2b3d3ad9-61a3-11de-8597-4b53547bb8b3" />
+                        <object refid="2b3d3ade-61a3-11de-8597-4b53547bb8b3" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2de1f510-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page6.cml">
+                  <prompt>
+                    <OTText id="2de1f511-61a3-11de-8597-4b53547bb8b3" text="What do you think caused the temperature of the larger atoms that are originally in the right part of the model to rise?" />
+                  </prompt>
+                  <input>
+                    <OTText id="2de1f512-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2de21c24-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page6.cml">
+                  <prompt>
+                    <OTText id="2de21c25-61a3-11de-8597-4b53547bb8b3" text="Place a snapshot of the model after the wall has been withdrawn that shows the larger atoms are in liquid state." />
+                  </prompt>
+                  <input>
+                    <OTImage id="2de21c26-61a3-11de-8597-4b53547bb8b3" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2f7bf607-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page7.cml">
+                  <prompt>
+                    <OTText id="2f7bf608-61a3-11de-8597-4b53547bb8b3" text="Please fill in the snapshot of the line graph you have taken after the simulation stops:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="2f7bf609-61a3-11de-8597-4b53547bb8b3" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2f7c1d1a-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page7.cml">
+                  <prompt>
+                    <OTText id="2f7c1d1b-61a3-11de-8597-4b53547bb8b3" text="Describe what was happening in the model when the temperature stopped rising (in the middle of the simulation). Describe the state of the molecules throughout this time ." />
+                  </prompt>
+                  <input>
+                    <OTText id="2f7c1d1c-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="30739c7e-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page8.cml">
+                  <prompt>
+                    <OTText id="30739c7f-61a3-11de-8597-4b53547bb8b3" text="What do you think caused the system to cool down when evaporation happens in the second model, based on the reasoning from the first model?" />
+                  </prompt>
+                  <input>
+                    <OTText id="3073c390-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="314432f2-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page9.cml">
+                  <prompt>
+                    <OTText id="314432f3-61a3-11de-8597-4b53547bb8b3" text="Fill in a snapshot image of the xenon when it is in a solid state." />
+                  </prompt>
+                  <input>
+                    <OTImage id="314432f4-61a3-11de-8597-4b53547bb8b3" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="31445a05-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page9.cml">
+                  <prompt>
+                    <OTText id="31445a06-61a3-11de-8597-4b53547bb8b3" text="Fill in a snapshot image of the xenon when it is in a liquid state." />
+                  </prompt>
+                  <input>
+                    <OTImage id="31445a07-61a3-11de-8597-4b53547bb8b3" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="31448118-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page9.cml">
+                  <prompt>
+                    <OTText id="31448119-61a3-11de-8597-4b53547bb8b3" text="Fill in a snapshot image of the xenon when it is in a gaseous state." />
+                  </prompt>
+                  <input>
+                    <OTImage id="3144811a-61a3-11de-8597-4b53547bb8b3" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3144811b-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page9.cml">
+                  <prompt>
+                    <OTText id="3144811c-61a3-11de-8597-4b53547bb8b3" text="When water cools from 2℃ to –2℃, what happens to the motion of the molecules?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3144811d-61a3-11de-8597-4b53547bb8b3" selectionUI="0">
+                      <choices>
+                        <OTText id="3144a82e-61a3-11de-8597-4b53547bb8b3" text="The molecules stop moving." />
+                        <OTText id="3144a82f-61a3-11de-8597-4b53547bb8b3" text="The molecules remain moving just the same." />
+                        <OTText id="3144a830-61a3-11de-8597-4b53547bb8b3" text="The molecules move less freely." />
+                        <OTText id="3144a831-61a3-11de-8597-4b53547bb8b3" text="The molecules move more freely." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="3144a830-61a3-11de-8597-4b53547bb8b3" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="3144cf42-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page9.cml">
+                  <prompt>
+                    <OTText id="3144cf43-61a3-11de-8597-4b53547bb8b3" text="Suppose you are small enough to sit on a molecule. Describe what you see if you were sitting on a molecule in a gas, and that gas turned into a liquid." />
+                  </prompt>
+                  <input>
+                    <OTText id="3144cf44-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3144cf46-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page9.cml">
+                  <prompt>
+                    <OTText id="3144cf47-61a3-11de-8597-4b53547bb8b3" text="On a microscopic scale atoms look just about as crowded in a liquid as in a solid. What are some molecular level ways you can think of to decide whether a substance is a solid or a liquid." />
+                  </prompt>
+                  <input>
+                    <OTText id="3144cf48-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="31451d6a-61a3-11de-8597-4b53547bb8b3" name="http://ri-itest.concord.org/SAMActivities/PhaseChange/PhaseChange_v3/page9.cml">
+                  <prompt>
+                    <OTText id="31451d6b-61a3-11de-8597-4b53547bb8b3" text="When you get out of the water after swimming, you often feel cold as water evaporates off of your skin. That means you must be losing heat energy. As the water evaporates, it is changing from a liquid to a gas. Explain why the process of evaporation should use up heat from your skin." />
+                  </prompt>
+                  <input>
+                    <OTText id="31451d6c-61a3-11de-8597-4b53547bb8b3" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

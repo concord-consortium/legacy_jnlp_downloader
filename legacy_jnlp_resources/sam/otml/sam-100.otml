@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="1ba151e0-cafc-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="720" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="0552b48b-cb03-11de-ab2e-db15a06743a5" name="NAP_P1_Q1">
+                  <prompt>
+                    <OTText id="0554d76c-cb03-11de-ab2e-db15a06743a5" text="The order of the nucleotide monomers in DNA carries genetic information. Write the letters of the nucleotides in the above DNA fragment in sequence, from #1 to #11, in the space below. (Hint)" />
+                  </prompt>
+                  <input>
+                    <OTText id="0556ac2d-cb03-11de-ab2e-db15a06743a5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0556fa4f-cb03-11de-ab2e-db15a06743a5" name="NAP_P1_Q2">
+                  <prompt>
+                    <OTText id="0556fa50-cb03-11de-ab2e-db15a06743a5" text="Which components are the same in all the DNA nucleotide monomers? (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0556fa51-cb03-11de-ab2e-db15a06743a5" selectionUI="1">
+                      <choices>
+                        <OTText id="0558a802-cb03-11de-ab2e-db15a06743a5" text="the sugar" />
+                        <OTText id="0558a803-cb03-11de-ab2e-db15a06743a5" text="the phosphate" />
+                        <OTText id="0558cf14-cb03-11de-ab2e-db15a06743a5" text="the base" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="0558a802-cb03-11de-ab2e-db15a06743a5" />
+                        <object refid="0558a803-cb03-11de-ab2e-db15a06743a5" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="05596b56-cb03-11de-ab2e-db15a06743a5" name="NAP_P1_Q3">
+                  <prompt>
+                    <OTText id="05596b57-cb03-11de-ab2e-db15a06743a5" text="Which components serve to link the DNA nucleotide monomers together into a polymer? (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="05596b58-cb03-11de-ab2e-db15a06743a5" selectionUI="1">
+                      <choices>
+                        <OTText id="05596b59-cb03-11de-ab2e-db15a06743a5" text="the sugar" />
+                        <OTText id="05596b5a-cb03-11de-ab2e-db15a06743a5" text="the phosphate" />
+                        <OTText id="05596b5b-cb03-11de-ab2e-db15a06743a5" text="the base" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="05596b59-cb03-11de-ab2e-db15a06743a5" />
+                        <object refid="05596b5a-cb03-11de-ab2e-db15a06743a5" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0a25e78d-cb03-11de-ab2e-db15a06743a5" name="NAP_P2_Q1">
+                  <prompt>
+                    <OTText id="0a260e9e-cb03-11de-ab2e-db15a06743a5" text="What is the greatest total number of hydrogen bonds you can form in the model?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="0a260e9f-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="0a260ea0-cb03-11de-ab2e-db15a06743a5" text="2" />
+                        <OTText id="0a2634b1-cb03-11de-ab2e-db15a06743a5" text="4" />
+                        <OTText id="0a2634b2-cb03-11de-ab2e-db15a06743a5" text="8" />
+                        <OTText id="0a2634b3-cb03-11de-ab2e-db15a06743a5" text="10" />
+                        <OTText id="0a2634b4-cb03-11de-ab2e-db15a06743a5" text="12" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="0a2634b3-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="0a2682d5-cb03-11de-ab2e-db15a06743a5" name="NAP_P2_Q2">
+                  <prompt>
+                    <OTText id="0a2682d6-cb03-11de-ab2e-db15a06743a5" text="Insert below the snapshot that shows how you arranged the nucleotide bases to create the greatest number of hydrogen bonds." />
+                  </prompt>
+                  <input>
+                    <OTImage id="0a2682d7-cb03-11de-ab2e-db15a06743a5" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0a276d38-cb03-11de-ab2e-db15a06743a5" name="NAP_P2_Q3">
+                  <prompt>
+                    <OTText id="0a276d39-cb03-11de-ab2e-db15a06743a5" text="Using what you learned about fitting the bases as opposite pairs, predict which bases you will find paired with each of the four bases in a DNA double helix." />
+                  </prompt>
+                  <input>
+                    <OTText id="0a276d3a-cb03-11de-ab2e-db15a06743a5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0e0d810c-cb03-11de-ab2e-db15a06743a5" name="NAP_P3_Q1">
+                  <prompt>
+                    <OTText id="0e0d810d-cb03-11de-ab2e-db15a06743a5" text="The order of the nucleotides in DNA is important—it carries a code used in making proteins. Take a snapshot that best shows the order of the bases in a single DNA chain." />
+                  </prompt>
+                  <input>
+                    <OTImage id="0e0d810e-cb03-11de-ab2e-db15a06743a5" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="0e0da81f-cb03-11de-ab2e-db15a06743a5" name="NAP_P3_Q2">
+                  <prompt>
+                    <OTText id="0e0da820-cb03-11de-ab2e-db15a06743a5" text="Take a snapshot that best illustrates the hydrogen bonds that attract the two DNA strands together. Use the annotation tools to label the hydrogen bonds." />
+                  </prompt>
+                  <input>
+                    <OTImage id="0e0dcf31-cb03-11de-ab2e-db15a06743a5" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="121db222-cb03-11de-ab2e-db15a06743a5" name="NAP_P4_Q1">
+                  <prompt>
+                    <OTText id="121db223-cb03-11de-ab2e-db15a06743a5" text="Which protein can puncture a cell wall?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="121db224-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="121dd935-cb03-11de-ab2e-db15a06743a5" text="Protein 1" />
+                        <OTText id="121e0046-cb03-11de-ab2e-db15a06743a5" text="Protein 2" />
+                        <OTText id="121e0047-cb03-11de-ab2e-db15a06743a5" text="Protein 3" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="121e0046-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="121e2758-cb03-11de-ab2e-db15a06743a5" name="NAP_P4_Q2">
+                  <prompt>
+                    <OTText id="121e2759-cb03-11de-ab2e-db15a06743a5" text="Which protein forms a cable?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="121e275a-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="121e275b-cb03-11de-ab2e-db15a06743a5" text="Protein 1" />
+                        <OTText id="121e275c-cb03-11de-ab2e-db15a06743a5" text="Protein 2" />
+                        <OTText id="121e4e6d-cb03-11de-ab2e-db15a06743a5" text="Protein 3" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="121e275b-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="121e9c8e-cb03-11de-ab2e-db15a06743a5" name="NAP_P4_Q3">
+                  <prompt>
+                    <OTText id="121e9c8f-cb03-11de-ab2e-db15a06743a5" text="Which protein becomes a pore in a membrane?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="121e9c90-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="121e9c91-cb03-11de-ab2e-db15a06743a5" text="Protein 1" />
+                        <OTText id="121e9c92-cb03-11de-ab2e-db15a06743a5" text="Protein 2" />
+                        <OTText id="121e9c93-cb03-11de-ab2e-db15a06743a5" text="Protein 3" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="121e9c93-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="15f2af04-cb03-11de-ab2e-db15a06743a5" name="NAP_P5_Q1">
+                  <prompt>
+                    <OTText id="15f2af05-cb03-11de-ab2e-db15a06743a5" text="Take a snapshot of an amino acid with a non-polar side chain. Use the annotation tools to circle the side chain of the amino acid." />
+                  </prompt>
+                  <input>
+                    <OTImage id="15f2af06-cb03-11de-ab2e-db15a06743a5" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="15f2d617-cb03-11de-ab2e-db15a06743a5" name="NAP_P5_Q2">
+                  <prompt>
+                    <OTText id="15f2d618-cb03-11de-ab2e-db15a06743a5" text="What is it about the atoms in a polar side chain that makes the side chain polar? Explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="15f2d619-cb03-11de-ab2e-db15a06743a5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2ad18c7b-cb03-11de-ab2e-db15a06743a5" name="NAP_P6_Q1">
+                  <prompt>
+                    <OTText id="2ad18c7c-cb03-11de-ab2e-db15a06743a5" text="Using the &quot;randomize&quot; button, create a protein with many non-polar (hydrophobic) amino acids, and let it fold in water. Place a snapshot of your folded protein here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="2ad18c7d-cb03-11de-ab2e-db15a06743a5" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2ad1b38e-cb03-11de-ab2e-db15a06743a5" name="NAP_P6_Q2">
+                  <prompt>
+                    <OTText id="2ad1b38f-cb03-11de-ab2e-db15a06743a5" text="If there are many non-polar (hydrophobic) amino acids in the protein, where do they tend to end up once the protein folds?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2ad1b390-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="2ad1b391-cb03-11de-ab2e-db15a06743a5" text="They are spread out on the surface of the protein." />
+                        <OTText id="2ad1daa2-cb03-11de-ab2e-db15a06743a5" text="They cluster together, forming an inner core of the protein." />
+                        <OTText id="2ad1daa3-cb03-11de-ab2e-db15a06743a5" text="The non-polar and polar amino acids are spread out evenly, both inside and on the surface." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2ad1daa2-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2ad228c4-cb03-11de-ab2e-db15a06743a5" name="NAP_P6_Q3">
+                  <prompt>
+                    <OTText id="2ad228c5-cb03-11de-ab2e-db15a06743a5" text="Explain how interactions between water molecules cause the hydrophobic amino acids to fold into the center of the protein." />
+                  </prompt>
+                  <input>
+                    <OTText id="2ad228c6-cb03-11de-ab2e-db15a06743a5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="37459158-cb03-11de-ab2e-db15a06743a5" name="NAP_P7_Q1">
+                  <prompt>
+                    <OTText id="37459159-cb03-11de-ab2e-db15a06743a5" text="What causes the two strands of DNA in a double helix to attract and wrap around each other?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3745915a-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="3745915b-cb03-11de-ab2e-db15a06743a5" text="covalent bonds between the bases of each chain" />
+                        <OTText id="3745915c-cb03-11de-ab2e-db15a06743a5" text="covalent bonds between the sugars of each chain" />
+                        <OTText id="3745915d-cb03-11de-ab2e-db15a06743a5" text="covalent bonds between the phosphates of each chain" />
+                        <OTText id="3745b86e-cb03-11de-ab2e-db15a06743a5" text="hydrogen bonds between the bases of each chain" />
+                        <OTText id="3745b86f-cb03-11de-ab2e-db15a06743a5" text="hydrogen bonds between the sugars of each chain" />
+                        <OTText id="3745b870-cb03-11de-ab2e-db15a06743a5" text="hydrogen bonds between the phosphates of each chain" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="3745b86e-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="37460691-cb03-11de-ab2e-db15a06743a5" name="NAP_P7_Q2">
+                  <prompt>
+                    <OTText id="37460692-cb03-11de-ab2e-db15a06743a5" text="Which part of a DNA nucleotide carries genetic information?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="37460693-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="37460694-cb03-11de-ab2e-db15a06743a5" text="the phosphate" />
+                        <OTText id="37462da5-cb03-11de-ab2e-db15a06743a5" text="the sugar" />
+                        <OTText id="37462da6-cb03-11de-ab2e-db15a06743a5" text="the base" />
+                        <OTText id="37462da7-cb03-11de-ab2e-db15a06743a5" text="the amino acid" />
+                        <OTText id="37462da8-cb03-11de-ab2e-db15a06743a5" text="the hydrogen bond" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="37462da6-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="374654b9-cb03-11de-ab2e-db15a06743a5" name="NAP_P7_Q3">
+                  <prompt>
+                    <OTText id="374654ba-cb03-11de-ab2e-db15a06743a5" text="The side chain of an amino acid" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="374654bb-cb03-11de-ab2e-db15a06743a5" selectionUI="0">
+                      <choices>
+                        <OTText id="374654bc-cb03-11de-ab2e-db15a06743a5" text="is the same in all amino acids" />
+                        <OTText id="37467bcd-cb03-11de-ab2e-db15a06743a5" text="is also called the R group" />
+                        <OTText id="37467bce-cb03-11de-ab2e-db15a06743a5" text="pairs with other side chains in a double helix" />
+                        <OTText id="37467bcf-cb03-11de-ab2e-db15a06743a5" text="is polar (hydrophilic)" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="37467bcd-cb03-11de-ab2e-db15a06743a5" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="37467bd0-cb03-11de-ab2e-db15a06743a5" name="NAP_P7_Q4">
+                  <prompt>
+                    <OTText id="3746a2e1-cb03-11de-ab2e-db15a06743a5" text="A protein chain (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3746a2e2-cb03-11de-ab2e-db15a06743a5" selectionUI="1">
+                      <choices>
+                        <OTText id="3746a2e3-cb03-11de-ab2e-db15a06743a5" text="folds into a shape that is important for it to work properly" />
+                        <OTText id="3746a2e4-cb03-11de-ab2e-db15a06743a5" text="contains sugars, phosphates and bases" />
+                        <OTText id="3746a2e5-cb03-11de-ab2e-db15a06743a5" text="is a chain of nucleotides" />
+                        <OTText id="3746a2e6-cb03-11de-ab2e-db15a06743a5" text="is a chain of amino acids" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="3746a2e3-cb03-11de-ab2e-db15a06743a5" />
+                        <object refid="3746a2e6-cb03-11de-ab2e-db15a06743a5" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="3746f108-cb03-11de-ab2e-db15a06743a5" name="NAP_P7_Q5">
+                  <prompt>
+                    <OTText id="3746f109-cb03-11de-ab2e-db15a06743a5" text="How are the structures of DNA and proteins similar to each other, and how are they different?" />
+                  </prompt>
+                  <input>
+                    <OTText id="3746f10a-cb03-11de-ab2e-db15a06743a5" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="37473f2c-cb03-11de-ab2e-db15a06743a5" name="http://ri-itest.concord.org/SAMActivities/ProteinsAndNucleic/ProteinsAndNucleic_v4/page7.cml">
+                  <prompt>
+                    <OTText id="37473f2d-cb03-11de-ab2e-db15a06743a5" text="The protein shown to the right folded in water. Which color represents the non-polar (hydrophobic) amino acids, and which color represents the polar (hydrophilic) amino acids? Explain how you know." />
+                  </prompt>
+                  <input>
+                    <OTText id="37473f2e-cb03-11de-ab2e-db15a06743a5" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="37473f2f-cb03-11de-ab2e-db15a06743a5" text="NAP_P7_Q6" />
+                  </correctAnswer>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

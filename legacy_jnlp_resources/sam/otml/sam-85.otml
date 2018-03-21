@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="9b011390-81e0-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="95f7e005-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page1.cml">
+                  <prompt>
+                    <OTText id="95f8a356-61b8-11de-bf40-0314bb7d1e36" text="What color light has the highest frequency?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="95fa7817-61b8-11de-bf40-0314bb7d1e36" selectionUI="0">
+                      <choices>
+                        <OTText id="95fb1458-61b8-11de-bf40-0314bb7d1e36" text="Red" />
+                        <OTText id="95fb3b69-61b8-11de-bf40-0314bb7d1e36" text="Yellow" />
+                        <OTText id="95fb3b6a-61b8-11de-bf40-0314bb7d1e36" text="Green" />
+                        <OTText id="95fc25cb-61b8-11de-bf40-0314bb7d1e36" text="Blue" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="95fc25cb-61b8-11de-bf40-0314bb7d1e36" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="95fc73ec-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page1.cml">
+                  <prompt>
+                    <OTText id="95fc73ed-61b8-11de-bf40-0314bb7d1e36" text="Which photon has the lowest amount of energy?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="95fc73ee-61b8-11de-bf40-0314bb7d1e36" selectionUI="0">
+                      <choices>
+                        <OTText id="95fc73ef-61b8-11de-bf40-0314bb7d1e36" text="Infrared" />
+                        <OTText id="95fc9b00-61b8-11de-bf40-0314bb7d1e36" text="Orange" />
+                        <OTText id="95fc9b01-61b8-11de-bf40-0314bb7d1e36" text="Violet" />
+                        <OTText id="95fc9b02-61b8-11de-bf40-0314bb7d1e36" text="Ultraviolet" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="95fc73ef-61b8-11de-bf40-0314bb7d1e36" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="97e1fcd3-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page2.cml">
+                  <prompt>
+                    <OTText id="97e223e4-61b8-11de-bf40-0314bb7d1e36" text="Take a snapshot of the model just before the atom emits a blue photon and insert it below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="97e223e5-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="97e3aa86-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page2.cml">
+                  <prompt>
+                    <OTText id="97e3aa87-61b8-11de-bf40-0314bb7d1e36" text="Take a snapshot of the model just after the atom emits a blue photon and insert it below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="97e3aa88-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="97e3d199-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page2.cml">
+                  <prompt>
+                    <OTText id="97e3d19a-61b8-11de-bf40-0314bb7d1e36" text="Take a snapshot of the energy level diagram just before the atom emits a blue photon and insert it below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="97e3d19b-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="97e3f8ac-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page2.cml">
+                  <prompt>
+                    <OTText id="97e3f8ad-61b8-11de-bf40-0314bb7d1e36" text="Take a snapshot of the energy level diagram just after the atom emits a blue photon and insert it below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="97e3f8ae-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="97e446cf-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page2.cml">
+                  <prompt>
+                    <OTText id="97e446d0-61b8-11de-bf40-0314bb7d1e36" text="Which energy levels (refer to them as the top, middle and bottom ones) were involved in making the blue photon? In other words, what state was the atom in before it emitted the photon and where did it end up?" />
+                  </prompt>
+                  <input>
+                    <OTText id="97e46ce1-61b8-11de-bf40-0314bb7d1e36" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="97e46ce2-61b8-11de-bf40-0314bb7d1e36" text="First excited state to ground state" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9ac8c823-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page3.cml">
+                  <prompt>
+                    <OTText id="9ac8c824-61b8-11de-bf40-0314bb7d1e36" text="Heat the model until several atoms are excited. Then let it run. Describe what happens to the atoms." />
+                  </prompt>
+                  <input>
+                    <OTText id="9ac8c825-61b8-11de-bf40-0314bb7d1e36" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="9ac8c826-61b8-11de-bf40-0314bb7d1e36" text="They cool down until they no longer have enough energy to reach the lowest excited state. After that they no longer emit photons so thay don't lose energy. The Photons remove them from the system. " />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9ac8ef37-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page3.cml">
+                  <prompt>
+                    <OTText id="9ac8ef38-61b8-11de-bf40-0314bb7d1e36" text="Reset the model, and do not heat up the model. Adjust the energy levels to see if you can get any photon emitted. Write down what you need to do below." />
+                  </prompt>
+                  <input>
+                    <OTText id="9ac8ef39-61b8-11de-bf40-0314bb7d1e36" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="9ac8ef3a-61b8-11de-bf40-0314bb7d1e36" text="You need to lower an energy level until it is about -3.80. Then there is enough energy in the system to allow the atoms to reach the lowest excited state." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9b9b0c4b-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page4.cml">
+                  <prompt>
+                    <OTText id="9b9b335c-61b8-11de-bf40-0314bb7d1e36" text=" The picture on the left shows an infrared photon. Run the model until you see a photon like this, then stop the model and run it back and forth frame by frame to figure out which type of atom emits this type of photon. Write your answer below." />
+                  </prompt>
+                  <input>
+                    <OTText id="9b9b335d-61b8-11de-bf40-0314bb7d1e36" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9b9b5a6f-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page4.cml">
+                  <prompt>
+                    <OTText id="9b9b5a70-61b8-11de-bf40-0314bb7d1e36" text=" Run the model until you see a blue photon. Stop the model and run it back and forth. Which type of atom emitted the blue photon?" />
+                  </prompt>
+                  <input>
+                    <OTText id="9b9b5a71-61b8-11de-bf40-0314bb7d1e36" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="9b9b5a72-61b8-11de-bf40-0314bb7d1e36" text="pink" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9c910513-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c910514-61b8-11de-bf40-0314bb7d1e36" text="Fill in a snapshot image below to show the model before a photon is absorbed by a purple atom:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="9c910515-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9c912c26-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c912c27-61b8-11de-bf40-0314bb7d1e36" text="Fill in a snapshot image below to show the model after a photon is absorbed by a purple atom:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="9c912c28-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9c915339-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c91533a-61b8-11de-bf40-0314bb7d1e36" text="In the space below, explain in your own words what you had to do to make the blue atom emit photons that the purple atoms could absorb." />
+                  </prompt>
+                  <input>
+                    <OTText id="9c91533b-61b8-11de-bf40-0314bb7d1e36" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9e22537d-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page6.cml">
+                  <prompt>
+                    <OTText id="9e22537e-61b8-11de-bf40-0314bb7d1e36" text="The picture above shows a spectrum with six lines in it, three of them visible, one infrared, and two ultraviolet. How many energy levels do you think the atom had that made this spectrum? Experiment with the model and see if you can make a spectrum with six lines. Check off below how many energy levels it took." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9e22537f-61b8-11de-bf40-0314bb7d1e36" selectionUI="0">
+                      <choices>
+                        <OTText id="9e225380-61b8-11de-bf40-0314bb7d1e36" text="3" />
+                        <OTText id="9e225381-61b8-11de-bf40-0314bb7d1e36" text="4" />
+                        <OTText id="9e227a92-61b8-11de-bf40-0314bb7d1e36" text="5" />
+                        <OTText id="9e227a93-61b8-11de-bf40-0314bb7d1e36" text="6" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9e225381-61b8-11de-bf40-0314bb7d1e36" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a00f5674-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a00f5675-61b8-11de-bf40-0314bb7d1e36" text="Place a snapshot of Type-1 atoms' spectrum here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a00f5676-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a00f7d87-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a00f7d88-61b8-11de-bf40-0314bb7d1e36" text="Place a snapshot of Type-2 atoms' spectrum here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a00f7d89-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a00fa49a-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a00fa49b-61b8-11de-bf40-0314bb7d1e36" text="Place a snapshot of Type-3 atoms' spectrum here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a00fa49c-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a00fcbad-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a00fcbae-61b8-11de-bf40-0314bb7d1e36" text="Place a snapshot of Type-4 atoms' spectrum here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a00fcbaf-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a01040e0-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a01040e1-61b8-11de-bf40-0314bb7d1e36" text="Place a snapshot of the unknown atoms' spectrum here." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a01040e2-61b8-11de-bf40-0314bb7d1e36" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a01067f3-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a01067f4-61b8-11de-bf40-0314bb7d1e36" text="Which type is most likely the unknown atom? (Note: the spectra may not be exactly identical. Look for the one that looks closest.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a01067f5-61b8-11de-bf40-0314bb7d1e36" selectionUI="0">
+                      <choices>
+                        <OTText id="a01067f6-61b8-11de-bf40-0314bb7d1e36" text="Type-1." />
+                        <OTText id="a0108f07-61b8-11de-bf40-0314bb7d1e36" text="Type-2." />
+                        <OTText id="a0108f08-61b8-11de-bf40-0314bb7d1e36" text="Type-3." />
+                        <OTText id="a0115259-61b8-11de-bf40-0314bb7d1e36" text="Type-4." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a0108f07-61b8-11de-bf40-0314bb7d1e36" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a23a73ea-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page8.cml">
+                  <prompt>
+                    <OTText id="a23a73eb-61b8-11de-bf40-0314bb7d1e36" text="A certain atom has two excited states. How many spectral lines can it produce at maximum?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a23a73ec-61b8-11de-bf40-0314bb7d1e36" selectionUI="0">
+                      <choices>
+                        <OTText id="a23a9afd-61b8-11de-bf40-0314bb7d1e36" text="1" />
+                        <OTText id="a23a9afe-61b8-11de-bf40-0314bb7d1e36" text="2" />
+                        <OTText id="a23a9aff-61b8-11de-bf40-0314bb7d1e36" text="3" />
+                        <OTText id="a23a9b00-61b8-11de-bf40-0314bb7d1e36" text="4" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a23a9aff-61b8-11de-bf40-0314bb7d1e36" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a23a9b01-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page8.cml">
+                  <prompt>
+                    <OTText id="a23ac212-61b8-11de-bf40-0314bb7d1e36" text="Is it possible for two different types of atoms to have exactly the same spectra but not have exactly the same energy levels?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a23ac213-61b8-11de-bf40-0314bb7d1e36" selectionUI="0">
+                      <choices>
+                        <OTText id="a23ac214-61b8-11de-bf40-0314bb7d1e36" text="They can't have the same spectrum because every atom is different." />
+                        <OTText id="a23ac215-61b8-11de-bf40-0314bb7d1e36" text="They could in principal, but it would mean that they had exactly the same energy levels." />
+                        <OTText id="a23ac216-61b8-11de-bf40-0314bb7d1e36" text="They could but it would mean that they had exactly the same differences between their energy levels." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a23ac214-61b8-11de-bf40-0314bb7d1e36" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a23ae927-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page8.cml">
+                  <prompt>
+                    <OTText id="a23ae928-61b8-11de-bf40-0314bb7d1e36" text="A scientist measured the spectrum of a gas supposedly composed purely of Type-C atoms, but he found the spectrum revealed that the gas was contaminated. Can you identify which type of atoms could have possibly contaminated the gas? (Check all that apply.)(The box in the above image shows the spectra of four types of atoms: A, B, C and D. The spectrum below the box shows the result he obtained.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a23ae929-61b8-11de-bf40-0314bb7d1e36" selectionUI="1">
+                      <choices>
+                        <OTText id="a23ae92a-61b8-11de-bf40-0314bb7d1e36" text="Type A" />
+                        <OTText id="a23ae92b-61b8-11de-bf40-0314bb7d1e36" text="Type B" />
+                        <OTText id="a23ae92c-61b8-11de-bf40-0314bb7d1e36" text="Type D" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="a23ae92a-61b8-11de-bf40-0314bb7d1e36" />
+                        <object refid="a23ae92c-61b8-11de-bf40-0314bb7d1e36" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a23b856e-61b8-11de-bf40-0314bb7d1e36" name="http://ri-itest.concord.org/SAMActivities/Spectroscopy/Spectroscopy_v4/page8.cml">
+                  <prompt>
+                    <OTText id="a23b856f-61b8-11de-bf40-0314bb7d1e36" text="Of the following transitions between the energy levels shown in the right graph, which results in photons with the lowest possible frequency?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a23b8570-61b8-11de-bf40-0314bb7d1e36" selectionUI="0">
+                      <choices>
+                        <OTText id="a23b8571-61b8-11de-bf40-0314bb7d1e36" text="2 to 1" />
+                        <OTText id="a23b8572-61b8-11de-bf40-0314bb7d1e36" text="3 to 2" />
+                        <OTText id="a23bac83-61b8-11de-bf40-0314bb7d1e36" text="4 to 3" />
+                        <OTText id="a23bac84-61b8-11de-bf40-0314bb7d1e36" text="5 to 4" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a23bac84-61b8-11de-bf40-0314bb7d1e36" />
+                  </correctAnswer>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

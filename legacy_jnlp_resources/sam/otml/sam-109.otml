@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="d28a1190-b06a-11df-94e2-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="219f6e31-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page2.cml">
+                  <prompt>
+                    <OTText id="21a16a02-b06b-11df-875f-add94e2300a8" text="Explain why the electrons move to their new positions in the above model." />
+                  </prompt>
+                  <input>
+                    <OTText id="21b39273-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="21b3e095-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page2.cml">
+                  <prompt>
+                    <OTText id="21b3e096-b06b-11df-875f-add94e2300a8" text="What keeps electrons from moving away from the atom altogether? Choose the best answer:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="21b407a7-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="21b5b558-b06b-11df-875f-add94e2300a8" text="They are stuck in their regions." />
+                        <OTText id="21b5b559-b06b-11df-875f-add94e2300a8" text="They aren't negatively charged enough." />
+                        <OTText id="21b5b55a-b06b-11df-875f-add94e2300a8" text="They are attracted to the nucleus of the atom." />
+                        <OTText id="21b5dc6b-b06b-11df-875f-add94e2300a8" text="They are attracted to other electrons." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="21b5b55a-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="24318acc-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page3.cml">
+                  <prompt>
+                    <OTText id="24318acd-b06b-11df-875f-add94e2300a8" text="Tetrahedral" />
+                  </prompt>
+                  <input>
+                    <OTImage id="24318ace-b06b-11df-875f-add94e2300a8" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="24324e1f-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page3.cml">
+                  <prompt>
+                    <OTText id="24324e20-b06b-11df-875f-add94e2300a8" text="Linear" />
+                  </prompt>
+                  <input>
+                    <OTImage id="24324e21-b06b-11df-875f-add94e2300a8" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="24327532-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page3.cml">
+                  <prompt>
+                    <OTText id="24327533-b06b-11df-875f-add94e2300a8" text="Trigonal Planar" />
+                  </prompt>
+                  <input>
+                    <OTImage id="24327534-b06b-11df-875f-add94e2300a8" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="24329c45-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page3.cml">
+                  <prompt>
+                    <OTText id="24329c46-b06b-11df-875f-add94e2300a8" text="How many regions of electron density are around the central atom in a molecule with tetrahedral geometry?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="24329c47-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="24329c48-b06b-11df-875f-add94e2300a8" text="One" />
+                        <OTText id="24329c49-b06b-11df-875f-add94e2300a8" text="Two" />
+                        <OTText id="24329c4a-b06b-11df-875f-add94e2300a8" text="Three" />
+                        <OTText id="24329c4b-b06b-11df-875f-add94e2300a8" text="Four" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="24329c4b-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2432ea6c-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page3.cml">
+                  <prompt>
+                    <OTText id="2432ea6d-b06b-11df-875f-add94e2300a8" text="How many regions of electron density are around the central atom in a molecule with linear geometry?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2432ea6e-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="2432ea6f-b06b-11df-875f-add94e2300a8" text="One" />
+                        <OTText id="2432ea70-b06b-11df-875f-add94e2300a8" text="Two" />
+                        <OTText id="2432ea71-b06b-11df-875f-add94e2300a8" text="Three" />
+                        <OTText id="2432ea72-b06b-11df-875f-add94e2300a8" text="Four" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2432ea70-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="24333893-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page3.cml">
+                  <prompt>
+                    <OTText id="24333894-b06b-11df-875f-add94e2300a8" text="How many regions of electron density are around the central atom in a molecule with trigonal planar geometry?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="24333895-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="24335fa6-b06b-11df-875f-add94e2300a8" text="One" />
+                        <OTText id="24335fa7-b06b-11df-875f-add94e2300a8" text="Two" />
+                        <OTText id="24335fa8-b06b-11df-875f-add94e2300a8" text="Three" />
+                        <OTText id="24335fa9-b06b-11df-875f-add94e2300a8" text="Four" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="24335fa8-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2800462a-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page5.cml">
+                  <prompt>
+                    <OTText id="2800462b-b06b-11df-875f-add94e2300a8" text="Step 1: Look at the Lewis dot structure for CO2 (above). What is the central atom in CO2?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2800462c-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="2800462d-b06b-11df-875f-add94e2300a8" text="carbon" />
+                        <OTText id="2800462e-b06b-11df-875f-add94e2300a8" text="oxygen" />
+                        <OTText id="28006d3f-b06b-11df-875f-add94e2300a8" text="dioxide" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2800462d-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="28009450-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page5.cml">
+                  <prompt>
+                    <OTText id="28009451-b06b-11df-875f-add94e2300a8" text="Step 2: How many regions of electron density are there around the central atom in CO2?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="28009452-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="28009453-b06b-11df-875f-add94e2300a8" text="one" />
+                        <OTText id="28009454-b06b-11df-875f-add94e2300a8" text="two" />
+                        <OTText id="28009455-b06b-11df-875f-add94e2300a8" text="four" />
+                        <OTText id="2800bb66-b06b-11df-875f-add94e2300a8" text="eight" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="28009454-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2800e277-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page5.cml">
+                  <prompt>
+                    <OTText id="2800e278-b06b-11df-875f-add94e2300a8">
+                      <text>Step 3: Think about electron repulsions and how regions of electron density arrange themselves around a central atom. Then...
+Step 4: Predict the geometry of carbon dioxide:</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTChoice id="2800e279-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="2800e27a-b06b-11df-875f-add94e2300a8" text="linear" />
+                        <OTText id="2800e27b-b06b-11df-875f-add94e2300a8" text="trigonal planar" />
+                        <OTText id="2800e27c-b06b-11df-875f-add94e2300a8" text="tetrahedral" />
+                        <OTText id="2800e27d-b06b-11df-875f-add94e2300a8" text="cubic" />
+                        <OTText id="2801098e-b06b-11df-875f-add94e2300a8" text="rectangular" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2800e27a-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2801309f-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page5.cml">
+                  <prompt>
+                    <OTText id="280130a0-b06b-11df-875f-add94e2300a8" text="Predict the geometry of boron trifluoride:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="280130a1-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="280130a2-b06b-11df-875f-add94e2300a8" text="linear" />
+                        <OTText id="280157b3-b06b-11df-875f-add94e2300a8" text="trigonal planar" />
+                        <OTText id="280157b4-b06b-11df-875f-add94e2300a8" text="tetrahedral" />
+                        <OTText id="280157b5-b06b-11df-875f-add94e2300a8" text="cubic" />
+                        <OTText id="280157b6-b06b-11df-875f-add94e2300a8" text="rectangular" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="280157b3-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="28017ec7-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page5.cml">
+                  <prompt>
+                    <OTText id="28017ec8-b06b-11df-875f-add94e2300a8" text="Explain why boron trifluoride has the geometry it does:" />
+                  </prompt>
+                  <input>
+                    <OTText id="28017ec9-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2ba643db-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page6.cml">
+                  <prompt>
+                    <OTText id="2ba643dc-b06b-11df-875f-add94e2300a8">
+                      <text>What is the electron geometry of water?
+Click here to see the steps for determining geometry.</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTChoice id="2ba66aed-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="2ba66aee-b06b-11df-875f-add94e2300a8" text="linear" />
+                        <OTText id="2ba66aef-b06b-11df-875f-add94e2300a8" text="trigonal planar" />
+                        <OTText id="2ba66af0-b06b-11df-875f-add94e2300a8" text="tetrahedral" />
+                        <OTText id="2ba69201-b06b-11df-875f-add94e2300a8" text="none of the above" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2ba66af0-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2ba6b912-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page6.cml">
+                  <prompt>
+                    <OTText id="2ba6b913-b06b-11df-875f-add94e2300a8" text="Describe how unshared electrons are responsible for the angle of the water molecule." />
+                  </prompt>
+                  <input>
+                    <OTText id="2ba6b914-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2ba72e46-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page6.cml">
+                  <prompt>
+                    <OTText id="2ba72e47-b06b-11df-875f-add94e2300a8" text="Carbon dioxide (CO2) and water (H2O) both have two atoms attached to the central atom. Explain why carbon dioxide's shape is linear, while water's shape is bent. (Click here to compare the Lewis structures of CO2 and water.)" />
+                  </prompt>
+                  <input>
+                    <OTText id="2ba75558-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2d3f5a7a-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page7.cml">
+                  <prompt>
+                    <OTText id="2d3f5a7b-b06b-11df-875f-add94e2300a8" text="Make a prediction for the shapes of NH3 and BF3, shown at right:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2d3f5a7c-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="2d3f5a7d-b06b-11df-875f-add94e2300a8" text="Their shapes will be the same." />
+                        <OTText id="2d3f818e-b06b-11df-875f-add94e2300a8" text="Their shapes will be different." />
+                        <OTText id="2d3f818f-b06b-11df-875f-add94e2300a8" text="Not enough information is given." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2d3f818e-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2d549030-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page7.cml">
+                  <prompt>
+                    <OTText id="2d549031-b06b-11df-875f-add94e2300a8" text="Place your snapshot of NH3 with the added unshared electron pair here:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="2d549032-b06b-11df-875f-add94e2300a8" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2d54b743-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page7.cml">
+                  <prompt>
+                    <OTText id="2d54b744-b06b-11df-875f-add94e2300a8" text="Explain your placement of the unshared electron pair in the snapshot at left." />
+                  </prompt>
+                  <input>
+                    <OTText id="2d54b745-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2d54de57-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page7.cml">
+                  <prompt>
+                    <OTText id="2d54de58-b06b-11df-875f-add94e2300a8" text="The shape of NH3 is called &quot;trigonal pyramidal.&quot; What is its electron geometry?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2d54de59-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="2d54de5a-b06b-11df-875f-add94e2300a8" text="Linear." />
+                        <OTText id="2d54de5b-b06b-11df-875f-add94e2300a8" text="Trigonal planar." />
+                        <OTText id="2d54de5c-b06b-11df-875f-add94e2300a8" text="Tetrahedral." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="2d54de5c-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2d55056d-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page7.cml">
+                  <prompt>
+                    <OTText id="2d55056e-b06b-11df-875f-add94e2300a8" text="Explain why the shape of BF3 is the same as its electron geometry:" />
+                  </prompt>
+                  <input>
+                    <OTText id="2d55056f-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="2f58ebc1-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page8.cml">
+                  <prompt>
+                    <OTText id="2f5912d2-b06b-11df-875f-add94e2300a8" text="Which numbered atoms have trigonal planar geometry?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2f5912d3-b06b-11df-875f-add94e2300a8" selectionUI="1">
+                      <choices>
+                        <OTText id="2f5912d4-b06b-11df-875f-add94e2300a8" text="atom #1" />
+                        <OTText id="2f5912d5-b06b-11df-875f-add94e2300a8" text="atom #2" />
+                        <OTText id="2f5912d6-b06b-11df-875f-add94e2300a8" text="atom #3" />
+                        <OTText id="2f5912d7-b06b-11df-875f-add94e2300a8" text="atom #4" />
+                        <OTText id="2f5912d8-b06b-11df-875f-add94e2300a8" text="atom #5" />
+                        <OTText id="2f5912d9-b06b-11df-875f-add94e2300a8" text="atom #6" />
+                        <OTText id="2f5912da-b06b-11df-875f-add94e2300a8" text="none" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="2f5912d8-b06b-11df-875f-add94e2300a8" />
+                        <object refid="2f5912d9-b06b-11df-875f-add94e2300a8" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2f6e217c-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page8.cml">
+                  <prompt>
+                    <OTText id="2f6e217d-b06b-11df-875f-add94e2300a8" text="Which numbered atoms have tetrahedral geometry?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2f6e217e-b06b-11df-875f-add94e2300a8" selectionUI="1">
+                      <choices>
+                        <OTText id="2f6e488f-b06b-11df-875f-add94e2300a8" text="atom #1" />
+                        <OTText id="2f6e4890-b06b-11df-875f-add94e2300a8" text="atom #2" />
+                        <OTText id="2f6e4891-b06b-11df-875f-add94e2300a8" text="atom #3" />
+                        <OTText id="2f6e4892-b06b-11df-875f-add94e2300a8" text="atom #4" />
+                        <OTText id="2f6e4893-b06b-11df-875f-add94e2300a8" text="atom #5" />
+                        <OTText id="2f6e4894-b06b-11df-875f-add94e2300a8" text="atom #6" />
+                        <OTText id="2f6e4895-b06b-11df-875f-add94e2300a8" text="none" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="2f6e488f-b06b-11df-875f-add94e2300a8" />
+                        <object refid="2f6e4890-b06b-11df-875f-add94e2300a8" />
+                        <object refid="2f6e4891-b06b-11df-875f-add94e2300a8" />
+                        <object refid="2f6e4892-b06b-11df-875f-add94e2300a8" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="2f6e6fa7-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page8.cml">
+                  <prompt>
+                    <OTText id="2f6e6fa8-b06b-11df-875f-add94e2300a8" text="Which numbered atoms have trigonal pyramidal geometry?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="2f6e6fa9-b06b-11df-875f-add94e2300a8" selectionUI="1">
+                      <choices>
+                        <OTText id="2f6e6faa-b06b-11df-875f-add94e2300a8" text="atom #1" />
+                        <OTText id="2f6e96bb-b06b-11df-875f-add94e2300a8" text="atom #2" />
+                        <OTText id="2f6e96bc-b06b-11df-875f-add94e2300a8" text="atom #3" />
+                        <OTText id="2f6e96bd-b06b-11df-875f-add94e2300a8" text="atom #4" />
+                        <OTText id="2f6e96be-b06b-11df-875f-add94e2300a8" text="atom #5" />
+                        <OTText id="2f6e96bf-b06b-11df-875f-add94e2300a8" text="atom #6" />
+                        <OTText id="2f6e96c0-b06b-11df-875f-add94e2300a8" text="none" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="2f6e96c0-b06b-11df-875f-add94e2300a8" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="375a2d42-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page9.cml">
+                  <prompt>
+                    <OTText id="375a2d43-b06b-11df-875f-add94e2300a8" text="Which of the two solids melts (becomes a liquid) first?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="375a2d44-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="375a2d45-b06b-11df-875f-add94e2300a8" text="Butter." />
+                        <OTText id="375a2d46-b06b-11df-875f-add94e2300a8" text="Oil." />
+                        <OTText id="375a2d47-b06b-11df-875f-add94e2300a8" text="They melt at the same temperature." />
+                        <OTText id="375a2d48-b06b-11df-875f-add94e2300a8" text="They never melt." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="375a2d46-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="375a5459-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page9.cml">
+                  <prompt>
+                    <OTText id="375a7b6a-b06b-11df-875f-add94e2300a8" text="Using your knowledge of close range intermolecular forces (van der Waals forces), explain how shape influences the melting points of butter and oil." />
+                  </prompt>
+                  <input>
+                    <OTText id="375a7b6b-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3a63eadd-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page10.cml">
+                  <prompt>
+                    <OTText id="3a63eade-b06b-11df-875f-add94e2300a8">
+                      <text>There are many fascinating uses for nanotechnology. Use one of the links below to search for an interesting example on the Web, or to find your own. When you find one that is compelling to you, paste the URL of the page below, and explain how nanotechnology is put to work in your example.
+Nanotechnology and Medicine
+Nanotechnology and Food
+Nanotechnology and Engineering
+What other areas can you think of?</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTText id="3a63eadf-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3d8c2cf1-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8c2cf2-b06b-11df-875f-add94e2300a8" text="The position of the electrons around an atom is NOT a result of" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3d8c2cf3-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="3d8c2cf4-b06b-11df-875f-add94e2300a8" text="electron-electron repulsive forces." />
+                        <OTText id="3d8c5405-b06b-11df-875f-add94e2300a8" text="electron-nucleus attractive forces." />
+                        <OTText id="3d8c5406-b06b-11df-875f-add94e2300a8" text="electron-nucleus repulsive forces." />
+                        <OTText id="3d8c5407-b06b-11df-875f-add94e2300a8" text="the number of electrons around the atom." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="3d8c5406-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="3d8cf048-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8cf049-b06b-11df-875f-add94e2300a8" text="Which of the following are regions of electron density? (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3d8cf04a-b06b-11df-875f-add94e2300a8" selectionUI="1">
+                      <choices>
+                        <OTText id="3d8cf04b-b06b-11df-875f-add94e2300a8" text="A covalent bond." />
+                        <OTText id="3d8cf04c-b06b-11df-875f-add94e2300a8" text="A shared electron pair." />
+                        <OTText id="3d8d175d-b06b-11df-875f-add94e2300a8" text="The nucleus of the atom." />
+                        <OTText id="3d8d175e-b06b-11df-875f-add94e2300a8" text="An unshared electron pair." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="3d8cf04b-b06b-11df-875f-add94e2300a8" />
+                        <object refid="3d8cf04c-b06b-11df-875f-add94e2300a8" />
+                        <object refid="3d8d175e-b06b-11df-875f-add94e2300a8" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="3d8d6580-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8d8c91-b06b-11df-875f-add94e2300a8" text="Do electron dot structures accurately describe the shapes of molecules? Explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="3d8d8c92-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3d8e9e04-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8e9e05-b06b-11df-875f-add94e2300a8" text="Below is the Lewis structure for phosphorous trichloride. Choose the correct electron geometry for it from the list below." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3d8e9e06-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="3d8e9e07-b06b-11df-875f-add94e2300a8" text="Linear." />
+                        <OTText id="3d8e9e08-b06b-11df-875f-add94e2300a8" text="Bent." />
+                        <OTText id="3d8e9e09-b06b-11df-875f-add94e2300a8" text="Trigonal planar." />
+                        <OTText id="3d8e9e0a-b06b-11df-875f-add94e2300a8" text="Trigonal pyramidal." />
+                        <OTText id="3d8ec51b-b06b-11df-875f-add94e2300a8" text="Tetrahedral." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="3d8ec51b-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="3d8ec51c-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8ec51d-b06b-11df-875f-add94e2300a8" text="Is the shape of phosphorus trichloride the same as its electron geometry? Explain why or why not." />
+                  </prompt>
+                  <input>
+                    <OTText id="3d8eec2e-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3d8eec30-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8eec31-b06b-11df-875f-add94e2300a8" text="Predict the electron geometry of nitrosyl chloride, shown below." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3d8eec32-b06b-11df-875f-add94e2300a8" selectionUI="0">
+                      <choices>
+                        <OTText id="3d8f1343-b06b-11df-875f-add94e2300a8" text="Linear." />
+                        <OTText id="3d8f1344-b06b-11df-875f-add94e2300a8" text="Bent." />
+                        <OTText id="3d8f1345-b06b-11df-875f-add94e2300a8" text="Trigonal planar." />
+                        <OTText id="3d8f1346-b06b-11df-875f-add94e2300a8" text="Trigonal pyramidal." />
+                        <OTText id="3d8f1347-b06b-11df-875f-add94e2300a8" text="Tetrahedral." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="3d8f1345-b06b-11df-875f-add94e2300a8" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="3d8f3a58-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8f3a59-b06b-11df-875f-add94e2300a8" text="In the previous question, you were asked to predict the electron geometry of nitrosyl chloride. Now, predict its shape and explain your answer:" />
+                  </prompt>
+                  <input>
+                    <OTText id="3d8f3a5a-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3d8f616c-b06b-11df-875f-add94e2300a8" name="http://ri-itest.concord.org/SAMActivities/MolecularGeometry/MolecularGeometry_v4/page11.cml">
+                  <prompt>
+                    <OTText id="3d8f616d-b06b-11df-875f-add94e2300a8" text="Explain how molecular shape plays a role in determining the temperature at which a solid melts into a liquid." />
+                  </prompt>
+                  <input>
+                    <OTText id="3d8f616e-b06b-11df-875f-add94e2300a8" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

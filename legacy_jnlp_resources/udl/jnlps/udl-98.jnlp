@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp codebase="http://jars.dev.concord.org/dev" spec="1.0+">
+  <information>
+    <title>UDL</title>
+    <vendor>The Concord Consortium</vendor>
+    <homepage href="http://udl.concord.org"/>
+    <description>Universal Design in Science Education (development site)</description>
+    <icon height="64" href="http://udl.concord.org/images/udl-tree-64x64-transparent.png" width="64"/>
+  </information>
+<security>
+    <all-permissions/>
+  </security>
+<resources os="Mac OS X" arch="ppc i386">
+  <j2se version="1.5" max-heap-size="128m" initial-heap-size="32m"/>
+</resources>
+<resources os="Mac OS X" arch="x86_64">
+  <j2se java-vm-args="-d32" version="1.5" max-heap-size="128m" initial-heap-size="32m"/>
+</resources>
+<resources os="Mac OS X">
+  <j2se java-vm-args="-d32" version="1.6" max-heap-size="128m" initial-heap-size="32m"/>
+</resources>
+<resources>
+    <j2se version="1.5+" max-heap-size="128m" initial-heap-size="32m"/>
+<jar href="org/telscenter/sail-otrunk/sail-otrunk__V0.1.0-20090723.144353-1047.jar"/>
+<jar href="org/concord/otrunk/otrunk__V0.1.1-20091110.200051-2.jar"/>
+<jar href="org/concord/framework/framework__V0.1.0-20090728.160007-342.jar"/>
+<jar href="org/concord/frameworkview/frameworkview__V0.1.0-20090729.080753-170.jar"/>
+<jar href="org/concord/swing/swing__V0.1.0-20090723.164039-180.jar"/>
+<jar href="jug/jug/jug__V1.1.2.jar"/>
+<jar href="jdom/jdom/jdom__V1.0.jar"/>
+<jar href="org/concord/apple-support/apple-support__V0.1.0-20090718.040447-120.jar"/>
+<jar href="org/concord/utilities/response-cache/response-cache__V0.1.0-20090808.020938-12.jar"/>
+<jar href="org/concord/loader/loader__V0.1.0-20090718.040611-115.jar"/>
+<jar href="net/sf/sail/sail-core/sail-core__V0.4.5-20090723.013952-1211.jar"/>
+<jar href="commons-beanutils/commons-beanutils/commons-beanutils__V1.7.0.jar"/>
+<jar href="commons-logging/commons-logging/commons-logging__V1.1.jar"/>
+<jar href="commons-lang/commons-lang/commons-lang__V2.0.jar"/>
+<jar href="commons-io/commons-io/commons-io__V1.1.jar"/>
+<jar href="log4j/log4j/log4j__V1.2.8.jar"/>
+<jar href="rhino/js/js__V1.6R5.jar"/>
+<jar href="script/jsr223/jsr223__V1.0.jar"/>
+<jar href="xstream/xstream/xstream__V1.1.2.jar"/>
+<jar href="net/sf/sail/sail-data-emf/sail-data-emf__V0.1.0-20100211.175629-50.jar" main="true"/>
+<jar href="org/eclipse/emf/ecore/ecore__V2.2.0.jar"/>
+<jar href="org/eclipse/emf/common/common__V2.2.0.jar"/>
+<jar href="org/eclipse/emf/ecore-xmi/ecore-xmi__V2.2.0.jar"/>
+<jar href="org/concord/portfolio/portfolio__V0.1.0-20090809.080206-422.jar"/>
+<jar href="org/concord/otrunk-ui/otrunk-ui__V0.1.0-20090808.080619-658.jar"/>
+<jar href="org/concord/external/sound/jlayer/jlayer__V1.0.jar"/>
+<jar href="org/concord/external/sound/mp3spi/mp3spi__V1.9.4.jar"/>
+<jar href="org/concord/external/sound/tritonus/tritonus__V0.1.jar"/>
+<jar href="org/concord/external/ekit/ekit__V1.0.jar"/>
+<jar href="org/concord/httpclient/httpclient__V0.1.0-20080330.082248-19.jar"/>
+<jar href="org/concord/datagraph/datagraph__V0.1.3-20100214.205227-3.jar"/>
+<jar href="org/concord/data/data__V0.2.0-20090731.041232-39.jar"/>
+<jar href="org/concord/graphutil/graphutil__V0.1.0-20100125.175323-421.jar"/>
+<jar href="org/concord/graph/graph__V0.1.0-20090730.210009-144.jar"/>
+<jar href="org/concord/collisions/collisions__V0.1.0-20090814.190349-486.jar"/>
+<jar href="org/concord/math/math__V0.1.0-20090718.040952-116.jar"/>
+<jar href="org/concord/external/jep/jep__V1.0.jar"/>
+<jar href="org/concord/external/vecmath/vecmath__V2.0.jar"/>
+<jar href="org/concord/multimedia/multimedia__V0.1.0-20090814.190328-487.jar"/>
+<jar href="org/concord/external/animating-card-layout/animating-card-layout__V1.0.jar"/>
+<jar href="org/concord/otrunk/data-util/data-util__V0.1.0-20090915.184338-729.jar"/>
+<jar href="org/concord/sensor/sensor__V0.2.0-20090731.081804-27.jar"/>
+<jar href="org/concord/external/rxtx/rxtx-comm/rxtx-comm__V2.1.7-r2.jar"/>
+<jar href="org/concord/otrunk-mw/otrunk-mw__V0.1.0-20090814.082202-714.jar"/>
+<jar href="org/concord/modeler/mw/mw__V2.1.0-20090813.170112-47.jar"/>
+<jar href="org/concord/otrunk-nlogo4/otrunk-nlogo4__V0.1.0-20090729.084247-179.jar"/>
+<jar href="org/concord/nlogo/netlogo4lite/netlogo4lite__V4.0-20090730.182210-2.jar"/>
+<jar href="org/concord/external/log/log4j/log4j__V1.2.15.jar"/>
+<jar href="org/concord/otrunk/otrunk-phet/otrunk-phet__V0.1.0-20090729.084322-204.jar"/>
+<jar href="org/concord/external/phet/phetballoons/phetballoons__V1.0.3.jar"/>
+<jar href="org/concord/otrunk-cck/otrunk-cck__V0.1.0-20090808.081050-433.jar"/>
+<jar href="org/concord/external/phet/phetcck/phetcck__V1.0.4-20090730.182144-32.jar"/>
+<jar href="org/concord/otrunk/otrunk-velocity/otrunk-velocity__V0.1.0-20090808.081950-336.jar"/>
+<jar href="org/apache/velocity/velocity/velocity__V1.5.jar"/>
+<jar href="commons-collections/commons-collections/commons-collections__V3.1.jar"/>
+<jar href="oro/oro/oro__V2.0.8.jar"/>
+<jar href="org/apache/velocity/velocity-tools/velocity-tools__V1.3.jar"/>
+<jar href="commons-digester/commons-digester/commons-digester__V1.8.jar"/>
+<jar href="logkit/logkit/logkit__V1.0.1.jar"/>
+<jar href="avalon-framework/avalon-framework/avalon-framework__V4.1.3.jar"/>
+<jar href="commons-validator/commons-validator/commons-validator__V1.3.1.jar"/>
+<jar href="sslext/sslext/sslext__V1.2-0.jar"/>
+<jar href="velocity/velocity/velocity__V1.4.jar"/>
+<jar href="velocity/velocity-dep/velocity-dep__V1.4.jar"/>
+<jar href="org/concord/otrunk/otrunk-udl/otrunk-udl__V0.1.0-20100125.162335-1389.jar"/>
+<jar href="org/concord/otrunk-browser/otrunk-browser__V0.1.0-20091123.164348-520.jar"/>
+<jar href="org/mozdev/mozswing/mozswing-complete/mozswing-complete__V1.1.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-script-api/ot-script-api__V0.1.0-20090808.081846-354.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-javascript/ot-javascript__V0.1.0-20090808.082025-361.jar"/>
+<jar href="bsf/bsf/bsf__V2.4.0.jar"/>
+<jar href="org/concord/external/tts/narrator/narrator__V1.1.jar"/>
+<jar href="org/concord/external/tts/freetts/freetts__V1.1.jar"/>
+<jar href="org/concord/external/tts/en_us/en_us__V1.1.jar"/>
+<jar href="org/concord/external/tts/cmutimelex/cmutimelex__V1.1.jar"/>
+<jar href="org/concord/external/tts/cmulex/cmulex__V1.1.jar"/>
+<jar href="org/concord/external/tts/cmudict04/cmudict04__V1.1.jar"/>
+<jar href="org/concord/external/tts/cmu_us_kal/cmu_us_kal__V1.1.jar"/>
+<jar href="org/concord/external/tts/cmu_time_awb/cmu_time_awb__V1.1.jar"/>
+<jar href="org/concord/sapi/sapi__V0.1.0-20090718.042133-4.jar"/>
+<jar href="net/java/com4j/com4j/com4j__V20080107.jar"/>
+<jar href="org/concord/sensor-native/sensor-native__V0.1.0-20090731.084214-219.jar"/>
+<jar href="org/concord/sensor/sensor-vernier/sensor-vernier__V0.2.0-20090731.084158-28.jar"/>
+<jar href="org/concord/sensor/labpro-usb/labpro-usb__V0.2.0-20090718.041553-5.jar"/>
+<jar href="org/concord/sensor/labquest-jna/labquest-jna__V0.1.0-20090718.041607-12.jar"/>
+<jar href="org/concord/external/jna/jna-jws/jna-jws__V3.0.9.jar"/>
+<jar href="org/concord/sensor/sensor-dataharvest/sensor-dataharvest__V0.1.0-20090319.210620-9.jar"/>
+<jar href="org/concord/ftdi-serial-wrapper/ftdi-serial-wrapper__V0.1.0-20090718.041452-122.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-bsf/ot-bsf__V0.1.0-20090808.082008-363.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-jruby/ot-jruby__V0.1.0-20090808.082746-348.jar"/>
+<jar href="org/jruby/jruby-complete/jruby-complete__V1.1.4.jar"/>
+<jar href="org/concord/otrunk/ot-script/ot-script-view/ot-script-view__V0.1.0-20090808.082102-322.jar"/>
+<property name="maven.jnlp.version" value="udl-otrunk-0.1.0-20090814.211853-i"/>
+<property name="freetts.voices" value="com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory"/>
+<property name="otrunk.view.frame_title" value="UDL - 98: Grades 5-6: UDL Clouds (Fall 2010)"/></resources>
+<resources os="Linux">
+<nativelib href="org/concord/external/rxtx/rxtx-serial/rxtx-serial-linux-nar__V2.1.7-r2.jar"/>
+</resources>
+<resources os="Windows">
+<nativelib href="org/concord/external/tts/quadmore/quadmore-win32-nar__V1.0-20080128.214245-1.jar"/>
+<nativelib href="net/java/com4j/com4j-native/com4j-native-win32-nar__V20080107.jar"/>
+<nativelib href="org/concord/sensor/vernier/vernier-goio/vernier-goio-win32-nar__V1.4.0.jar"/>
+<nativelib href="org/concord/sensor/labpro-usb-native/labpro-usb-native-win32-nar__V0.2.0-20090323.155823-1.jar"/>
+<nativelib href="org/concord/external/jna/jna-jnidispatch/jna-jnidispatch-win32-nar__V3.0.9.jar"/>
+<nativelib href="org/concord/ftdi-serial-wrapper-native/ftdi-serial-wrapper-native-win32-nar__V0.1.0-20070303.181906-4.jar"/>
+<nativelib href="org/concord/external/rxtx/rxtx-serial/rxtx-serial-win32-nar__V2.1.7-r2.jar"/>
+</resources>
+<resources os="Mac OS X">
+<nativelib href="org/mozdev/mozswing/mozswing-cocoautils/mozswing-cocoautils-macosx-nar__V1.0-20080124.063453-1.jar"/>
+<nativelib href="org/concord/sensor/vernier/vernier-goio/vernier-goio-macosx-nar__V1.4.0.jar"/>
+<nativelib href="org/concord/external/jna/jna-jnidispatch/jna-jnidispatch-macosx-nar__V3.0.9.jar"/>
+<nativelib href="org/concord/external/rxtx/rxtx-serial/rxtx-serial-macosx-nar__V2.1.7-r2.jar"/>
+</resources>
+<application-desc main-class="net.sf.sail.emf.launch.EMFLauncher2">
+   <argument>http://models-resources.concord.org/legacy_jnlp_resources/udl/configs/udl-98-config.xml</argument>
+</application-desc></jnlp>

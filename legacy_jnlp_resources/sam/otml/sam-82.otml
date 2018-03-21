@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="b778d3a0-81e0-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="acfdd4ed-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page1.cml">
+                  <prompt>
+                    <OTText id="acfe983e-61b3-11de-b9d3-012a69d2227c" text="What color light has the highest frequency?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="ad00bb1f-61b3-11de-b9d3-012a69d2227c" selectionUI="0">
+                      <choices>
+                        <OTText id="ad0241c0-61b3-11de-b9d3-012a69d2227c" text="Red." />
+                        <OTText id="ad0268d1-61b3-11de-b9d3-012a69d2227c" text="Yellow." />
+                        <OTText id="ad0268d2-61b3-11de-b9d3-012a69d2227c" text="Green." />
+                        <OTText id="ad0268d3-61b3-11de-b9d3-012a69d2227c" text="Blue." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="ad0268d3-61b3-11de-b9d3-012a69d2227c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="ad028fe4-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page1.cml">
+                  <prompt>
+                    <OTText id="ad028fe5-61b3-11de-b9d3-012a69d2227c" text="Which photon has the lowest amount of energy?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="ad028fe6-61b3-11de-b9d3-012a69d2227c" selectionUI="0">
+                      <choices>
+                        <OTText id="ad028fe7-61b3-11de-b9d3-012a69d2227c" text="Infrared." />
+                        <OTText id="ad028fe8-61b3-11de-b9d3-012a69d2227c" text="Orange." />
+                        <OTText id="ad02b6f9-61b3-11de-b9d3-012a69d2227c" text="Violet." />
+                        <OTText id="ad02b6fa-61b3-11de-b9d3-012a69d2227c" text="Ultraviolet." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="ad028fe7-61b3-11de-b9d3-012a69d2227c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="af4e068b-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page2.cml">
+                  <prompt>
+                    <OTText id="af4e068c-61b3-11de-b9d3-012a69d2227c" text="Based on the model, which of the following must be true? (Check all that are true.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="af4e068d-61b3-11de-b9d3-012a69d2227c" selectionUI="1">
+                      <choices>
+                        <OTText id="af4e068e-61b3-11de-b9d3-012a69d2227c" text="The red leaf absorbs red photons." />
+                        <OTText id="af4e068f-61b3-11de-b9d3-012a69d2227c" text="The green leaf absorbs green photons." />
+                        <OTText id="af4e2da0-61b3-11de-b9d3-012a69d2227c" text="The red leaf absorbs photons of any color but red." />
+                        <OTText id="af4e2da1-61b3-11de-b9d3-012a69d2227c" text="The green leaf absorbs photons of any color but green." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="af4e2da0-61b3-11de-b9d3-012a69d2227c" />
+                        <object refid="af4e2da1-61b3-11de-b9d3-012a69d2227c" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="af61dcb3-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page2.cml">
+                  <prompt>
+                    <OTText id="af61dcb4-61b3-11de-b9d3-012a69d2227c" text="What will happen if we put a plant in a dark room and only shine green light on it? Explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="af61dcb5-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b0b29fa7-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page3.cml">
+                  <prompt>
+                    <OTText id="b0b2c6b8-61b3-11de-b9d3-012a69d2227c" text="Based on your observation of the above model, which molecule is responsible for absorbing light in the leaf?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b0b2c6b9-61b3-11de-b9d3-012a69d2227c" selectionUI="0">
+                      <choices>
+                        <OTText id="b0b2c6ba-61b3-11de-b9d3-012a69d2227c" text="Molecule A." />
+                        <OTText id="b0b2c6bb-61b3-11de-b9d3-012a69d2227c" text="Molecule B." />
+                        <OTText id="b0b2c6bc-61b3-11de-b9d3-012a69d2227c" text="Molecule C." />
+                        <OTText id="b0b2c6bd-61b3-11de-b9d3-012a69d2227c" text="Cannot determine." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b0b2c6bc-61b3-11de-b9d3-012a69d2227c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b0b2edce-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page3.cml">
+                  <prompt>
+                    <OTText id="b0b2edcf-61b3-11de-b9d3-012a69d2227c" text="Click the &quot;Whole Leaf&quot; button and describe three different ways in which photons interact with the leaves." />
+                  </prompt>
+                  <input>
+                    <OTText id="b0b2edd0-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b0b314e2-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page3.cml">
+                  <prompt>
+                    <OTText id="b0b314e3-61b3-11de-b9d3-012a69d2227c" text="In the cell, chlorophyll binds to other molecules in a large complex. Based on the structure of chlorophyll's tail, with which of the following would chlorophyll associate? (Check all that apply)." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b0b314e4-61b3-11de-b9d3-012a69d2227c" selectionUI="1">
+                      <choices>
+                        <OTText id="b0b314e5-61b3-11de-b9d3-012a69d2227c" text="membrane lipids" />
+                        <OTText id="b0b314e6-61b3-11de-b9d3-012a69d2227c" text="hydrophobic areas of proteins" />
+                        <OTText id="b0b33bf7-61b3-11de-b9d3-012a69d2227c" text="hydrophillic areas of proteins" />
+                        <OTText id="b0b33bf8-61b3-11de-b9d3-012a69d2227c" text="water" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="b0b314e5-61b3-11de-b9d3-012a69d2227c" />
+                        <object refid="b0b314e6-61b3-11de-b9d3-012a69d2227c" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b0b4265a-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page3.cml">
+                  <prompt>
+                    <OTText id="b0b4265b-61b3-11de-b9d3-012a69d2227c" text="Heme is a functional group similar to chlorophyll's head, but it has iron in place of magnesium. Heme is what makes blood look red. What colors of light does iron help heme absorb? Explain your answer. (Hint)" />
+                  </prompt>
+                  <input>
+                    <OTText id="b0b4265c-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="b0b4265d-61b3-11de-b9d3-012a69d2227c" text="The answer can contain any colors except red; students should understand that red is NOT absorbed by heme." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b591e09e-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page4.cml">
+                  <prompt>
+                    <OTText id="b591e09f-61b3-11de-b9d3-012a69d2227c" text="How do additional pigments help chlorophyll to transfer energy for photosynthesis?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b591e0a0-61b3-11de-b9d3-012a69d2227c" selectionUI="0">
+                      <choices>
+                        <OTText id="b591e0a1-61b3-11de-b9d3-012a69d2227c" text="Chlorophyll transfers electrons to them." />
+                        <OTText id="b591e0a2-61b3-11de-b9d3-012a69d2227c" text="They transfer photons to proteins." />
+                        <OTText id="b591e0a3-61b3-11de-b9d3-012a69d2227c" text="They absorb photons of other frequencies." />
+                        <OTText id="b59207b4-61b3-11de-b9d3-012a69d2227c" text="They absorb electrons from proteins." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b591e0a3-61b3-11de-b9d3-012a69d2227c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b59207b5-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page4.cml">
+                  <prompt>
+                    <OTText id="b59207b6-61b3-11de-b9d3-012a69d2227c" text="Compared to the other pigments, there is so much chlorophyll in leaves that they appear green. In the autumn, pigments start to break down. How can you explain the other colors in autumn leaves?" />
+                  </prompt>
+                  <input>
+                    <OTText id="b59207b7-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="b59207b8-61b3-11de-b9d3-012a69d2227c" text="Chlorophyll breaks down first, so that the other pigments are revealed." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b81b71b9-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page5.cml">
+                  <prompt>
+                    <OTText id="b81b71ba-61b3-11de-b9d3-012a69d2227c" text="Describe what you need to do in order to produce a blue pigment." />
+                  </prompt>
+                  <input>
+                    <OTText id="b81b71bb-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b81be6ed-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page5.cml">
+                  <prompt>
+                    <OTText id="b81be6ee-61b3-11de-b9d3-012a69d2227c" text="Place the snapshot of the energy level diagram you have designed that produces a blue pigment." />
+                  </prompt>
+                  <input>
+                    <OTImage id="b81be6ef-61b3-11de-b9d3-012a69d2227c" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b9e00520-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page6.cml">
+                  <prompt>
+                    <OTText id="b9e00521-61b3-11de-b9d3-012a69d2227c" text="What color of light is LEAST effective in causing photosynthesis? Why?" />
+                  </prompt>
+                  <input>
+                    <OTText id="b9e00522-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b9e02c34-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page6.cml">
+                  <prompt>
+                    <OTText id="b9e02c35-61b3-11de-b9d3-012a69d2227c" text="If a substance is blue, then what is true about the photons it absorbs?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b9e02c36-61b3-11de-b9d3-012a69d2227c" selectionUI="0">
+                      <choices>
+                        <OTText id="b9e02c37-61b3-11de-b9d3-012a69d2227c" text="The frequencies of the photons are all in the blue zone." />
+                        <OTText id="b9e02c38-61b3-11de-b9d3-012a69d2227c" text="The frequencies of the photons are not in the blue zone." />
+                        <OTText id="b9e02c39-61b3-11de-b9d3-012a69d2227c" text="The photons are turned into blue by the material." />
+                        <OTText id="b9e02c3a-61b3-11de-b9d3-012a69d2227c" text="None of the above." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b9e02c38-61b3-11de-b9d3-012a69d2227c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b9e0534b-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page6.cml">
+                  <prompt>
+                    <OTText id="b9e0534c-61b3-11de-b9d3-012a69d2227c" text="Water tends to absorb more red photons than blue ones. Red algae are the known photosynthetic organisms that live deepest in the sea (as deep as 600 feet). Why do they have a red color when we observe them under sunlight?" />
+                  </prompt>
+                  <input>
+                    <OTText id="b9e0534d-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b9e07a5f-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page6.cml">
+                  <prompt>
+                    <OTText id="b9e07a60-61b3-11de-b9d3-012a69d2227c" text="Which of the following must be true about photon absorption and energy levels of pigments?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b9e07a61-61b3-11de-b9d3-012a69d2227c" selectionUI="0">
+                      <choices>
+                        <OTText id="b9e0a172-61b3-11de-b9d3-012a69d2227c" text="The energy of an absorbed photon must be equal to the difference of energy between two energy levels." />
+                        <OTText id="b9e0a173-61b3-11de-b9d3-012a69d2227c" text="The higher the energy levels are, the higher the energy of the photons a pigment will absorb." />
+                        <OTText id="b9e0c884-61b3-11de-b9d3-012a69d2227c" text="The energy levels of a pigment become higher when a photon is absorbed." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b9e0a172-61b3-11de-b9d3-012a69d2227c" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b9e0ef95-61b3-11de-b9d3-012a69d2227c" name="http://ri-itest.concord.org/SAMActivities/Photosynthesis/photosynthesis_v3/page6.cml">
+                  <prompt>
+                    <OTText id="b9e0ef96-61b3-11de-b9d3-012a69d2227c" text="Indian pipe plants (see the image on the left) contain no chlorophyll. What can you conclude about the ability of the Indian pipe plant to make its own food? Explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="b9e0ef97-61b3-11de-b9d3-012a69d2227c" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="3a560ab0-fb01-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="90cf01ce-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page1.cml">
+                  <prompt>
+                    <OTText id="90d03a4f-fb04-11de-a034-09e0fdc8e717" text="Use the Do It Yourself controls above to create a view that shows how the protein is folded. Use the text tool  to label each end of the folded chain." />
+                  </prompt>
+                  <input>
+                    <OTImage id="90d124b0-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="90d34791-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page1.cml">
+                  <prompt>
+                    <OTText id="90d34792-fb04-11de-a034-09e0fdc8e717" text="Create a view that you think best shows the primary structure of parvalbumin. Use the text tool  to explain why you chose this way of representing the primary structure." />
+                  </prompt>
+                  <input>
+                    <OTImage id="90d34793-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="95f62124-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page2.cml">
+                  <prompt>
+                    <OTText id="95f62125-fb04-11de-a034-09e0fdc8e717" text="" />
+                  </prompt>
+                  <input>
+                    <OTImage id="95f62126-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="95f64837-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page2.cml">
+                  <prompt>
+                    <OTText id="95f64838-fb04-11de-a034-09e0fdc8e717" text="Use the link above to open and explore the 20 rotatable 3D amino acids. Then select the &quot;Sidechain&quot; color scheme. The atoms that are colored gray are the same in every amino acid. What are they called?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="95f66f49-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="95f780ba-fb04-11de-a034-09e0fdc8e717" text="the sidechain atoms" />
+                        <OTText id="95f780bb-fb04-11de-a034-09e0fdc8e717" text="the backbone atoms" />
+                        <OTText id="95f780bc-fb04-11de-a034-09e0fdc8e717" text="the protein atoms" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="95f780bb-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="95f7a7cd-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page2.cml">
+                  <prompt>
+                    <OTText id="95f7a7ce-fb04-11de-a034-09e0fdc8e717" text="On the page of 3D amino acids, find glutamine and histidine. Use the different color schemes to select the true statement(s) below. (More than one statement may be true)." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="95f7a7cf-fb04-11de-a034-09e0fdc8e717" selectionUI="1">
+                      <choices>
+                        <OTText id="95f7cee0-fb04-11de-a034-09e0fdc8e717" text="they are both polar amino acids" />
+                        <OTText id="95f7cee1-fb04-11de-a034-09e0fdc8e717" text="one is polar and the other is non-polar" />
+                        <OTText id="95f7cee2-fb04-11de-a034-09e0fdc8e717" text="one of them is charged" />
+                        <OTText id="95f7cee3-fb04-11de-a034-09e0fdc8e717" text="they are both non-polar" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="95f7cee0-fb04-11de-a034-09e0fdc8e717" />
+                        <object refid="95f7cee2-fb04-11de-a034-09e0fdc8e717" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="98442fe5-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page3.cml">
+                  <prompt>
+                    <OTText id="98442fe6-fb04-11de-a034-09e0fdc8e717" text="Take a snapshot of an alpha helix that shows how it folds." />
+                  </prompt>
+                  <input>
+                    <OTImage id="98442fe7-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="984456f8-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page3.cml">
+                  <prompt>
+                    <OTText id="984456f9-fb04-11de-a034-09e0fdc8e717" text="Take a snapshot of a beta sheet that shows how much space it occupies within the protein. Hint." />
+                  </prompt>
+                  <input>
+                    <OTImage id="984456fa-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9a65d76b-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page4.cml">
+                  <prompt>
+                    <OTText id="9a65d76c-fb04-11de-a034-09e0fdc8e717" text="Hydrogen bonds stabilizing an alpha helix. Use the arrow tool to point out the hydrogen bonds." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9a65d76d-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9a65fe7e-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page4.cml">
+                  <prompt>
+                    <OTText id="9a65fe7f-fb04-11de-a034-09e0fdc8e717" text="Hydrogen bonds stabilizing a beta sheet. Use the arrow tool to point out the hydrogen bonds." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9a65fe80-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9a662591-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page4.cml">
+                  <prompt>
+                    <OTText id="9a662592-fb04-11de-a034-09e0fdc8e717" text="Hydrogen bonds stabilizing alpha helices and beta sheets form between the atoms of which part(s) of the amino acids involved?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9a662593-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="9a662594-fb04-11de-a034-09e0fdc8e717" text="the side chains" />
+                        <OTText id="9a664ca5-fb04-11de-a034-09e0fdc8e717" text="the side chains and backbone" />
+                        <OTText id="9a664ca6-fb04-11de-a034-09e0fdc8e717" text="the backbone" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9a664ca6-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9a6673b7-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page4.cml">
+                  <prompt>
+                    <OTText id="9a6673b8-fb04-11de-a034-09e0fdc8e717" text="Place a snapshot here that illustrates your answer to the previous question." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9a6673b9-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9c33e0ba-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c33e0bb-fb04-11de-a034-09e0fdc8e717" text="Is water a polar or non-polar molecule? Explain your answer by writing about the bonds in water." />
+                  </prompt>
+                  <input>
+                    <OTText id="9c33e0bc-fb04-11de-a034-09e0fdc8e717" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9c3407ce-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c3407cf-fb04-11de-a034-09e0fdc8e717" text="Which type of amino acid is hydrophobic?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9c3407d0-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="9c3407d1-fb04-11de-a034-09e0fdc8e717" text="polar" />
+                        <OTText id="9c342ee2-fb04-11de-a034-09e0fdc8e717" text="non-polar" />
+                        <OTText id="9c342ee3-fb04-11de-a034-09e0fdc8e717" text="neither - they both don't attract water very well" />
+                        <OTText id="9c342ee4-fb04-11de-a034-09e0fdc8e717" text="neither - they attract the water molecules equally" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9c342ee2-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9c3455f5-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c3455f6-fb04-11de-a034-09e0fdc8e717" text="Which of the following correctly describe the interactions of the amino acids with water? (Check ALL that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9c3455f7-fb04-11de-a034-09e0fdc8e717" selectionUI="1">
+                      <choices>
+                        <OTText id="9c3455f8-fb04-11de-a034-09e0fdc8e717" text="non-polar amino acids are repelled by water" />
+                        <OTText id="9c347d09-fb04-11de-a034-09e0fdc8e717" text="non-polar amino acids are weakly attracted to water" />
+                        <OTText id="9c347d0a-fb04-11de-a034-09e0fdc8e717" text="water molecules are attracted to each other more than to non-polar amino acids" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="9c347d09-fb04-11de-a034-09e0fdc8e717" />
+                        <object refid="9c347d0a-fb04-11de-a034-09e0fdc8e717" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9c34a41c-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c34a41d-fb04-11de-a034-09e0fdc8e717" text="Use your knowledge of positive and negative charge to explain why polar molecules attract each other better than non-polar molecules." />
+                  </prompt>
+                  <input>
+                    <OTText id="9c34a41e-fb04-11de-a034-09e0fdc8e717" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9c34a420-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c34a421-fb04-11de-a034-09e0fdc8e717" text="Which solvent(s) leads to folding of the protein?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9c34a422-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="9c34cb33-fb04-11de-a034-09e0fdc8e717" text="both water and oil" />
+                        <OTText id="9c34cb34-fb04-11de-a034-09e0fdc8e717" text="neither water nor oil" />
+                        <OTText id="9c34cb35-fb04-11de-a034-09e0fdc8e717" text="water" />
+                        <OTText id="9c34cb36-fb04-11de-a034-09e0fdc8e717" text="oil" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9c34cb35-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9c34f247-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page5.cml">
+                  <prompt>
+                    <OTText id="9c34f248-fb04-11de-a034-09e0fdc8e717" text="Where do the amino acids with polar side chains end up when the protein chain folds?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="9c34f249-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="9c34f24a-fb04-11de-a034-09e0fdc8e717" text="evenly throughout the folded protein" />
+                        <OTText id="9c34f24b-fb04-11de-a034-09e0fdc8e717" text="mostly inside the folded protein" />
+                        <OTText id="9c34f24c-fb04-11de-a034-09e0fdc8e717" text="mostly on the outside of the folded protein" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="9c34f24c-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="9e6a6fed-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page6.cml">
+                  <prompt>
+                    <OTText id="9e6a6fee-fb04-11de-a034-09e0fdc8e717" text="Show an interaction that stabilizes two alpha helices to each other. Use the annotation tool to label the type of interaction you are showing." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9e6a6fef-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="9e6a9700-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page6.cml">
+                  <prompt>
+                    <OTText id="9e6a9701-fb04-11de-a034-09e0fdc8e717" text="Create a view that shows both the amino acids at the surface and those that fold into the inside the protein. Use the annotation tools to label the part that is more attracted to water." />
+                  </prompt>
+                  <input>
+                    <OTImage id="9e6ae522-fb04-11de-a034-09e0fdc8e717" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a05aa733-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a05aa734-fb04-11de-a034-09e0fdc8e717" text="On the left is a different small molecule than NAD. Why wouldn't this molecule bind to alcohol dehydrogenase in place of NAD? (Choose the BEST answer below)." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a05aa735-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="a05ace46-fb04-11de-a034-09e0fdc8e717" text="it is not the same as NAD" />
+                        <OTText id="a05ace47-fb04-11de-a034-09e0fdc8e717" text="it is smaller than NAD" />
+                        <OTText id="a05ace48-fb04-11de-a034-09e0fdc8e717" text="it is too large to fit in the NAD site" />
+                        <OTText id="a05ace49-fb04-11de-a034-09e0fdc8e717" text="it's the wrong shape, and will not form attractions with the site" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a05ace46-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a05af55a-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a05af55b-fb04-11de-a034-09e0fdc8e717" text="What would you expect to happen to the function of proteins at very high temperatures?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a05af55c-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="a05af55d-fb04-11de-a034-09e0fdc8e717" text="the functions would not be affected" />
+                        <OTText id="a05af55e-fb04-11de-a034-09e0fdc8e717" text="the proteins would not be able to function" />
+                        <OTText id="a05af55f-fb04-11de-a034-09e0fdc8e717" text="the functions would happen faster" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a05af55d-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a05b1c70-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page7.cml">
+                  <prompt>
+                    <OTText id="a05b1c71-fb04-11de-a034-09e0fdc8e717" text="Explain your answer to the previous question." />
+                  </prompt>
+                  <input>
+                    <OTText id="a05b1c72-fb04-11de-a034-09e0fdc8e717" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a46b7494-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page8.cml">
+                  <prompt>
+                    <OTText id="a46b7495-fb04-11de-a034-09e0fdc8e717" text="Does TNF have the quaternary level of structure? Make sure to try different color schemes on the model of TNF above." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a46b7496-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="a46b7497-fb04-11de-a034-09e0fdc8e717" text="yes" />
+                        <OTText id="a46b9ba8-fb04-11de-a034-09e0fdc8e717" text="no" />
+                        <OTText id="a46b9ba9-fb04-11de-a034-09e0fdc8e717" text="It is impossible to tell." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a46b7497-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a46bc2ba-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page8.cml">
+                  <prompt>
+                    <OTText id="a46bc2bb-fb04-11de-a034-09e0fdc8e717" text="Explain your answer to the previous question:" />
+                  </prompt>
+                  <input>
+                    <OTText id="a46bc2bc-fb04-11de-a034-09e0fdc8e717" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a6e8a99e-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page9.cml">
+                  <prompt>
+                    <OTText id="a6e8d0af-fb04-11de-a034-09e0fdc8e717" text="The &quot;primary structure&quot; of a protein refers to:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a6e8d0b0-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="a6e8d0b1-fb04-11de-a034-09e0fdc8e717" text="the folds of the protein" />
+                        <OTText id="a6e8d0b2-fb04-11de-a034-09e0fdc8e717" text="the alpha helix and beta sheet structures" />
+                        <OTText id="a6e8d0b3-fb04-11de-a034-09e0fdc8e717" text="the sequence of amino acids in the protein" />
+                        <OTText id="a6e8d0b4-fb04-11de-a034-09e0fdc8e717" text="the number of protein chains in a structure" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a6e8d0b3-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a6eaa575-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page9.cml">
+                  <prompt>
+                    <OTText id="a6eaa576-fb04-11de-a034-09e0fdc8e717" text="What part of an amino acid has properties (shape, charge) that are different from other amino acids?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a6eaa577-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="a6eacc88-fb04-11de-a034-09e0fdc8e717" text="the side chain" />
+                        <OTText id="a6eacc89-fb04-11de-a034-09e0fdc8e717" text="the backbone atoms" />
+                        <OTText id="a6eacc8a-fb04-11de-a034-09e0fdc8e717" text="the secondary structure" />
+                        <OTText id="a6eacc8b-fb04-11de-a034-09e0fdc8e717" text="none of the above" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a6eacc88-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a6eaf39c-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page9.cml">
+                  <prompt>
+                    <OTText id="a6eaf39d-fb04-11de-a034-09e0fdc8e717" text="The protein shown at right has folded in water. Which of the following statements about it is FALSE?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a6eaf39e-fb04-11de-a034-09e0fdc8e717" selectionUI="0">
+                      <choices>
+                        <OTText id="a6eaf39f-fb04-11de-a034-09e0fdc8e717" text="amino acid 14 is most likely hydrophobic" />
+                        <OTText id="a6eaf3a0-fb04-11de-a034-09e0fdc8e717" text="amino acid 17 is most likely polar" />
+                        <OTText id="a6eb1ab1-fb04-11de-a034-09e0fdc8e717" text="amino acid 22 is most likely polar" />
+                        <OTText id="a6eb1ab2-fb04-11de-a034-09e0fdc8e717" text="amino acid 20 is most likely hydrophilic" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a6eb1ab1-fb04-11de-a034-09e0fdc8e717" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a6eb68d3-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page9.cml">
+                  <prompt>
+                    <OTText id="a6eb68d4-fb04-11de-a034-09e0fdc8e717" text="Which of the following do hydrogen bonds help to stabilize? (Check ALL that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a6eb68d5-fb04-11de-a034-09e0fdc8e717" selectionUI="1">
+                      <choices>
+                        <OTText id="a6eb68d6-fb04-11de-a034-09e0fdc8e717" text="primary structure" />
+                        <OTText id="a6eb68d7-fb04-11de-a034-09e0fdc8e717" text="secondary structure" />
+                        <OTText id="a6eb68d8-fb04-11de-a034-09e0fdc8e717" text="tertiary structure" />
+                        <OTText id="a6eb68d9-fb04-11de-a034-09e0fdc8e717" text="quaternary structure" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="a6eb68d7-fb04-11de-a034-09e0fdc8e717" />
+                        <object refid="a6eb68d8-fb04-11de-a034-09e0fdc8e717" />
+                        <object refid="a6eb68d9-fb04-11de-a034-09e0fdc8e717" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a6ebb6fb-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page9.cml">
+                  <prompt>
+                    <OTText id="a6ebb6fc-fb04-11de-a034-09e0fdc8e717">
+                      <text>Select the two correct choices:
+A protein with quaternary structure...</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTChoice id="a6ebb6fd-fb04-11de-a034-09e0fdc8e717" selectionUI="1">
+                      <choices>
+                        <OTText id="a6ebb6fe-fb04-11de-a034-09e0fdc8e717" text="is made of two or more chains of amino acids" />
+                        <OTText id="a6ebb6ff-fb04-11de-a034-09e0fdc8e717" text="is always composed of identical subunits" />
+                        <OTText id="a6ebb700-fb04-11de-a034-09e0fdc8e717" text="is always composed of different subunits" />
+                        <OTText id="a6ebde11-fb04-11de-a034-09e0fdc8e717" text="can be a mix of identical and different subunits" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="a6ebb6fe-fb04-11de-a034-09e0fdc8e717" />
+                        <object refid="a6ebde11-fb04-11de-a034-09e0fdc8e717" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a6ec0523-fb04-11de-a034-09e0fdc8e717" name="http://ri-itest.concord.org/SAMActivities/FourLevelsOfProteinStruct/FourLevelsOfProteinStruct_v4/page9.cml">
+                  <prompt>
+                    <OTText id="a6ec0524-fb04-11de-a034-09e0fdc8e717" text="Why do defects in protein folding cause disease?" />
+                  </prompt>
+                  <input>
+                    <OTText id="a6ec0525-fb04-11de-a034-09e0fdc8e717" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

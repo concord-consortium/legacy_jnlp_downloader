@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="10970150-81e1-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="70fb93f2-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page2.cml">
+                  <prompt>
+                    <OTText id="70fc5743-60eb-11de-a919-05a6103736ac" text="Remove atoms inside the balloon until there are fewer than 20 atoms. Run the model for a minute, take a snapshot, and drag the image into the box below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="70fe2c04-60eb-11de-a919-05a6103736ac" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="70fea135-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page2.cml">
+                  <prompt>
+                    <OTText id="70fea136-60eb-11de-a919-05a6103736ac" text="Add atoms inside the balloon until there are more than 60 atoms. Run the model for a minute, take a snapshot, and drag the image into the box below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="70fea137-60eb-11de-a919-05a6103736ac" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="70feef58-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page2.cml">
+                  <prompt>
+                    <OTText id="70feef59-60eb-11de-a919-05a6103736ac" text="How does adding and removing atoms affect the position of the balloon's skin (the rectangle)?" />
+                  </prompt>
+                  <input>
+                    <OTText id="70feef5a-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="70ff3d7c-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page2.cml">
+                  <prompt>
+                    <OTText id="70ff3d7d-60eb-11de-a919-05a6103736ac" text="Can you think of other ways of increasing the number of collisions on the inner surface of the balloon without adding more atoms to it?" />
+                  </prompt>
+                  <input>
+                    <OTText id="70ff3d7e-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="73586fc0-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page3.cml">
+                  <prompt>
+                    <OTText id="73586fc1-60eb-11de-a919-05a6103736ac" text="According to your data, which of the four graphs above best represents the relationship between pressure and volume of a gas at constant temperature?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="735896d2-60eb-11de-a919-05a6103736ac" selectionUI="0">
+                      <choices>
+                        <OTText id="736bf7c3-60eb-11de-a919-05a6103736ac" text="❶" />
+                        <OTText id="736bf7c4-60eb-11de-a919-05a6103736ac" text="❷" />
+                        <OTText id="736c1ed5-60eb-11de-a919-05a6103736ac" text="❸" />
+                        <OTText id="736c1ed6-60eb-11de-a919-05a6103736ac" text="❹" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="736bf7c3-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="736c1ed7-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page3.cml">
+                  <prompt>
+                    <OTText id="736c1ed8-60eb-11de-a919-05a6103736ac" text="Which of the following best describes what occurred as the volume increased?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="736c45e9-60eb-11de-a919-05a6103736ac" selectionUI="0">
+                      <choices>
+                        <OTText id="736c45ea-60eb-11de-a919-05a6103736ac" text="The strength and/or rate of collisions increased." />
+                        <OTText id="736c940b-60eb-11de-a919-05a6103736ac" text="The strength and/or rate of collisions decreased." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="736c940b-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="736cbb1c-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page3.cml">
+                  <prompt>
+                    <OTText id="736cbb1d-60eb-11de-a919-05a6103736ac" text="In your own words, describe the relationship between pressure and volume." />
+                  </prompt>
+                  <input>
+                    <OTText id="736cbb1e-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="75167280-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page4.cml">
+                  <prompt>
+                    <OTText id="75169991-60eb-11de-a919-05a6103736ac" text="Why does the piston move when the temperature changes? Include in your answer how molecules colliding with the piston can account for the movement." />
+                  </prompt>
+                  <input>
+                    <OTText id="75169992-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="75169994-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page4.cml">
+                  <prompt>
+                    <OTText id="75169995-60eb-11de-a919-05a6103736ac" text="Use the slider to select a lower temperature, run the model for a minute, take a snapshot and describe what happens to the volume of the gas." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7516c0a6-60eb-11de-a919-05a6103736ac" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="75175ce7-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page4.cml">
+                  <prompt>
+                    <OTText id="75175ce8-60eb-11de-a919-05a6103736ac" text="Use the slider to select a higher temperature, run the model for a minute, take a snapshot, and describe what happens to the volume of the gas." />
+                  </prompt>
+                  <input>
+                    <OTImage id="75175ce9-60eb-11de-a919-05a6103736ac" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="75175cea-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page4.cml">
+                  <prompt>
+                    <OTText id="75175ceb-60eb-11de-a919-05a6103736ac" text="In your own words, describe the relationship between temperature and volume in the ideal gas law." />
+                  </prompt>
+                  <input>
+                    <OTText id="751783fc-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="771ffe2e-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page5.cml">
+                  <prompt>
+                    <OTText id="771ffe2f-60eb-11de-a919-05a6103736ac" text="Which of the following best describes what occurred as the temperature increased?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="771ffe30-60eb-11de-a919-05a6103736ac" selectionUI="0">
+                      <choices>
+                        <OTText id="771ffe31-60eb-11de-a919-05a6103736ac" text="The strength and/or rate of collisions increased." />
+                        <OTText id="771ffe32-60eb-11de-a919-05a6103736ac" text="The strength and/or rate of collisions decreased." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="771ffe31-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="77202543-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page5.cml">
+                  <prompt>
+                    <OTText id="77202544-60eb-11de-a919-05a6103736ac" text="How does changing the temperature of the gas affect the pressure?" />
+                  </prompt>
+                  <input>
+                    <OTText id="77202545-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="77204c57-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page5.cml">
+                  <prompt>
+                    <OTText id="77204c58-60eb-11de-a919-05a6103736ac" text="In your own words, describe the relationship between pressure and temperature." />
+                  </prompt>
+                  <input>
+                    <OTText id="77204c59-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="78d3a1ab-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d3a1ac-60eb-11de-a919-05a6103736ac" text="120 molecules" />
+                  </prompt>
+                  <input>
+                    <OTText id="78d3a1ad-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="78d3a1ae-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d3c8bf-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d3c8c0-60eb-11de-a919-05a6103736ac" text="100 molecules" />
+                  </prompt>
+                  <input>
+                    <OTText id="78d3c8c1-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="78d3c8c2-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d3efd3-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d3efd4-60eb-11de-a919-05a6103736ac" text="80 molecules" />
+                  </prompt>
+                  <input>
+                    <OTText id="78d3efd5-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="78d3efd6-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d3efd7-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d3efd8-60eb-11de-a919-05a6103736ac" text="60 molecules" />
+                  </prompt>
+                  <input>
+                    <OTText id="78d416e9-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="78d416ea-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d416eb-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d416ec-60eb-11de-a919-05a6103736ac" text="40 molecules" />
+                  </prompt>
+                  <input>
+                    <OTText id="78d416ed-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="78d416ee-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d43dff-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d43e00-60eb-11de-a919-05a6103736ac" text="20 molecules" />
+                  </prompt>
+                  <input>
+                    <OTText id="78d43e01-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="78d43e02-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d46513-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d46514-60eb-11de-a919-05a6103736ac" text="According to your data, which of the four graphs below best represents the relationship between the number of particles and volume of a gas (at constant pressure and temperature)?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="78d46515-60eb-11de-a919-05a6103736ac" selectionUI="0">
+                      <choices>
+                        <OTText id="78d48c26-60eb-11de-a919-05a6103736ac" text="❶" />
+                        <OTText id="78d48c27-60eb-11de-a919-05a6103736ac" text="❷" />
+                        <OTText id="78d4b338-60eb-11de-a919-05a6103736ac" text="❸" />
+                        <OTText id="78d4b339-60eb-11de-a919-05a6103736ac" text="❹" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="78d4b339-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d5286a-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d5286b-60eb-11de-a919-05a6103736ac" text="Which of the following best explains what occurred as the number of particles decreased (check all that apply)?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="78d5286c-60eb-11de-a919-05a6103736ac" selectionUI="1">
+                      <choices>
+                        <OTText id="78d5286d-60eb-11de-a919-05a6103736ac" text="The strength of collisions increased." />
+                        <OTText id="78d5286e-60eb-11de-a919-05a6103736ac" text="The strength of collisions decreased." />
+                        <OTText id="78d5286f-60eb-11de-a919-05a6103736ac" text="The rate of collisions increased." />
+                        <OTText id="78d54f80-60eb-11de-a919-05a6103736ac" text="The rate of collisions decreased." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="78d54f80-60eb-11de-a919-05a6103736ac" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="78d5c4b2-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page6.cml">
+                  <prompt>
+                    <OTText id="78d5c4b3-60eb-11de-a919-05a6103736ac" text="In your own words, describe the relationship between volume and number of molecules." />
+                  </prompt>
+                  <input>
+                    <OTText id="78d5c4b4-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7c7d6ff6-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7c7d6ff7-60eb-11de-a919-05a6103736ac" text="Take a snapshot that illustrates that you figured out the reason why the soda can collapsed." />
+                  </prompt>
+                  <input>
+                    <OTImage id="7c7d6ff8-60eb-11de-a919-05a6103736ac" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7c7d9709-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page7.cml">
+                  <prompt>
+                    <OTText id="7c7d970a-60eb-11de-a919-05a6103736ac" text="Use your understanding to explain why the coke can on the first page collapsed. Assume the can was sealed when it was placed in the ice water." />
+                  </prompt>
+                  <input>
+                    <OTText id="7c7d970b-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7e37a31d-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e37ca2e-60eb-11de-a919-05a6103736ac" text="Which relationship of the following best explains this experiment?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="7e37ca2f-60eb-11de-a919-05a6103736ac" selectionUI="0">
+                      <choices>
+                        <OTText id="7e383f60-60eb-11de-a919-05a6103736ac" text="V-P relationship" />
+                        <OTText id="7e383f61-60eb-11de-a919-05a6103736ac" text="T-V relationship" />
+                        <OTText id="7e386672-60eb-11de-a919-05a6103736ac" text="T-P relationship" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="7e383f61-60eb-11de-a919-05a6103736ac" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="7e388d83-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e388d84-60eb-11de-a919-05a6103736ac" text="Explain why the balloon shrank and then expanded in this experiment." />
+                  </prompt>
+                  <input>
+                    <OTText id="7e388d85-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7e38b497-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e38b498-60eb-11de-a919-05a6103736ac" text="List two ways you can increase the pressure in a container with a fixed volume and explain why this causes a pressure increase." />
+                  </prompt>
+                  <input>
+                    <OTText id="7e38b499-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="7e38dbab-60eb-11de-a919-05a6103736ac" name="http://ri-itest.concord.org/SAMActivities/GasLaws/GasLaws_v3/page8.cml">
+                  <prompt>
+                    <OTText id="7e38dbac-60eb-11de-a919-05a6103736ac" text="SCUBA tanks have to be built to withstand very high pressure because many gas molecules are put inside them. Why would putting more molecules inside cause high pressure?" />
+                  </prompt>
+                  <input>
+                    <OTText id="7e38dbad-60eb-11de-a919-05a6103736ac" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

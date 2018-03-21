@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="01f85450-81e1-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="47c4acde-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page1.cml">
+                  <prompt>
+                    <OTText id="47c5702f-60f1-11de-b181-45963482b50d" text="What is the difference between polar and non-polar molecules? (Be sure to include more than the colors used to represent them in your response!)" />
+                  </prompt>
+                  <input>
+                    <OTText id="47c744f0-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="47c76c02-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page1.cml">
+                  <prompt>
+                    <OTText id="47c76c03-60f1-11de-b181-45963482b50d" text="Image showing intermolecular attractions:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="47c79314-60f1-11de-b181-45963482b50d" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="47c8a485-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page1.cml">
+                  <prompt>
+                    <OTText id="47c8a486-60f1-11de-b181-45963482b50d" text="Which of the following formed intermolecular attractions (check all that apply):" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="47c8a487-60f1-11de-b181-45963482b50d" selectionUI="1">
+                      <choices>
+                        <OTText id="47c940c8-60f1-11de-b181-45963482b50d" text="+ ends of polar molecules to + ends of other polar molecules" />
+                        <OTText id="47c967d9-60f1-11de-b181-45963482b50d" text="+ ends of polar molecules to - ends of other polar molecules" />
+                        <OTText id="47c98eea-60f1-11de-b181-45963482b50d" text="- ends of polar molecules to - ends of other polar molecules" />
+                        <OTText id="47c98eeb-60f1-11de-b181-45963482b50d" text="non-polar molecules to other non-polar molecules" />
+                        <OTText id="47c98eec-60f1-11de-b181-45963482b50d" text="non-polar molecules to + parts of polar molecules" />
+                        <OTText id="47c9b5fd-60f1-11de-b181-45963482b50d" text="non-polar molecules to - parts of polar molecules" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="47c967d9-60f1-11de-b181-45963482b50d" />
+                        <object refid="47c98eeb-60f1-11de-b181-45963482b50d" />
+                        <object refid="47c98eec-60f1-11de-b181-45963482b50d" />
+                        <object refid="47c9b5fd-60f1-11de-b181-45963482b50d" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4b97fc0f-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page2.cml">
+                  <prompt>
+                    <OTText id="4b97fc10-60f1-11de-b181-45963482b50d" text="What is the primary attraction between NON-POLAR molecules:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="4b97fc11-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="4b982322-60f1-11de-b181-45963482b50d" text="London Dispersion attraction" />
+                        <OTText id="4b982323-60f1-11de-b181-45963482b50d" text="dipole-dipole attraction" />
+                        <OTText id="4b984a34-60f1-11de-b181-45963482b50d" text="gravitational attraction" />
+                        <OTText id="4b984a35-60f1-11de-b181-45963482b50d" text="magnetic attraction" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="4b982322-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4b984a36-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page2.cml">
+                  <prompt>
+                    <OTText id="4b984a37-60f1-11de-b181-45963482b50d" text="What is the primary attraction between POLAR molecules:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="4b984a38-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="4b987149-60f1-11de-b181-45963482b50d" text="London Dispersion attraction" />
+                        <OTText id="4b98714a-60f1-11de-b181-45963482b50d" text="dipole-dipole attraction" />
+                        <OTText id="4b98714b-60f1-11de-b181-45963482b50d" text="gravitational attraction" />
+                        <OTText id="4b98714c-60f1-11de-b181-45963482b50d" text="magnetic attraction" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="4b98714a-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4b98985d-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page2.cml">
+                  <prompt>
+                    <OTText id="4b98985e-60f1-11de-b181-45963482b50d" text="Which type of intermolecular attraction is strongest:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="4b98985f-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="4b989860-60f1-11de-b181-45963482b50d" text="London Dispersion attraction" />
+                        <OTText id="4b989861-60f1-11de-b181-45963482b50d" text="dipole-dipole attraction" />
+                        <OTText id="4b989862-60f1-11de-b181-45963482b50d" text="gravitational attraction" />
+                        <OTText id="4b989863-60f1-11de-b181-45963482b50d" text="magnetic attraction" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="4b989861-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4d3b24d4-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page3.cml">
+                  <prompt>
+                    <OTText id="4d3b24d5-60f1-11de-b181-45963482b50d" text="Which liquid boiled first (i.e. had the lowest boiling point):" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="4d3b4be6-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="4d3b4be7-60f1-11de-b181-45963482b50d" text="The polar liquid boiled first." />
+                        <OTText id="4d3b4be8-60f1-11de-b181-45963482b50d" text="The non-polar liquid boiled first." />
+                        <OTText id="4d3b72f9-60f1-11de-b181-45963482b50d" text="They both boiled at the same time." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="4d3b4be8-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4d3b72fa-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page3.cml">
+                  <prompt>
+                    <OTText id="4d3b72fb-60f1-11de-b181-45963482b50d" text="Explain how intermolecular attractions affect the boilng point of a substance." />
+                  </prompt>
+                  <input>
+                    <OTText id="4d3b72fc-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="4d3b9a0e-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page3.cml">
+                  <prompt>
+                    <OTText id="4d3b9a0f-60f1-11de-b181-45963482b50d" text="Explain why polar and non-polar substances won't stay mixed with each other." />
+                  </prompt>
+                  <input>
+                    <OTText id="4d3b9a10-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="4edbdc92-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page4.cml">
+                  <prompt>
+                    <OTText id="4edbdc93-60f1-11de-b181-45963482b50d" text="Which molecule had the strongest attraction:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="4edbdc94-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="4edbdc95-60f1-11de-b181-45963482b50d" text="the least polar molecule" />
+                        <OTText id="4edbdc96-60f1-11de-b181-45963482b50d" text="the medium polarity molecule" />
+                        <OTText id="4edbdc97-60f1-11de-b181-45963482b50d" text="the most polar molecule" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="4edbdc97-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4edc03a8-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page4.cml">
+                  <prompt>
+                    <OTText id="4edc03a9-60f1-11de-b181-45963482b50d" text="Explain why polarity has an affect on the strength of attraction between molecules." />
+                  </prompt>
+                  <input>
+                    <OTText id="4edc03aa-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="4edc2abc-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page4.cml">
+                  <prompt>
+                    <OTText id="4edc2abd-60f1-11de-b181-45963482b50d" text="Which substance will have the highest boiling point:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="4edc2abe-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="4edc51cf-60f1-11de-b181-45963482b50d" text="1-heptanol" />
+                        <OTText id="4edc51d0-60f1-11de-b181-45963482b50d" text="1,7-heptanediol" />
+                        <OTText id="4edc51d1-60f1-11de-b181-45963482b50d" text="1,4,7-heptanetriol" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="4edc51d1-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4edc51d2-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page4.cml">
+                  <prompt>
+                    <OTText id="4edc78e3-60f1-11de-b181-45963482b50d" text="Explain your choice for highest boiling point:" />
+                  </prompt>
+                  <input>
+                    <OTText id="4edc78e4-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5049c486-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page5.cml">
+                  <prompt>
+                    <OTText id="5049c487-60f1-11de-b181-45963482b50d" text="Which molecule pairs had the strongest attraction (check all that apply):" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="5049c488-60f1-11de-b181-45963482b50d" selectionUI="1">
+                      <choices>
+                        <OTText id="5049c489-60f1-11de-b181-45963482b50d" text="the two small molecules" />
+                        <OTText id="5049c48a-60f1-11de-b181-45963482b50d" text="the two large straight molecules" />
+                        <OTText id="5049c48b-60f1-11de-b181-45963482b50d" text="the large straight and bent molecules" />
+                        <OTText id="5049c48c-60f1-11de-b181-45963482b50d" text="the large straight and circular molecules" />
+                        <OTText id="5049eb9d-60f1-11de-b181-45963482b50d" text="the large curved and circular molecules" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="5049c48a-60f1-11de-b181-45963482b50d" />
+                        <object refid="5049eb9d-60f1-11de-b181-45963482b50d" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="5049eb9f-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page5.cml">
+                  <prompt>
+                    <OTText id="5049eba0-60f1-11de-b181-45963482b50d" text="Propane boils at -42°C, butane at 0°C, and pentane at 36°C. They are all straight molecules. Which one is the biggest?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="5049eba1-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="504a39c2-60f1-11de-b181-45963482b50d" text="propane" />
+                        <OTText id="504a39c3-60f1-11de-b181-45963482b50d" text="butane" />
+                        <OTText id="504a39c4-60f1-11de-b181-45963482b50d" text="pentane" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="504a39c4-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="504a87e5-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page5.cml">
+                  <prompt>
+                    <OTText id="504a87e6-60f1-11de-b181-45963482b50d" text="Small molecules did not attract well. However, only some of the large ones had a strong attraction. Describe how both size and shape play a role in the strength of the London Dispersion attraction." />
+                  </prompt>
+                  <input>
+                    <OTText id="504a87e7-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="51c65279-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page6.cml">
+                  <prompt>
+                    <OTText id="51c6527a-60f1-11de-b181-45963482b50d" text="Snapshot with annotations indicating hydrogen bonds:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="51c6527b-60f1-11de-b181-45963482b50d" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="51c6c7ac-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page6.cml">
+                  <prompt>
+                    <OTText id="51c6c7ad-60f1-11de-b181-45963482b50d" text="While not possible, imagine that water molecules had no attraction for each other at all. Would you most likely find water as a solid, liquid, or gas? Explain your reasoning." />
+                  </prompt>
+                  <input>
+                    <OTText id="51c6c7ae-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="537c8e00-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page7.cml">
+                  <prompt>
+                    <OTText id="537c8e01-60f1-11de-b181-45963482b50d" text="Which pair of bases is held together more strongly: C and G, or A and T? How do you know?" />
+                  </prompt>
+                  <input>
+                    <OTText id="537c8e02-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="54e9b294-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page8.cml">
+                  <prompt>
+                    <OTText id="54e9b295-60f1-11de-b181-45963482b50d" text="Image of the 3D anitibody/antigen from top of page:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="54e9b296-60f1-11de-b181-45963482b50d" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="54e9d9a7-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page8.cml">
+                  <prompt>
+                    <OTText id="54e9d9a8-60f1-11de-b181-45963482b50d" text="Image of the anitbody you just designed:" />
+                  </prompt>
+                  <input>
+                    <OTImage id="54e9d9a9-60f1-11de-b181-45963482b50d" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="5654662a-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page9.cml">
+                  <prompt>
+                    <OTText id="5654662b-60f1-11de-b181-45963482b50d" text="Why do you think a gecko's feet stick much better to a wall than your fingers? Think about surface area, intermolecular attractions, and the rough surface (on a microscopic level) of a typical wall." />
+                  </prompt>
+                  <input>
+                    <OTText id="5654662c-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="589bbe1e-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page10.cml">
+                  <prompt>
+                    <OTText id="589bbe1f-60f1-11de-b181-45963482b50d" text="Which of the following is NOT an attractive force between molecules:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="589bbe20-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="589be531-60f1-11de-b181-45963482b50d" text="London dispersion" />
+                        <OTText id="589be532-60f1-11de-b181-45963482b50d" text="dipole-dipole" />
+                        <OTText id="589be533-60f1-11de-b181-45963482b50d" text="covalent bond" />
+                        <OTText id="589be534-60f1-11de-b181-45963482b50d" text="hydrogen bond" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="589be533-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="589c0c45-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page10.cml">
+                  <prompt>
+                    <OTText id="589c0c46-60f1-11de-b181-45963482b50d" text="Which factors affect the strength of the intermolecular attractions? (check all that apply)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="589c0c47-60f1-11de-b181-45963482b50d" selectionUI="1">
+                      <choices>
+                        <OTText id="589c0c48-60f1-11de-b181-45963482b50d" text="the color of the molecules" />
+                        <OTText id="589c0c49-60f1-11de-b181-45963482b50d" text="the polarity of the molecules" />
+                        <OTText id="589c335a-60f1-11de-b181-45963482b50d" text="the shape of the molecules" />
+                        <OTText id="589c335b-60f1-11de-b181-45963482b50d" text="the size of the molecules" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="589c0c49-60f1-11de-b181-45963482b50d" />
+                        <object refid="589c335a-60f1-11de-b181-45963482b50d" />
+                        <object refid="589c335b-60f1-11de-b181-45963482b50d" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="589c5a6d-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page10.cml">
+                  <prompt>
+                    <OTText id="589c5a6e-60f1-11de-b181-45963482b50d" text="You have two substances: A and B. Both have molecules of similar size and shape. Substance A has molecules that attract with London dispersion attraction, and substance B has molecules that attract with dipole-dipole attraction. Which one will have the higher boiling point?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="589c5a6f-60f1-11de-b181-45963482b50d" selectionUI="0">
+                      <choices>
+                        <OTText id="589c5a70-60f1-11de-b181-45963482b50d" text="Substance A" />
+                        <OTText id="589c5a71-60f1-11de-b181-45963482b50d" text="Substance B" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="589c5a71-60f1-11de-b181-45963482b50d" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="589c8182-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page10.cml">
+                  <prompt>
+                    <OTText id="589c8183-60f1-11de-b181-45963482b50d" text="Explain why you chose Substance A or B." />
+                  </prompt>
+                  <input>
+                    <OTText id="589c8184-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="589ca896-60f1-11de-b181-45963482b50d" name="http://ri-itest.concord.org/SAMActivities/IntermolecularAttractions/IntermolecularAttractions_v3/page10.cml">
+                  <prompt>
+                    <OTText id="589ca897-60f1-11de-b181-45963482b50d" text="You have two substances, both of which have the same boiling point (or attraction between their molecules). The first substance is made from molecules that are small (just a few atoms bonded together), and the second substance is made from molecules that are larger (many atoms bonded together). How can it be possible for two such different molecules to yield substances with the same boiling point? Describe the kinds of intermolecular attractions that must be involved and any other properties of the molecules that could cause this result." />
+                  </prompt>
+                  <input>
+                    <OTText id="589ca898-60f1-11de-b181-45963482b50d" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

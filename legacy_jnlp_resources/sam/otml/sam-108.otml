@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="89e162e0-10ec-11df-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="338d8e2d-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page1.cml">
+                  <prompt>
+                    <OTText id="338eedbe-10ee-11df-a41b-07682e056e65" text="Check all of the structural shapes that BOTH macromolecules and small molecules can have." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="3391acdf-10ee-11df-a41b-07682e056e65" selectionUI="1">
+                      <choices>
+                        <OTText id="33924920-10ee-11df-a41b-07682e056e65" text="straight line structures" />
+                        <OTText id="33927031-10ee-11df-a41b-07682e056e65" text="ring structures" />
+                        <OTText id="33927032-10ee-11df-a41b-07682e056e65" text="branched structures" />
+                        <OTText id="33927033-10ee-11df-a41b-07682e056e65" text="ball-shaped (globular) structures" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="33924920-10ee-11df-a41b-07682e056e65" />
+                        <object refid="33927031-10ee-11df-a41b-07682e056e65" />
+                        <object refid="33927032-10ee-11df-a41b-07682e056e65" />
+                        <object refid="33927033-10ee-11df-a41b-07682e056e65" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="33930c75-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page1.cml">
+                  <prompt>
+                    <OTText id="33930c76-10ee-11df-a41b-07682e056e65">
+                      <text>Place your protein snapshot here. Then double-click in the box below. A window will pop up. Use the annotation tool on the tool bar of the window  to point to peaks and valleys on the surface of the protein.
+What do you think these peaks and valleys are used for?</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTImage id="33930c77-10ee-11df-a41b-07682e056e65" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="3393cfc8-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page1.cml">
+                  <prompt>
+                    <OTText id="3393cfc9-10ee-11df-a41b-07682e056e65" text="What ideas do you have about why it is important for biological molecules to have a great variety of sizes, shapes, and surfaces?" />
+                  </prompt>
+                  <input>
+                    <OTText id="3393cfca-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="37e6881c-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page2.cml">
+                  <prompt>
+                    <OTText id="37e6881d-10ee-11df-a41b-07682e056e65" text="Place snapshot #1 here showing the three partner molecules in place on the protein." />
+                  </prompt>
+                  <input>
+                    <OTImage id="37e6881e-10ee-11df-a41b-07682e056e65" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="37e6af2f-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page2.cml">
+                  <prompt>
+                    <OTText id="37e6af30-10ee-11df-a41b-07682e056e65" text="Place snapshot #2 here showing whether any partners moved away from the protein when you ran the model." />
+                  </prompt>
+                  <input>
+                    <OTImage id="37e6af31-10ee-11df-a41b-07682e056e65" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="37e6fd52-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page2.cml">
+                  <prompt>
+                    <OTText id="37e6fd53-10ee-11df-a41b-07682e056e65" text="After raising the temperature, place snapshot #3 here showing the partner that stayed with the protein longest." />
+                  </prompt>
+                  <input>
+                    <OTImage id="37e6fd54-10ee-11df-a41b-07682e056e65" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="37e72465-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page2.cml">
+                  <prompt>
+                    <OTText id="37e72466-10ee-11df-a41b-07682e056e65" text="Why does raising the temperature increase the rate at which the partners separate?" />
+                  </prompt>
+                  <input>
+                    <OTText id="37e72467-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="37e72468-10ee-11df-a41b-07682e056e65" text="Raising the temperature increases the heat in the system, which increases the thermal motion of the molecules. The vibrating, stretching, and bending that molecules do with increased heat energy makes it harder for them to stay close together. As the distance between them increases, the intermolecular attractions get less and less, until they are not strong enough to hold the partmers together." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="37e74b79-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page2.cml">
+                  <prompt>
+                    <OTText id="37e74b7a-10ee-11df-a41b-07682e056e65" text="Describe what factors help small molecules to stick to the protein better." />
+                  </prompt>
+                  <input>
+                    <OTText id="37e74b7b-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="37e74b7c-10ee-11df-a41b-07682e056e65" text="The more intermolecular attractions that form, the better the molecules bind to each other. When the surfaces of the two molecules fit together well, it brings them close enough for intermolecular attractions to form. If the surfaces do not get close enough, such as when they do not fit well with each other, fewer attractions can occur." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4085691d-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page3.cml">
+                  <prompt>
+                    <OTText id="4085691e-10ee-11df-a41b-07682e056e65" text="How do oxygen and nitrogen affect the sharing of electrons with nearby carbon and hydrogen atoms?" />
+                  </prompt>
+                  <input>
+                    <OTText id="4085691f-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="40856920-10ee-11df-a41b-07682e056e65" text="Oxygen and nitrogen cause unequal sharing of electrons with carbon and hydrogen. They create areas of negative charge around themselves, and so the carbon and hydrogen atoms have a positive charge. (An advanced answer could include the fact that N and O attract electrons more strongly than C and H)." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="4085b741-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page3.cml">
+                  <prompt>
+                    <OTText id="4085b742-10ee-11df-a41b-07682e056e65" text="Imagine you are a carbon atom in a molecule composed entirely of carbon and hydrogen. One of the atoms you are bonded to is changed to an oxygen. Describe how the electron cloud around you is affected, and how that results in a change in surface charge." />
+                  </prompt>
+                  <input>
+                    <OTText id="4085b743-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="4085b744-10ee-11df-a41b-07682e056e65" text="The oxygen pulls more of the electrons away from me than either hydrogen or another carbon would. So, the electron cloud around me shifts toward the oxygen. The surface near the oxygen is negative, and near me, positive." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="439abf75-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page4.cml">
+                  <prompt>
+                    <OTText id="439ae686-10ee-11df-a41b-07682e056e65" text="Which word best describes the character of the amino acid under the protein surface here? (Click to see it in the model.) Choose the BEST answer:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="439ae687-10ee-11df-a41b-07682e056e65" selectionUI="0">
+                      <choices>
+                        <OTText id="439b0d98-10ee-11df-a41b-07682e056e65" text="polar" />
+                        <OTText id="439b0d99-10ee-11df-a41b-07682e056e65" text="nonpolar" />
+                        <OTText id="439b0d9a-10ee-11df-a41b-07682e056e65" text="positive" />
+                        <OTText id="439b0d9b-10ee-11df-a41b-07682e056e65" text="negative" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="439b0d9a-10ee-11df-a41b-07682e056e65" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="439b5bbc-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page4.cml">
+                  <prompt>
+                    <OTText id="439b5bbd-10ee-11df-a41b-07682e056e65" text="Which word best describes the character of the amino acid under the protein surface here? (Click to see it in the model.) Select the BEST answer:" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="439b5bbe-10ee-11df-a41b-07682e056e65" selectionUI="0">
+                      <choices>
+                        <OTText id="439b5bbf-10ee-11df-a41b-07682e056e65" text="polar" />
+                        <OTText id="439b5bc0-10ee-11df-a41b-07682e056e65" text="nonpolar" />
+                        <OTText id="439b5bc1-10ee-11df-a41b-07682e056e65" text="positive" />
+                        <OTText id="439b82d2-10ee-11df-a41b-07682e056e65" text="negative" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="439b5bbf-10ee-11df-a41b-07682e056e65" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="439ba9e3-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page4.cml">
+                  <prompt>
+                    <OTText id="439ba9e4-10ee-11df-a41b-07682e056e65" text="Areas of neutral charge are hydrophobic. Why do you think we don't we see much in the way of neutral areas on the surface of this protein? Hint" />
+                  </prompt>
+                  <input>
+                    <OTText id="439ba9e5-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="439ba9e6-10ee-11df-a41b-07682e056e65" text="Simple answer: Charged parts of the protein are on the outside, because they are more attracted to water than neutral parts. Hydrophobic parts of the protein are on the inside. Advanced answer: Since water is more attracted to the polar and charged side chains, hydrophobic side chains move to the interior of a protein as it folds." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="439bf807-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page4.cml">
+                  <prompt>
+                    <OTText id="439bf808-10ee-11df-a41b-07682e056e65" text="Imagine that the region shown here could bind stongly to another protein. Describe the shape and charge of the part of the other protein that binds here." />
+                  </prompt>
+                  <input>
+                    <OTText id="439bf809-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="439bf80a-10ee-11df-a41b-07682e056e65" text="The other molecule would have a cavity or deep pocket that would be complementary in shape to this &quot;knob&quot;. In addition the pocket would be polar, with areas of positive and negative charge that would align with the opposing charges on the knob." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="50f8610b-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page5.cml">
+                  <prompt>
+                    <OTText id="50f8610c-10ee-11df-a41b-07682e056e65" text="Use your knowledge of shape, intermolecular attractions, and charge to predict which small molecule the protein in the model above will recognize. Hint" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="50f8610d-10ee-11df-a41b-07682e056e65" selectionUI="0">
+                      <choices>
+                        <OTText id="50f8610e-10ee-11df-a41b-07682e056e65" text="Small molecule 1." />
+                        <OTText id="50f8610f-10ee-11df-a41b-07682e056e65" text="Small molecule 2." />
+                        <OTText id="50f88820-10ee-11df-a41b-07682e056e65" text="Small molecule 3." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="50f8610e-10ee-11df-a41b-07682e056e65" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="50f8af31-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page5.cml">
+                  <prompt>
+                    <OTText id="50f8af32-10ee-11df-a41b-07682e056e65">
+                      <text>After using the new model above, return to your snapshots and place the one with the real partner molecule in the binding site here.
+Use the circle tool  to circle the partner molecule.</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTImage id="50f8af33-10ee-11df-a41b-07682e056e65" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="50f8d644-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page5.cml">
+                  <prompt>
+                    <OTText id="50f8d645-10ee-11df-a41b-07682e056e65" text="Explain how the partner molecule recognizes the protein while the other two small molecules do not." />
+                  </prompt>
+                  <input>
+                    <OTText id="50f8d646-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="50f8d647-10ee-11df-a41b-07682e056e65" text="Small molecule #1 recognizes the protein's binding site by its close fit (shape) and opposing charges. The good fit brings the atoms close together, so many intermolecular attractions can form. In addition, the areas of charge line up opposite to each other - wherever there is a positive area on the protein, the corresponding part of the partner is negative and vice versa. (The observant student may also note that a neutral area is also matched on the partner.) Small molecule #3 has the wrong charges to fit in the site, whereas small molecule #2 has the wrong shape." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="620af448-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page6.cml">
+                  <prompt>
+                    <OTText id="620af449-10ee-11df-a41b-07682e056e65" text="Do you think adrenaline is a charged molecule? How can you tell? Use evidence from the model above in your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="620af44a-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="620b1b5b-10ee-11df-a41b-07682e056e65" text="The surface of adrenaline's binding site is blue, indicating that it is negatively charged. Therefore adrenaline must be positively charged, or it would not be attracted to the site. " />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="620b426c-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page6.cml">
+                  <prompt>
+                    <OTText id="620b426d-10ee-11df-a41b-07682e056e65" text="Why is it important that adrenaline fits closely inside its binding site?" />
+                  </prompt>
+                  <input>
+                    <OTText id="620b426e-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="620b426f-10ee-11df-a41b-07682e056e65" text="A close fit allows for intermolecular interactions to form so that adrenaline can be held securely by its receptor." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="77a9c660-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page7.cml">
+                  <prompt>
+                    <OTText id="77a9c661-10ee-11df-a41b-07682e056e65" text="Describe the features of proteins that allow them to be recognized (or not) as partners by other molecules." />
+                  </prompt>
+                  <input>
+                    <OTText id="77a9c662-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="77a9c663-10ee-11df-a41b-07682e056e65" text="The surface of a protein has a particular shape created by the underlying amino acids, and across the surface there are charges that vary, from no charge to positive or negative. The combination of shape and charge make each protein unique. A molecule that has an opposite shape and charge and can therefore fit closely with the protein can recognize and bind to it. Molecules with shapes that don't 'match' like this will bounce off, not recognizing the protein. " />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="77aa62a4-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page7.cml">
+                  <prompt>
+                    <OTText id="77aa62a5-10ee-11df-a41b-07682e056e65" text="The surface of a protein..." />
+                  </prompt>
+                  <input>
+                    <OTChoice id="77aa62a6-10ee-11df-a41b-07682e056e65" selectionUI="0">
+                      <choices>
+                        <OTText id="77aa89b7-10ee-11df-a41b-07682e056e65" text="is smooth and uniform in charge." />
+                        <OTText id="77aa89b8-10ee-11df-a41b-07682e056e65" text="has the same charges as its partner molecule." />
+                        <OTText id="77aa89b9-10ee-11df-a41b-07682e056e65" text="has shapes and charges due to the amino acids' properties." />
+                        <OTText id="77aa89ba-10ee-11df-a41b-07682e056e65" text="is charged oppositely to the amino acids' properties." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="77aa89b9-10ee-11df-a41b-07682e056e65" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="77aad7db-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page7.cml">
+                  <prompt>
+                    <OTText id="77aad7dc-10ee-11df-a41b-07682e056e65" text="Which of the following changes in a protein's binding site might prevent its partner from binding there?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="77aad7dd-10ee-11df-a41b-07682e056e65" selectionUI="0">
+                      <choices>
+                        <OTText id="77aad7de-10ee-11df-a41b-07682e056e65" text="A small amino acid is changed to a large amino acid." />
+                        <OTText id="77aad7df-10ee-11df-a41b-07682e056e65" text="A positive amino acid is changed to a negative amino acid." />
+                        <OTText id="77aafef0-10ee-11df-a41b-07682e056e65" text="A polar amino acid is changed to a non-polar amino acid." />
+                        <OTText id="77aafef1-10ee-11df-a41b-07682e056e65" text="A non-polar amino acid is changed to a polar amino acid." />
+                        <OTText id="77aafef2-10ee-11df-a41b-07682e056e65" text="All of the above" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="77aafef2-10ee-11df-a41b-07682e056e65" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="77ab9b33-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page7.cml">
+                  <prompt>
+                    <OTText id="77ab9b34-10ee-11df-a41b-07682e056e65" text="Some complexes between two partner molecules stay together only at low temperatures, but when the temperature is raised, they come apart. Use what you have learned about intermolecular attractions to explain how this could happen." />
+                  </prompt>
+                  <input>
+                    <OTText id="77ab9b35-10ee-11df-a41b-07682e056e65" text="" />
+                  </input>
+                  <correctAnswer>
+                    <OTText id="77ab9b36-10ee-11df-a41b-07682e056e65" text="When two molecules don't fit very closely together, the complex between two molecules involves only a few intermolecular attractions. At low temperature they are strong enough to hold the complex together. As the temperature increases, the molecules move around more, and there are not enough intermolecular attractions to hold it together." />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="77abe957-10ee-11df-a41b-07682e056e65" name="http://ri-itest.concord.org/SAMActivities/MolecularRecognition/ProteinPartnering_v3/page7.cml">
+                  <prompt>
+                    <OTText id="77abe958-10ee-11df-a41b-07682e056e65" text="A mutant receptor protein is found to be defective and is no longer recognized by its partner molecule. The identity of a single amino acid in the protein was changed by the mutation. Where in the protein would this amino acid most likely be found? (More than one answer may be correct - choose the best answer.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="77abe959-10ee-11df-a41b-07682e056e65" selectionUI="0">
+                      <choices>
+                        <OTText id="77abe95a-10ee-11df-a41b-07682e056e65" text="In the receptor binding site" />
+                        <OTText id="77abe95b-10ee-11df-a41b-07682e056e65" text="Buried in the interior of the receptor" />
+                        <OTText id="77ac106c-10ee-11df-a41b-07682e056e65" text="On the surface of the receptor" />
+                        <OTText id="77ac106d-10ee-11df-a41b-07682e056e65" text="At the beginning of the protein chain" />
+                        <OTText id="77ac106e-10ee-11df-a41b-07682e056e65" text="At the end of the protein chain" />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="77abe95a-10ee-11df-a41b-07682e056e65" />
+                  </correctAnswer>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+

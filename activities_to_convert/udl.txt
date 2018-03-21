@@ -1,0 +1,8 @@
+http://jnlpwrapper.diy.concord.org/jcl/UDL/udl-plants.jnlp?jnlp=http://static.concord.org/activity-finder/jnlp/udl-plants.jnlp
+http://udl.portal.concord.org/diy/view/101/type/ExternalOtrunkActivity/
+http://jnlpwrapper.diy.concord.org/jcl/UDL/udl-clouds.jnlp?jnlp=http://static.concord.org/activity-finder/jnlp/20140826/udl-clouds.jnlp
+http://udl.portal.concord.org/diy/view/99/type/ExternalOtrunkActivity/
+http://udl.portal.concord.org/diy/view/103/type/ExternalOtrunkActivity/
+http://udl.portal.concord.org/diy/view/100/type/ExternalOtrunkActivity/
+http://udl.portal.concord.org/diy/view/98/type/ExternalOtrunkActivity/
+http://udl.portal.concord.org/diy/view/96/type/ExternalOtrunkActivity/

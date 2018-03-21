@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="a4f1c8e0-81e0-11de-8a39-0800200c9a66">
+  <imports>
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTTextObject" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+
+  </imports>
+  <objects>
+    <OTSystem>
+      <bundles>
+        <OTViewBundle showLeftPanel="false">
+          <views>
+
+            <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
+            <OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
+            <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceCheckBoxView" useViewsAsChoices="true" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTLayerContainer" viewClass="org.concord.otrunk.ui.swing.OTLayerContainerView" />
+            <OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView" />
+            <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
+            <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+          </views>
+          <frame>
+            <OTFrame width="800" height="600" />
+          </frame>
+        </OTViewBundle>
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+      </bundles>
+      <root>
+        <OTLayerContainer>
+          <layers>
+            <OTModelerPage local_id="mwpage" authoredDataURL="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/index.cml">
+              <variables />
+              <questions>
+                <OTQuestion id="a38930fd-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page1.cml">
+                  <prompt>
+                    <OTText id="a38930fe-61b7-11de-bd28-9d05b7ffce46" text="Place the snapshot you have taken to show a solution below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a38930ff-61b7-11de-bd28-9d05b7ffce46" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a3897f20-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page1.cml">
+                  <prompt>
+                    <OTText id="a3897f21-61b7-11de-bd28-9d05b7ffce46" text="Consider the mixtures listed. According to your everyday experience, which would meet the definition of &quot;solution&quot; given above, after they are allowed to settle? (Check all that apply.)" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a3897f22-61b7-11de-bd28-9d05b7ffce46" selectionUI="1">
+                      <choices>
+                        <OTText id="a3897f23-61b7-11de-bd28-9d05b7ffce46" text="A teaspoon of sand stirred into a cup of water." />
+                        <OTText id="a3897f24-61b7-11de-bd28-9d05b7ffce46" text="A teaspoon of salt stirred into a cup of water." />
+                        <OTText id="a3897f25-61b7-11de-bd28-9d05b7ffce46" text="A teaspoon of oil stirred into a cup of water." />
+                        <OTText id="a3897f26-61b7-11de-bd28-9d05b7ffce46" text="A teaspoon of sugar stirred into a cup of water." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <OTObjectSet>
+                      <objects>
+                        <object refid="a3897f24-61b7-11de-bd28-9d05b7ffce46" />
+                        <object refid="a3897f26-61b7-11de-bd28-9d05b7ffce46" />
+                      </objects>
+                    </OTObjectSet>
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a51cf068-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page2.cml">
+                  <prompt>
+                    <OTText id="a51cf069-61b7-11de-bd28-9d05b7ffce46" text="Take a snapshot that shows some part of salt has been dissolved in water." />
+                  </prompt>
+                  <input>
+                    <OTImage id="a51cf06a-61b7-11de-bd28-9d05b7ffce46" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a51d3e8b-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page2.cml">
+                  <prompt>
+                    <OTText id="a51d3e8c-61b7-11de-bd28-9d05b7ffce46">
+                      <text>Describe how the interatomic attractions are responsible for salt dissolving in water. (Hint: Click the following button to remove the charges on the ions:
+
+Compare the result with the case when water is charged.)</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTText id="a51d3e8d-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a7d4212f-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page3.cml">
+                  <prompt>
+                    <OTText id="a7d42130-61b7-11de-bd28-9d05b7ffce46" text="Describe why a crystal of salt formed as the water evaporated from a drop of salt solution." />
+                  </prompt>
+                  <input>
+                    <OTText id="a7d42131-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="a8d78773-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page4.cml">
+                  <prompt>
+                    <OTText id="a8d78774-61b7-11de-bd28-9d05b7ffce46" text="Which of the following forms intermolecular attractions?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a8d78775-61b7-11de-bd28-9d05b7ffce46" selectionUI="0">
+                      <choices>
+                        <OTText id="a8d78776-61b7-11de-bd28-9d05b7ffce46" text="Polar molecules and other polar molecules." />
+                        <OTText id="a8d78777-61b7-11de-bd28-9d05b7ffce46" text="Polar and nonpolar molecules." />
+                        <OTText id="a8d7ae88-61b7-11de-bd28-9d05b7ffce46" text="Nonpolar and nonpolar molecules." />
+                        <OTText id="a8d7ae89-61b7-11de-bd28-9d05b7ffce46" text="All of the above." />
+                        <OTText id="a8d8e70a-61b7-11de-bd28-9d05b7ffce46" text="None of the above." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a8d7ae89-61b7-11de-bd28-9d05b7ffce46" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a8d90e1b-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page4.cml">
+                  <prompt>
+                    <OTText id="a8d90e1c-61b7-11de-bd28-9d05b7ffce46" text="In the above model, which of the following did you find to have the strongest intermolecular attractions?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="a8d90e1d-61b7-11de-bd28-9d05b7ffce46" selectionUI="0">
+                      <choices>
+                        <OTText id="a8d90e1e-61b7-11de-bd28-9d05b7ffce46" text="Two non-polar molecules." />
+                        <OTText id="a8d90e1f-61b7-11de-bd28-9d05b7ffce46" text="Two polar molecules." />
+                        <OTText id="a8d93530-61b7-11de-bd28-9d05b7ffce46" text="A non-polar molecule and a polar molecule." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="a8d90e1f-61b7-11de-bd28-9d05b7ffce46" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="a8d98351-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page4.cml">
+                  <prompt>
+                    <OTText id="a8d98352-61b7-11de-bd28-9d05b7ffce46" text="How do intermolecular attractions explain why the polar molecules and non-polar molecules do not mix?" />
+                  </prompt>
+                  <input>
+                    <OTText id="a8d98353-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="abe2a4a5-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page5.cml">
+                  <prompt>
+                    <OTText id="abe2a4a6-61b7-11de-bd28-9d05b7ffce46" text="Does salt dissolve in benzene? Why or why not?" />
+                  </prompt>
+                  <input>
+                    <OTText id="abe2a4a7-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="abe2cbb9-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page5.cml">
+                  <prompt>
+                    <OTText id="abe2cbba-61b7-11de-bd28-9d05b7ffce46" text="Explain how the model supports the following rule for dissolving: Like dissolves like." />
+                  </prompt>
+                  <input>
+                    <OTText id="abe2cbbb-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="aed7efdd-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page6.cml">
+                  <prompt>
+                    <OTText id="aed7efde-61b7-11de-bd28-9d05b7ffce46" text="Reset the model. Set the temperature to &quot;low&quot; and run the model for 20,000 fs (note the number near the clock at the lower-left corner of the model window). Take a snapshot and place it below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="aed7efdf-61b7-11de-bd28-9d05b7ffce46" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="aed816f0-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page6.cml">
+                  <prompt>
+                    <OTText id="aed816f1-61b7-11de-bd28-9d05b7ffce46" text="Reset the model. Set the temperature to &quot;high&quot; and run the model for 20,000 fs. Take a snapshot and place it below." />
+                  </prompt>
+                  <input>
+                    <OTImage id="aed816f2-61b7-11de-bd28-9d05b7ffce46" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="aed83e03-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page6.cml">
+                  <prompt>
+                    <OTText id="aed83e04-61b7-11de-bd28-9d05b7ffce46" text="Raising the temperature" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="aed83e05-61b7-11de-bd28-9d05b7ffce46" selectionUI="0">
+                      <choices>
+                        <OTText id="aed83e06-61b7-11de-bd28-9d05b7ffce46" text="speeds up rate of dissolving." />
+                        <OTText id="aed83e07-61b7-11de-bd28-9d05b7ffce46" text="slows down rate of dissolving." />
+                        <OTText id="aed83e08-61b7-11de-bd28-9d05b7ffce46" text="has no effect." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="aed83e06-61b7-11de-bd28-9d05b7ffce46" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="aed86519-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page6.cml">
+                  <prompt>
+                    <OTText id="aed8651a-61b7-11de-bd28-9d05b7ffce46" text="Compare the dissolving rate of the green molecules in the blue molecules at different temperatures. Use the images above to explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="aed8651b-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b22df8bd-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page7.cml">
+                  <prompt>
+                    <OTText id="b22df8be-61b7-11de-bd28-9d05b7ffce46" text="Place a snapshot of the model after a long run below and annotate the image to point out which region represents the part of solute that hasn't been dissolved." />
+                  </prompt>
+                  <input>
+                    <OTImage id="b22df8bf-61b7-11de-bd28-9d05b7ffce46" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b22e1ed0-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page7.cml">
+                  <prompt>
+                    <OTText id="b22e1ed1-61b7-11de-bd28-9d05b7ffce46" text="Based on the above simulation, give a molecular reason for why a solvent reaches saturation." />
+                  </prompt>
+                  <input>
+                    <OTText id="b22e45e2-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b2f58d84-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page8.cml">
+                  <prompt>
+                    <OTText id="b2f58d85-61b7-11de-bd28-9d05b7ffce46" text="Water can dissolve ionic compounds. Which idea best describes how this happens?" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b2f58d86-61b7-11de-bd28-9d05b7ffce46" selectionUI="0">
+                      <choices>
+                        <OTText id="b2f5b497-61b7-11de-bd28-9d05b7ffce46" text="Ionic compounds fit in between water molecules." />
+                        <OTText id="b2f5b498-61b7-11de-bd28-9d05b7ffce46" text="Charges on water molecules attract the ions in compounds with the opposite charge." />
+                        <OTText id="b2f5b499-61b7-11de-bd28-9d05b7ffce46" text="Non-polar bonds are made between water and ionic compounds." />
+                        <OTText id="b2f5b49a-61b7-11de-bd28-9d05b7ffce46" text="Water has no charges while ionic compounds have charges." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b2f5b498-61b7-11de-bd28-9d05b7ffce46" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b2f5dbab-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page8.cml">
+                  <prompt>
+                    <OTText id="b2f5dbac-61b7-11de-bd28-9d05b7ffce46" text="For solids dissolving in liquids, an increase in temperature" />
+                  </prompt>
+                  <input>
+                    <OTChoice id="b2f5dbad-61b7-11de-bd28-9d05b7ffce46" selectionUI="0">
+                      <choices>
+                        <OTText id="b2f5dbae-61b7-11de-bd28-9d05b7ffce46" text="does not change solubility." />
+                        <OTText id="b2f5dbaf-61b7-11de-bd28-9d05b7ffce46" text="decreases solubility." />
+                        <OTText id="b2f5dbb0-61b7-11de-bd28-9d05b7ffce46" text="increases solubility." />
+                        <OTText id="b2f5dbb1-61b7-11de-bd28-9d05b7ffce46" text="makes solution less concentrated." />
+                      </choices>
+                    </OTChoice>
+                  </input>
+                  <correctAnswer>
+                    <object refid="b2f5dbb0-61b7-11de-bd28-9d05b7ffce46" />
+                  </correctAnswer>
+                </OTQuestion>
+                <OTQuestion id="b2f602c2-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page8.cml">
+                  <prompt>
+                    <OTText id="b2f602c3-61b7-11de-bd28-9d05b7ffce46" text="Is the statement &quot;all liquids are able to be mixed to create a solution&quot; true? Explain your answer." />
+                  </prompt>
+                  <input>
+                    <OTText id="b2f602c4-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b2f629d6-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page8.cml">
+                  <prompt>
+                    <OTText id="b2f629d7-61b7-11de-bd28-9d05b7ffce46" text="Explain how attractive forces between molecules and random motion determine if one substance will dissolve in another." />
+                  </prompt>
+                  <input>
+                    <OTText id="b2f629d8-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+                <OTQuestion id="b2f650ea-61b7-11de-bd28-9d05b7ffce46" name="http://ri-itest.concord.org/SAMActivities/Solubility/Solubility_v2/page8.cml">
+                  <prompt>
+                    <OTText id="b2f650eb-61b7-11de-bd28-9d05b7ffce46">
+                      <text>Click the "Run" button to run the model to the left. Watch carefully how the water molecules around the gray ion interact with it. Then click the following button to reverse the charge on the gray ion:
+
+
+What happens to the water molecules surrounding the ion? You can reverse the charge as many times as you want in order to observe more clearly. Write down your observation.</text>
+                    </OTText>
+                  </prompt>
+                  <input>
+                    <OTText id="b2f650ec-61b7-11de-bd28-9d05b7ffce46" text="" />
+                  </input>
+                </OTQuestion>
+              </questions>
+            </OTModelerPage>
+
+          </layers>
+        </OTLayerContainer>
+      </root>
+    </OTSystem>
+  </objects>
+</otrunk>
+
